@@ -1,6 +1,5 @@
 <aside class="sidebar sidebar--right">
   <header class="sidebar__header">
-    
     <button class="btn btn--primary" id="rightClose">
       <i class="btn__icon bi-x"></i>
     </button>
@@ -8,10 +7,11 @@
     <div class="page-title">{{ .Title }}</div>
 
     <div class="word-count">
-      <strong>Words: </strong> <span id="wordCount">0</span> | <strong>Characters: </strong> <span id="charCount">0</span>
+      <strong>Words: </strong> <span id="wordCount">0</span> |
+      <strong>Characters: </strong> <span id="charCount">0</span>
     </div>
-
   </header>
+  
   <div class="sidebar__area">
     <select class="tab-action" data-tabs-group="group2">
       <option class="tab-action__option" value="tocTab">Table of Contents</option>
@@ -20,7 +20,6 @@
     </select>
     
     <div class="tab-area">
-
       <div class="tab-area__content active" data-tab="tocTab">
         <nav class="nav nav--toc">{{ .TableOfContents }}</nav>
       </div>

@@ -4,11 +4,10 @@
     {{ range .Pages }}
       {{ if .IsSection }}
         <li class="nav__item">
-          <a class="nav__link" href="{{ .RelPermalink }}">
-            <i class="btn__icon bi-folder2"></i>
-            <span class="btn__name">{{ .LinkTitle }}</span>
+          <a class="link" href="{{ .RelPermalink }}">
+            <i class="link__icon bi-folder2"></i>
+            <span class="link__name">{{ .LinkTitle }}</span>
           </a>
-          <!-- Memanggil folder_list secara rekursif untuk sub-bagian -->
           {{ template "folder_list" . }}
         </li>
       {{ end }}
@@ -22,12 +21,11 @@
     {{ range .Pages }}
       {{ if .IsSection }}
         <li class="nav__item">
-          <a href="{{ .RelPermalink }}" class="btn btn--collapse">
-            <i class="btn__icon bi-folder2"></i>
-            <span class="btn__name">{{ .LinkTitle }}</span>
+          <a class="nav__link" href="{{ .RelPermalink }}">
+            <i class="nav__link-icon bi-folder2"></i>
+            <span class="nav__link-name">{{ .LinkTitle }}</span>
           </a>
-          <ul class="nav__list nav__list--collapse-content">
-            <!-- Memanggil section_list untuk menampilkan sub-seksi -->
+          <ul class="nav__list">
             {{ template "section_list" . }}
           </ul>
         </li>
@@ -55,8 +53,7 @@
             <i class="btn__icon bi-folder2"></i>
             <span class="btn__name">{{ .LinkTitle }}</span>
           </button>
-          <ul class="nav__list nav__list--collapse-content">
-            <!-- Memanggil nav_list secara rekursif untuk menampilkan sub-seksi -->
+          <ul class="nav__list nav__list--collapse">
             {{ template "nav_list" . }}
           </ul>
         </li>

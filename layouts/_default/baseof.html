@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ or .Site.Language.LanguageCode .Site.Language.Lang }}">
 {{ partial "head.html" . }}
-<body class="layout">
+<body class="container">
   {{ partial "left-sidebar.html" . }}
   {{ partial "header.html" . }}
-  <main class="main">
-    {{ block "main" . }}{{ end }}
-  </main>
+  <main class="main">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
   {{ partial "right-sidebar.html" . }}
   {{ partial "script.html" . }}

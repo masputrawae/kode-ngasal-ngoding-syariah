@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Keren</title>
+  <style>
+
+
+:root[data-theme="dark"] {
+  --bg-body: var(--deep-space-100);
+  --bg-primary: var(--deep-space-200);
+  --bg-secondary: var(--deep-space-300);
+  --bg-card: var(--deep-space-400);
+  --bg-btn: var(--deep-space-500);
+  --bg-gradient: linear-gradient(135deg, var(--deep-space-300), var(--deep-space-500));
+
+  --accent: var(--spark-300);
+
+  --cl-text: var(--snow-100);
+  --cl-heading: var(--snow-200);
+  --cl-article: var(--snow-300);
+
+  --cl-danger: var(--spark-600);
+  --cl-info: var(--spark-200);
+  --cl-success: var(--quetzalcoatl-300);
+  --cl-warning: var(--quetzalcoatl-500);
+
+  --cl-link: var(--spark-400);
+  --cl-btn: var(--snow-100);
+  --cl-border: var(--deep-space-400);
+  --cl-shadow: rgba(0, 0, 0, 0.6);
+}
+
+:root[data-theme="light"] {
+  --bg-body: var(--snow-100);
+  --bg-primary: var(--snow-200);
+  --bg-secondary: var(--snow-300);
+  --bg-card: var(--snow-400);
+  --bg-btn: var(--snow-500);
+  --bg-gradient: linear-gradient(135deg, var(--quetzalcoatl-300), var(--quetzalcoatl-400));
+
+  --accent: var(--quetzalcoatl-400);
+
+  --cl-text: var(--deep-space-200);
+  --cl-heading: var(--deep-space-300);
+  --cl-article: var(--deep-space-300);
+
+  --cl-danger: var(--spark-600);
+  --cl-info: var(--spark-300);
+  --cl-success: var(--quetzalcoatl-400);
+  --cl-warning: var(--quetzalcoatl-500);
+
+  --cl-link: var(--quetzalcoatl-400);
+  --cl-btn: var(--deep-space-100);
+  --cl-border: var(--snow-300);
+  --cl-shadow: rgba(0, 0, 0, 0.1);
+}
+
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--cl-text);
+    }
+
+    header {
+      background: var(--bg-gradient);
+      padding: 1rem;
+      text-align: center;
+      color: var(--cl-heading);
+      font-size: 1.5rem;
+      border-bottom: 3px solid var(--accent);
+      border-top: 3px solid var(--accent);
+      border-radius: 10px;
+      
+    }
+
+    .container {
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px var(--cl-shadow);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: var(--cl-btn);
+      background-color: var(--bg-btn);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: var(--accent);
+      color: var(--bg-body);
+    }
+    
+    blockquote{
+      border-left: 5px solid;
+      border-radius: 5px;
+    }
+
+    .alert {
+      padding: 0.25rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      box-shadow: 0px 10px 20px var(--cl-shadow);
+    }
+
+    .alert.info {
+      border-color: var(--cl-info);    
+      color: var(--cl-text);
+    }
+
+    .alert.success {
+      border-color: var(--cl-success);
+      color: var(--cl-text);
+    }
+
+    .alert.warning {
+      border-color: var(--cl-warning);
+      color: var(--cl-text);
+    }
+
+    .alert.danger {
+      border-color: var(--cl-danger);
+      color: var(--cl-text);
+    }
+
+    .toggle-theme {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .toggle-theme button {
+      padding: 0.5rem;
+      border: none;
+      background: var(--accent);
+      color: var(--bg-body);
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    article {
+      background: var(--bg-primary);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Website Keren</header>
+  <div class="container">
+    <div class="card">
+      <h2>Selamat Datang</h2>
+      <p>Ini adalah contoh website dengan tema dark/light yang dapat diubah sesuai preferensi.</p>
+    </div>
+
+    <blockquote class="alert info">
+      <strong>Info</strong>
+      <p>Ini adalah pesan informasi.</p>
+      <blockquote class="alert info">
+        <p>Ini adalah pesan informasi.</p>
+      </blockquote>
+    </blockquote>
+    <blockquote class="alert success">
+      <strong>Success</strong>
+      <p>Tindakan berhasil dilakukan!</p>
+    </blockquote>
+    <blockquote class="alert warning">
+      <strong>Warning</strong>
+      <p>Perhatian! Terdapat sesuatu yang perlu diperhatikan.</p>
+    </blockquote>
+    <blockquote class="alert danger">
+      <strong>Danger</strong>
+      <p>Kesalahan terjadi. Harap coba lagi.</p>
+    </blockquote>
+
+    <article>
+      <h3>Artikel: Apa Itu Lorem Ipsum?</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur 
+        sagittis, nisl nunc interdum nisl, sit amet tincidunt urna libero eu risus. Curabitur accumsan 
+        sapien sit amet erat vehicula, in sodales risus iaculis.
+      </p>
+      <p>
+        Vivamus auctor, felis at facilisis congue, velit ligula vestibulum massa, vel ornare lacus arcu non 
+        nisl. Nulla facilisi. Praesent ut blandit purus, ut aliquet purus. Integer placerat mauris vitae 
+        vehicula laoreet.
+      </p>
+    </article>
+
+    <div class="toggle-theme">
+      <button id="theme-toggle">Ubah Tema</button>
+    </div>
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    const root = document.documentElement;
+
+    toggleButton.addEventListener("click", () => {
+      const currentTheme = root.getAttribute("data-theme");
+      root.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+    });
+  </script>
+</body>
+</html>

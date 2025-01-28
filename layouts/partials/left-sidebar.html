@@ -1,21 +1,20 @@
 <aside class="sidebar sidebar--left">
   <header class="sidebar__header">
-    
-    <button class="btn btn--primary" id="switchTheme">
-      <i class="btn__icon bi-moon"></i>
-    </button>
-    
     <a class="logo" href="{{ .Site.BaseURL }}">
       <img class="logo__img" src="" alt="Logo Image {{ .Site.Title }}">
       <span class="logo__title">{{ .Site.Title }}</span>
     </a>
     
+    <button class="btn btn--primary" id="switchTheme">
+      <i class="btn__icon bi-moon"></i>
+    </button>
+    
     <button class="btn btn--primary" id="leftClose">
       <i class="btn__icon bi-x"></i>
     </button>
-    
   </header>
-  <div class="sidebar__area">
+  
+  <div class="sidebar__tab">
     <select class="tab-action" data-tabs-group="group1">
       <option class="tab-action__option" value="filesTab">Files</option>
       <option class="tab-action__option" value="searchTab">Search</option>
@@ -30,7 +29,6 @@
     </button>
     
     <div class="tab-area">
-      <!--  -->
       <div class="tab-area__content active" data-tab="filesTab">
         <nav class="nav">
           <ul class="nav__list">
@@ -39,10 +37,8 @@
         </nav>
       </div>
       
-      <!--  -->
       <div class="tab-area__content" data-tab="searchTab">
         <div class="search">
-          
           <form class="search__form" id="search" onsubmit="return handleSearch(event);">
             <input class="search__input" type="text" id="search-input" name="query" placeholder="🔍 Ketik untuk mencari">
             <button class="btn btn--search" type="submit">
@@ -56,14 +52,21 @@
               Hasil pencarian akan ditampilkan di sini.
             </li>
           </ul>
-          
         </div>
       </div>
       
-      <div class="tab-area__content" data-tab="categoriesTab">{{ template "categories_list" . }}</div>
-      <div class="tab-area__content" data-tab="tagsTab">{{ template "categories_list" . }}</div>
-      <div class="tab-area__content" data-tab="groupsTab">{{ template "groups_list" . }}</div>
-      <div class="tab-area__content" data-tab="pinnedTab">{{ template "pinned_list" . }}</div>
+      <div class="tab-area__content" data-tab="categoriesTab">
+        {{ template "categories_list" . }}
+      </div>
+      <div class="tab-area__content" data-tab="tagsTab">
+        {{ template "categories_list" . }}
+      </div>
+      <div class="tab-area__content" data-tab="groupsTab">
+        {{ template "groups_list" . }}
+      </div>
+      <div class="tab-area__content" data-tab="pinnedTab">
+        {{ template "pinned_list" . }}
+      </div>
     </div>
   </div>
 </aside>

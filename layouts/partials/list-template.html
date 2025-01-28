@@ -4,25 +4,20 @@
     <ul class="nav__list">
       {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
         <li class="nav__item">
-
           <button class="btn btn--collapse">
             <i class="btn__icon bi-list"></i>
             <span class="btn__name">{{ $name }}</span>
           </button>
-      
-          <ul class="nav__list nav__list--collapse-content">
+          <ul class="nav__list nav__list--collapse">
             {{ range $taxonomy }}
-
               <li class="nav__item">
                 <a class="nav__link" href="{{ .Permalink }}">
                   <i class="nav__link-icon bi-file-earmark-text"></i>
                   <span class="nav__link-name">{{ .Title }}</span>
                 </a>
               </li>
-
             {{ end }}
           </ul>
-      
         </li>
       {{ end }}
     </ul>
@@ -34,14 +29,12 @@
   <nav class="nav">
     <ul class="nav__list">
       {{ range .Site.Taxonomies.tags }}
-
         <li class="nav__item">
           <a class="nav__link" href="{{ .Page.RelPermalink }}">
             <i class="nav__link-icon bi-tags"></i>
             <span class="nav__link-name">{{ .Page.Title }}</span>
           </a>
         </li>
-
       {{ end }}
     </ul>
   </nav>
@@ -52,24 +45,19 @@
   <nav class="nav">
     <ul class="nav__list">
       {{ range $name, $taxonomy := .Site.Taxonomies.group }}
-    
         <li class="nav__item">
-        
           <button class="btn btn--collapse">
             <i class="btn__icon bi-collection"></i>
             <span class="btn__name">{{ $name }}</span>
           </button>
-
-          <ul class="nav__list nav__list--collapse-content">
+          <ul class="nav__list nav__list--collapse">
             {{ range $taxonomy }}
-          
               <li class="nav__item">
                 <a class="nav__link" href="{{ .Permalink }}">
                   <i class="nav__link-icon bi-file-earmark-text"></i>
                   <span class="nav__link-name">{{ .Title }}</span>
                 </a>
               </li>
-
             {{ end }}
           </ul>
         </li>
@@ -85,14 +73,12 @@
       {{ $pinnedPosts := where .Site.RegularPages "Params.pinned" true }}
         {{ if $pinnedPosts }}
           {{ range $pinnedPosts }}
-
             <li class="nav__item">
               <a class="nav__link" href="{{ .Permalink }}">
                 <i class="nav__link-icon bi-pin-fill"></i>
                 <span class="nav__link-name">{{ .Title }}</span>
               </a>
-            </li>
-        
+            </li>            
           {{ end }}
         {{ else }}
         <p>Tidak ada artikel yang dipin.</p>

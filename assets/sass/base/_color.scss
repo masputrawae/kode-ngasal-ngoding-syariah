@@ -1,0 +1,82 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+@use "../abstract/breakpoint" as bp;
+
+:root {
+  --deep-space-100: #000921;
+  --deep-space-200: #120A34;
+  --deep-space-300: #2A0944;
+  --deep-space-400: #4B0D5D;
+  --deep-space-500: #721D7D;
+
+  --snow-100: #FEFEFE;
+  --snow-200: #F7F7F7;
+  --snow-300: #EDEDED;
+  --snow-400: #D6D6D6;
+  --snow-500: #BFBFBF;
+  --snow-600: #9F9F9F;
+
+  --spark-100: #004085;
+  --spark-200: #0056B3;
+  --spark-300: #007BFF;
+  --spark-400: #FFFFFF;
+  --spark-500: #FFC107;
+  --spark-600: #DC3545;
+
+  --quetzalcoatl-100: #0C1B29;
+  --quetzalcoatl-200: #1B5F5C;
+  --quetzalcoatl-300: #198754;
+  --quetzalcoatl-400: #74C25B;
+  --quetzalcoatl-500: #FFC107;
+  --quetzalcoatl-600: #A12F3A;
+}
+
+:root[data-theme="dark"] {
+  --bg-body: ;
+  --bg-primary: ;
+  --bg-secondary: ;
+  --bg-card: ;
+  --bg-btn: ;
+  --bg-gradient: ;
+
+  --accent: ;
+
+  --cl-text: ;
+  --cl-heading: ;
+  --cl-article: ;
+
+  --cl-danger: ;
+  --cl-info: ;
+  --cl-success: ;
+  --cl-warning: ;
+
+  --cl-link: ;
+  --cl-btn: ;
+  --cl-border: ;
+  --cl-shadow: ;
+}
+
+:root[data-theme="light"] {
+  --bg-body: ;
+  --bg-primary: ;
+  --bg-secondary: ;
+  --bg-card: ;
+  --bg-btn: ;
+  --bg-gradient: ;
+
+  --accent: ;
+
+  --cl-text: ;
+  --cl-heading: ;
+  --cl-article: ;
+
+  --cl-danger: ;
+  --cl-info: ;
+  --cl-success: ;
+  --cl-warning: ;
+
+  --cl-link: ;
+  --cl-btn: ;
+  --cl-border: ;
+  --cl-shadow: ;
+}
