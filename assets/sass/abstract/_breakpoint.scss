@@ -1,0 +1,16 @@
+@mixin min-width($size) {
+    @if $size == md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $size == lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    } @else if $size == xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}

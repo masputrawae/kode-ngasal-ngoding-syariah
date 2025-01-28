@@ -1,3 +1,54 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+body {
+    background: var(--bg-gradient);
+}
+.container {
+    @include bp.min-width(md){
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "left top right"
+            "left main right"
+            "left bottom right";
+        gap: 0.5rem;
+    
+        .sidebar--left {grid-area: left;}
+        .header {grid-area: top;}
+        .main {grid-area: main;}
+        .footer {grid-area: bottom;}
+        .sidebar--right {grid-area: right;}
+    }
+}
+*::-webkit-scrollbar {
+    height: v.$size-1;
+    width: v.$size-1;
+}
+*::-webkit-scrollbar-track {
+    border-radius: v.$size-1;
+    background: var(--bg-gradient);
+}
+
+*::-webkit-scrollbar-track:hover {
+    background: var(--bg-gradient);
+}
+
+*::-webkit-scrollbar-track:active {
+    background: var(--bg-gradient);
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: v.$size-1;
+    background-color: var(--accent);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: var(--accent);
+}

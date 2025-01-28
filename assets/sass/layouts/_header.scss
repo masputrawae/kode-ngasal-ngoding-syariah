@@ -1,0 +1,14 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+@use "../abstract/breakpoint" as bp;
+
+.header {
+    background: var(--bg-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    top: 0;
+    position: sticky;
+}

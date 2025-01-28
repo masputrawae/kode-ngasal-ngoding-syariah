@@ -1,0 +1,5 @@
+// LEBAR TINGGI
+@mixin area-calculation($width, $height){
+    width: $width;
+    height: $height;
+}
