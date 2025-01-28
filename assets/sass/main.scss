@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+ul {
+  padding-left: 5px;
+}
+li {
+  list-style-type: none;
+  padding-left: 5px;
+}
+.nav__link-name--ellipsis {
+  text-decoration: none;
+  display: inline-block; 
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.layout {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "left top right"
+    "left main right"
+    "left bottom right";
+
+    .sidebar--left{
+        grid-area: left;
+      }
+      
+      .header {
+        grid-area: top;
+      }
+      
+      .main {
+        grid-area: main;
+      }
+      
+      .footer {
+        grid-area: bottom;
+      }
+      
+      .sidebar--right {
+        grid-area: right;
+      }
+}

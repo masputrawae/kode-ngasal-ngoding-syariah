@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="page">
+  <header class="page__header">
+    <h1 class="page__title">{{ .Title }}</h1>
+  </header>
+  
+  <section class="page__content">
+    {{ .Content }}
+  </section>
+
+  <nav class="nav">
+    <ul>
+      {{ range .Data.Terms.Alphabetical }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a> ({{ .Count }})</li>
+      {{ end }}
+    </ul>
+  </nav>
+</article>
+{{ end }}
