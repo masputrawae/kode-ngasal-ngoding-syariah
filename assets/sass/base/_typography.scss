@@ -1,3 +1,128 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..700&family=Orbitron:wght@400..700&family=Barlow:wght@300..700&family=Saira+Condensed:wght@400..700&display=swap');
+:root {
+    /* Font Variables */
+    --font-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-article: "Inter", sans-serif;
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-monospace: "JetBrains Mono", Consolas, "Courier New", Courier, monospace;
+    --font-title: "Orbitron", sans-serif;
+    --font-subtitle: "Barlow", sans-serif;
+    --font-caption: "Saira Condensed", sans-serif;
+
+    /* Font Sizes */
+    --fs-large: 1.435rem;
+    --fs-medium: 1.344rem;
+    --fs-small: 1.260rem;
+    --fs-h1: 1.181rem;
+    --fs-h2: 1.107rem;
+    --fs-h3: 1.037rem;
+    --fs-h4: 0.972rem;
+    --fs-h5: 0.911rem;
+    --fs-h6: 0.854rem;
+    --fs-subtitle: 0.800rem;
+    --fs-body: 0.750rem;
+    --fs-caption: 0.703rem;
+    --fs-label: 0.659rem;
+    --fs-tagline: 0.617rem;
+
+    /* Line Height */
+    --line-height: 1.3;
+
+    @include bp.min-width(md) {
+        --fs-large: 1.674rem;
+        --fs-medium: 1.569rem;
+        --fs-small: 1.470rem;
+        --fs-h1: 1.378rem;
+        --fs-h2: 1.291rem;
+        --fs-h3: 1.210rem;
+        --fs-h4: 1.134rem;
+        --fs-h5: 1.063rem;
+        --fs-h6: 0.996rem;
+        --fs-subtitle: 0.934rem;
+        --fs-body: 0.875rem;
+        --fs-caption: 0.820rem;
+        --fs-label: 0.769rem;
+        --fs-tagline: 0.720rem;
+
+        --line-height: 1.4;
+    }
+
+    @include bp.min-width(lg) {
+        --fs-large: 1.913rem;
+        --fs-medium: 1.793rem;
+        --fs-small: 1.680rem;
+        --fs-h1: 1.575rem;
+        --fs-h2: 1.476rem;
+        --fs-h3: 1.383rem;
+        --fs-h4: 1.296rem;
+        --fs-h5: 1.215rem;
+        --fs-h6: 1.138rem;
+        --fs-subtitle: 1.067rem;
+        --fs-body: 1.000rem;
+        --fs-caption: 0.937rem;
+        --fs-label: 0.878rem;
+        --fs-tagline: 0.823rem;
+
+        --line-height: 1.5;
+    }
+
+    @include bp.min-width(xl) {
+        --fs-large: 2.152rem;
+        --fs-medium: 2.017rem;
+        --fs-small: 1.890rem;
+        --fs-h1: 1.771rem;
+        --fs-h2: 1.660rem;
+        --fs-h3: 1.556rem;
+        --fs-h4: 1.458rem;
+        --fs-h5: 1.367rem;
+        --fs-h6: 1.281rem;
+        --fs-subtitle: 1.200rem;
+        --fs-body: 1.125rem;
+        --fs-caption: 1.054rem;
+        --fs-label: 0.988rem;
+        --fs-tagline: 0.926rem;
+
+        --line-height: 1.6;
+    }
+}
+
+html {
+    transition: font-size 0.3s ease;
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--fs-body);
+    color: var(--cl-text);
+    line-height: var(--line-height);
+}
+.btn__name, .link__name {font-size: var(--fs-subtitle);}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: bolder;
+    line-height: 1.15;
+}
+
+#contentArticle, p {
+    font-family: var(--font-article);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+h5 { font-size: var(--fs-h5); }
+h6 { font-size: var(--fs-h6); }
+
+figcaption {
+    font-size: var(--fs-caption);
+}
+
+label, input {
+    font-size: var(--fs-label);
+}

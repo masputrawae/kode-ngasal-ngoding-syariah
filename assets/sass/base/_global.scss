@@ -3,7 +3,7 @@
 @use "../abstract/breakpoint" as bp;
 
 body {
-    background: var(--bg-gradient);
+    background: var(--bg-body);
 }
 .container {
     @include bp.min-width(md){

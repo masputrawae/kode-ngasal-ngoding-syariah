@@ -1,0 +1,27 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+@use "../abstract/breakpoint" as bp;
+.breadcrumb {
+    max-width: 100%;
+    overflow-x: auto;
+    &__list {
+        @include m.flex-justify();
+        padding: v.$size-0;
+        gap: v.$size-1;
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--cl-link);
+        font-family: var(--font-subtitle);
+        font-size: var(--fs-label);
+        white-space: nowrap;
+
+        &--active {
+            cursor: none;
+            color: var(--cl-accent);
+            font-size: var(--fs-subtitle);
+        }
+    }
+}

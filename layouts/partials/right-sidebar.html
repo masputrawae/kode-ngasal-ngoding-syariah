@@ -1,14 +1,28 @@
 <aside class="sidebar sidebar--right">
   <header class="sidebar__header">
-    <button class="btn btn--primary" id="rightClose">
-      <i class="btn__icon bi-x"></i>
-    </button>
+    <div class="sidebar__top">
+      <button class="btn btn--primary" id="rightClose">
+        <i class="btn__icon bi-x"></i>
+      </button>
+      <label for="fontAdjustment">Font Size: </label>
+      <select name="fontAdjustment" id="fontAdjustment">
+        <option value="115">115%</option>
+        <option value="110">110%</option>
+        <option value="default">Default</option>
+        <option value="90">90%</option>
+        <option value="80">80%</option>
+        <option value="70">70%</option>
+        <option value="60">60%</option>
+        <option value="50">50%</option>
+      </select>
+    </div>
+    <div class="sidebar__bottom">
+      <div class="page-title">{{ .Title }}</div>
 
-    <div class="page-title">{{ .Title }}</div>
-
-    <div class="word-count">
-      <strong>Words: </strong> <span id="wordCount">0</span> |
-      <strong>Characters: </strong> <span id="charCount">0</span>
+      <div class="word-count">
+        <strong>Words: </strong> <span id="wordCount">0</span> |
+        <strong>Characters: </strong> <span id="charCount">0</span>
+      </div>
     </div>
   </header>
   

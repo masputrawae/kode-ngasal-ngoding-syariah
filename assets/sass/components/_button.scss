@@ -3,9 +3,17 @@
 @use "../abstract/breakpoint" as bp;
 
 .btn {
-    color: var(--cl-btn)!important;
-    font-size: v.$size-4;
-    border-radius: v.$size-1;
-    text-shadow: 1px 10px 5px var(--cl-shadow);
+    color: var(--cl-btn);
+    text-shadow: 1px 5px 5px var(--cl-shadow-dark);
     background: none;
+
+    &--primary {
+        color: var(--cl-accent);
+        font-size: v.$size-5;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }

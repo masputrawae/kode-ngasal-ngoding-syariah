@@ -34,57 +34,106 @@
   --neon-purple: #aa00ff;
   --neon-pink: #ff008a;
   --neon-yellow: #ffee00;
-  
-  --cl-shadow-dark: rgba(0, 0, 0, 0.1);
+  --cl-shadow-dark: rgba(0, 0, 0, 0.2);
   --cl-shadow-light: rgba(255, 255, 255, 0.1);
 }
 
 :root[data-theme=dark] {
-  --bg-body: ;
-  --bg-header: ;
-  --bg-sidebar: ;
-  --bg-content: ;
-  --bg-footer: ;
-  --bg-gradient: ;
+  --bg-body: var(--neutral-black);
+  --bg-header: var(--neutral-dark);
+  --bg-sidebar: var(--neutral-darker-gray);
+  --bg-content: var(--neutral-dark-gray);
+  --bg-footer: var(--neutral-dark);
+  --bg-gradient: linear-gradient(135deg, var(--purple-darkest), var(--blue-dark));
   
-  --cl-accent: ;
-  --cl-text: ;
-  --cl-info: ;
-  --cl-warning: ;
-  --cl-danger: ;
-  --cl-success: ;
-  --cl-muted: ;
-  --cl-highlight: ;
+  --cl-accent: var(--purple-medium);
+  --cl-text: var(--snow-white);
+  --cl-info: var(--blue-bright);
+  --cl-warning: var(--yellow-gold);
+  --cl-danger: var(--red-bright);
+  --cl-success: var(--neon-green);
+  --cl-muted: var(--snow-gray);
+  --cl-highlight: var(--neon-purple);
   
-  --cl-card-bg: ;
-  --cl-card-bg-hover: ;
-  --cl-card-text: ;
-  --cl-card-border: ;
-  --cl-card-border-hover: ;
+  --cl-card-bg: var(--neutral-dark);
+  --cl-card-bg-hover: var(--neutral-darker-gray);
+  --cl-card-text: var(--snow-light);
+  --cl-card-border: var(--purple-darker);
+  --cl-card-border-hover: var(--purple-medium);
   
-  --cl-btn: ;
-  --cl-btn-hover: ;
-  --cl-btn-bg: ;
-  --cl-btn-bg-hover: ;
-  --cl-btn-active: ;
-  --cl-btn-focus: ;
+  --cl-btn: var(--snow-white);
+  --cl-btn-hover: var(--snow-light);
+  --cl-btn-bg: var(--purple-dark);
+  --cl-btn-bg-hover: var(--purple-medium);
+  --cl-btn-active: var(--purple-light);
+  --cl-btn-focus: var(--neon-purple);
   
-  --cl-link: ;
-  --cl-link-hover: ;
-  --cl-link-underline: ;
-  --cl-link-underline-hover: ;
-  --cl-link-active: ;
-  --cl-link-focus: ;
+  --cl-link: var(--blue-bright);
+  --cl-link-hover: var(--neon-blue);
+  --cl-link-underline: var(--blue-medium);
+  --cl-link-underline-hover: var(--neon-blue);
+  --cl-link-active: var(--blue-dark);
+  --cl-link-focus: var(--neon-blue);
   
-  --cl-blockquote: ;
-  --cl-blockquote-border: ;
-  --cl-toc-highlight: ;
-  --cl-code-inline: ;
-  --cl-code-inline-bg: ;
-  --cl-pre-code-bg: ;
-  --cl-label: ;
-  --cl-table-border: ;
-  --cl-table-header: ;
-  --cl-table-odd-bg: ;
-  --cl-table-even-bg: ;
+  --cl-blockquote: var(--snow-light);
+  --cl-blockquote-border: var(--purple-dark);
+  --cl-toc-highlight: var(--neon-purple);
+  --cl-code-inline: var(--neon-yellow);
+  --cl-code-inline-bg: var(--neutral-dark-gray);
+  --cl-pre-code-bg: var(--neutral-darker-gray);
+  --cl-label: var(--neon-green);
+  --cl-table-border: var(--neutral-gray);
+  --cl-table-header: var(--purple-dark);
+  --cl-table-odd-bg: var(--neutral-dark);
+  --cl-table-even-bg: var(--neutral-dark-gray);
+}
+
+:root[data-theme=light] {
+  --bg-body: var(--snow-white);
+  --bg-header: var(--snow-light);
+  --bg-sidebar: var(--snow-lighter);
+  --bg-content: var(--snow-medium);
+  --bg-footer: var(--snow-light);
+  --bg-gradient: linear-gradient(135deg, var(--purple-light), var(--blue-medium));
+  
+  --cl-accent: var(--purple-dark);
+  --cl-text: var(--neutral-black);
+  --cl-info: var(--blue-medium);
+  --cl-warning: var(--yellow-gold);
+  --cl-danger: var(--red-bright);
+  --cl-success: var(--neon-green);
+  --cl-muted: var(--snow-gray);
+  --cl-highlight: var(--neon-pink);
+  
+  --cl-card-bg: var(--snow-light);
+  --cl-card-bg-hover: var(--snow-lighter);
+  --cl-card-text: var(--neutral-black);
+  --cl-card-border: var(--purple-medium);
+  --cl-card-border-hover: var(--purple-dark);
+  
+  --cl-btn: var(--neutral-black);
+  --cl-btn-hover: var(--neutral-gray);
+  --cl-btn-bg: var(--purple-medium);
+  --cl-btn-bg-hover: var(--purple-dark);
+  --cl-btn-active: var(--purple-darkest);
+  --cl-btn-focus: var(--neon-purple);
+  
+  --cl-link: var(--blue-medium);
+  --cl-link-hover: var(--blue-bright);
+  --cl-link-underline: var(--blue-dark);
+  --cl-link-underline-hover: var(--neon-blue);
+  --cl-link-active: var(--blue-dark);
+  --cl-link-focus: var(--neon-blue);
+  
+  --cl-blockquote: var(--neutral-black);
+  --cl-blockquote-border: var(--purple-medium);
+  --cl-toc-highlight: var(--neon-pink);
+  --cl-code-inline: var(--neon-yellow);
+  --cl-code-inline-bg: var(--snow-lighter);
+  --cl-pre-code-bg: var(--snow-medium);
+  --cl-label: var(--neon-green);
+  --cl-table-border: var(--snow-gray);
+  --cl-table-header: var(--purple-medium);
+  --cl-table-odd-bg: var(--snow-light);
+  --cl-table-even-bg: var(--snow-lighter);
 }
