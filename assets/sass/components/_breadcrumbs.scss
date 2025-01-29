@@ -78,6 +78,9 @@
     @include bp.min-width(md){
         left: 50%;
         transform: translateX(-50%);
+        &.has-overflow{
+            margin: 0px;
+        }
 
         &__link {
             margin: v.$size-1;

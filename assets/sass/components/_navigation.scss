@@ -1,3 +1,40 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+.nav {
+    &__list {
+        list-style: none;
+        padding: v.$size-1;
+    }
+}
+.nav__list--collapse {
+    display: none;
+    list-style: none;
+    padding-left: 20px; /* Sesuaikan sesuai kebutuhan */
+  }
+  
+  .nav__list--collapse.is-visible {
+    display: block;
+  }
+  
+  .btn--collapse {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn__icon {
+    margin-right: 8px;
+  }
+
+
+// TABS MENU
+.tab-area__content {
+    display: none;
+  }
+  
+  .tab-area__content.active {
+    display: block;
+  }
+  

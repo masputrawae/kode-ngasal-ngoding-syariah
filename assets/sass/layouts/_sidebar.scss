@@ -4,6 +4,7 @@
 
 .sidebar {
     @include m.area-calculation(100%, 100vh);
+    padding: v.$size-3;
     z-index: 25;
     background: var(--bg-sidebar);
     position: fixed;
@@ -34,23 +35,13 @@
         }
     }
 
+    // BREAKPOINT
     @include bp.min-width(lg){
-        width: 20%;
-
-        // LEFT SIDEBAR
-        &--left {
-            left: 0;
-            &.open {
-                left: 0;
-            }
-        }
-
-        // RIGHT SIDEBAR
-        &--right {
-            right: 0;
-            &.open {
-                right: 0;
-            }
-        }
+        animation: unset;
+        background-color: var(--cl-overlay);
+        border-radius: v.$size-5;
+        top: v.$size-1;
+        position: sticky;
+        margin: v.$size-1;
     }
 }
