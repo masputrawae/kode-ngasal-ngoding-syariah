@@ -5,6 +5,14 @@
 body {
     background: var(--bg-body);
 }
+
+// HIDEN BUTTON IN DESKTOP
+@include bp.min-width(md){
+    #leftOpen, #rightOpen, #leftClose, #rightClose {
+        display: none;
+    }
+}
+
 .container {
     @include bp.min-width(md){
         display: grid;
@@ -14,7 +22,6 @@ body {
             "left top right"
             "left main right"
             "left bottom right";
-        gap: 0.5rem;
     
         .sidebar--left {grid-area: left;}
         .header {grid-area: top;}
@@ -23,32 +30,33 @@ body {
         .sidebar--right {grid-area: right;}
     }
 }
+
 *::-webkit-scrollbar {
     height: v.$size-1;
     width: v.$size-1;
 }
 *::-webkit-scrollbar-track {
     border-radius: v.$size-1;
-    background: var(--bg-gradient);
+    background: var(--cl-overlay);
 }
 
 *::-webkit-scrollbar-track:hover {
-    background: var(--bg-gradient);
+    background: var(--cl-btn-hover);
 }
 
 *::-webkit-scrollbar-track:active {
-    background: var(--bg-gradient);
+    background: var(--cl-btn-active);
 }
 
 *::-webkit-scrollbar-thumb {
     border-radius: v.$size-1;
-    background-color: var(--accent);
+    background-color: var(--cl-accent);
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: var(--accent);
+    background-color: var(--cl-accent);
 }
 
 *::-webkit-scrollbar-thumb:active {
-    background-color: var(--accent);
+    background-color: var(--cl-accent);
 }

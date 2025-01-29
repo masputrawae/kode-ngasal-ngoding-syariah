@@ -2,16 +2,68 @@
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
 .breadcrumb {
+    position: relative;
     max-width: 100%;
-    overflow-x: auto;
+    overflow: auto;
+    transition: all 1s ease;
+    
+    &.has-overflow{
+        border-radius: v.$size-2;
+        margin: 0px 20px;
+        border-right: 3px solid var(--cl-accent);
+        border-left: 3px solid var(--cl-accent);
+        box-shadow: 
+            inset 0px 0px 20px var(--cl-shadow);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+    &::-webkit-scrollbar-track{
+        display: none;
+    }
+
     &__list {
         @include m.flex-justify();
-        padding: v.$size-0;
-        gap: v.$size-1;
         list-style: none;
+        padding: v.$size-0;
+    }
+
+    &__item {
+        margin-right: v.$size-2;
+        padding: v.$size-1 v.$size-4;
+        border-radius: v.$size-1;
+        background-color: var(--cl-overlay);
+        border-bottom: 2px solid var(--cl-border);
+        border-top: 2px solid var(--cl-border);
+        box-shadow: 0px 0px 0px var(--cl-shadow);
+        transition: all 0.3s ease-in-out;
+
+        &:last-child {
+            border-color: var(--cl-accent);
+            box-shadow: 
+                0px 3px 10px var(--cl-shadow),
+                inset 0px 1px 5px var(--cl-shadow);
+            .breadcrumb__link {
+                color: var(--cl-accent);
+            }
+        }
+
+        &:hover {
+            border-color: var(--cl-accent);
+            box-shadow: 
+                0px 3px 10px var(--cl-shadow),
+                inset 0px 3px 5px var(--cl-shadow);
+
+            .breadcrumb__link {
+                color: var(--cl-accent);
+            }
+        }
     }
 
     &__link {
+        transition: color 0.3s ease;
+        position: relative;
         text-decoration: none;
         color: var(--cl-link);
         font-family: var(--font-subtitle);
@@ -19,9 +71,16 @@
         white-space: nowrap;
 
         &--active {
-            cursor: none;
-            color: var(--cl-accent);
-            font-size: var(--fs-subtitle);
+            pointer-events: none;
+        }
+    }
+
+    @include bp.min-width(md){
+        left: 50%;
+        transform: translateX(-50%);
+
+        &__link {
+            margin: v.$size-1;
         }
     }
 }

@@ -70,3 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const observer = new MutationObserver(updateWordCount);
   observer.observe(document.getElementById('contentArticle'), { childList: true, subtree: true, characterData: true });
 });
+
+// MENENTUKAN OVERFLOW MUNCUL, BORDER MUNCUL
+const breadcrumbElement = document.getElementById('breadcrumbElement');
+
+  function checkOverflow() {
+    if (breadcrumbElement.scrollWidth > breadcrumbElement.clientWidth || breadcrumbElement.scrollHeight > breadcrumbElement.clientHeight) {
+      breadcrumbElement.classList.add('has-overflow'); // Menambah class jika ada overflow
+    } else {
+      breadcrumbElement.classList.remove('has-overflow'); // Menghapus class jika tidak ada overflow
+    }
+  }
+
+  // Periksa overflow saat ukuran berubah
+  window.addEventListener('resize', checkOverflow);
+  checkOverflow(); // Panggil pertama kali

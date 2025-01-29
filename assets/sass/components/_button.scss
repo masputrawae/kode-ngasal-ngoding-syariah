@@ -4,8 +4,9 @@
 
 .btn {
     color: var(--cl-btn);
-    text-shadow: 1px 5px 5px var(--cl-shadow-dark);
+    text-shadow: 1px 5px 5px var(--cl-shadow);
     background: none;
+    cursor: pointer;
 
     &--primary {
         color: var(--cl-accent);
