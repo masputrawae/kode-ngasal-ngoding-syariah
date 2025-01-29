@@ -3,10 +3,8 @@
 @use "../abstract/breakpoint" as bp;
 
 .header {
+    @include m.flex-justify();
     background: var(--bg-secondary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 0.5rem;
     padding: 1rem;
     top: 0;

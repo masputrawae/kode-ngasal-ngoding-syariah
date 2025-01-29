@@ -34,56 +34,57 @@
   --neon-purple: #aa00ff;
   --neon-pink: #ff008a;
   --neon-yellow: #ffee00;
-
-  --cl-shadow: rgba(0, 0, 0, 0.5);
+  
+  --cl-shadow-dark: rgba(0, 0, 0, 0.1);
+  --cl-shadow-light: rgba(255, 255, 255, 0.1);
 }
 
 :root[data-theme=dark] {
-  --bg-body: var(--neutral-black);
-  --bg-primary: var(--neutral-dark);
-  --bg-secondary: var(--neutral-darker-gray);
-  --bg-card: var(--neutral-dark-gray);
-  --bg-btn: var(--neutral-gray);
-
-  --bg-gradient: linear-gradient(135deg, var(--neutral-dark), var(--purple-darker));
-
-  --accent: var(--neon-blue);
-
-  --cl-text: var(--snow-gray);
-  --cl-heading: var(--neon-green);
-  --cl-article: var(--snow-dark);
-
-  --cl-danger: var(--red-bright);
-  --cl-info: var(--blue-bright);
-  --cl-success: var(--neon-green);
-  --cl-warning: var(--neon-yellow);
-
-  --cl-link: var(--neon-blue);
-  --cl-btn: var(--neon-purple);
-  --cl-border: var(--purple-darker);
-}
-
-:root[data-theme=light] {
-  --bg-body: var(--snow-white);
-  --bg-primary: var(--snow-light);
-  --bg-secondary: var(--snow-medium);
-  --bg-card: var(--snow-gray);
-  --bg-btn: var(--snow-dark);
-
-  --bg-gradient: linear-gradient(135deg, var(--snow-white), var(--neon-yellow));
-
-  --accent: var(--neon-pink);
-
-  --cl-text: var(--neutral-dark);
-  --cl-heading: var(--neutral-black);
-  --cl-article: var(--neutral-gray);
-
-  --cl-danger: var(--red-bright);
-  --cl-info: var(--blue-medium);
-  --cl-success: var(--neon-green);
-  --cl-warning: var(--neon-yellow);
-
-  --cl-link: var(--neon-blue);
-  --cl-btn: var(--neon-pink);
-  --cl-border: var(--snow-dark);
+  --bg-body: ;
+  --bg-header: ;
+  --bg-sidebar: ;
+  --bg-content: ;
+  --bg-footer: ;
+  --bg-gradient: ;
+  
+  --cl-accent: ;
+  --cl-text: ;
+  --cl-info: ;
+  --cl-warning: ;
+  --cl-danger: ;
+  --cl-success: ;
+  --cl-muted: ;
+  --cl-highlight: ;
+  
+  --cl-card-bg: ;
+  --cl-card-bg-hover: ;
+  --cl-card-text: ;
+  --cl-card-border: ;
+  --cl-card-border-hover: ;
+  
+  --cl-btn: ;
+  --cl-btn-hover: ;
+  --cl-btn-bg: ;
+  --cl-btn-bg-hover: ;
+  --cl-btn-active: ;
+  --cl-btn-focus: ;
+  
+  --cl-link: ;
+  --cl-link-hover: ;
+  --cl-link-underline: ;
+  --cl-link-underline-hover: ;
+  --cl-link-active: ;
+  --cl-link-focus: ;
+  
+  --cl-blockquote: ;
+  --cl-blockquote-border: ;
+  --cl-toc-highlight: ;
+  --cl-code-inline: ;
+  --cl-code-inline-bg: ;
+  --cl-pre-code-bg: ;
+  --cl-label: ;
+  --cl-table-border: ;
+  --cl-table-header: ;
+  --cl-table-odd-bg: ;
+  --cl-table-even-bg: ;
 }

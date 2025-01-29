@@ -5,18 +5,7 @@
 .btn {
     color: var(--cl-btn)!important;
     font-size: v.$size-4;
+    border-radius: v.$size-1;
     text-shadow: 1px 10px 5px var(--cl-shadow);
-    border-radius: 10px;
     background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &__icon {
-        margin: v.$size-1;
-    }
-
-    @include bp.min-width(lg) {
-        font-size: v.$size-4;
-    }
 }

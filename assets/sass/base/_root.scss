@@ -3,9 +3,77 @@
 @use "../abstract/breakpoint" as bp;
 
 :root {
-  --font-base: ;
-  --font-article: ;
-  --font-heading: ;
-  --font-monospace: ;
-  --font-title: ;
+    --font-base: ;
+    --font-article: ;
+    --font-heading: ;
+    --font-monospace: ;
+    --font-title: ;
+    --font-subtitle: ;
+    --font-caption: ;
+    
+    --fs-large: 1.435rem;
+    --fs-medium: 1.344rem;
+    --fs-small: 1.260rem;
+    --fs-h1: 1.181rem;
+    --fs-h2: 1.107rem;
+    --fs-h3: 1.037rem;
+    --fs-h4: 0.972rem;
+    --fs-h5: 0.911rem;
+    --fs-h6: 0.854rem;
+    --fs-subtitle: 0.800rem;
+    --fs-body: 0.750rem;
+    --fs-caption: 0.703rem;
+    --fs-label: 0.659rem;
+    --fs-tagline: 0.617rem;
+  
+    @include bp.min-width(md) {
+        --fs-large: 1.674rem;
+        --fs-medium: 1.569rem;
+        --fs-small: 1.470rem;
+        --fs-h1: 1.378rem;
+        --fs-h2: 1.291rem;
+        --fs-h3: 1.210rem;
+        --fs-h4: 1.134rem;
+        --fs-h5: 1.063rem;
+        --fs-h6: 0.996rem;
+        --fs-subtitle: 0.934rem;
+        --fs-body: 0.875rem;
+        --fs-caption: 0.820rem;
+        --fs-label: 0.769rem;
+        --fs-tagline: 0.720rem;
+    }
+  
+    @include bp.min-width(lg) {
+        --fa-large: 1.913rem;
+        --fa-nedium: 1.793rem;
+        --fa-small: 1.680rem;
+        --fa-h1: 1.575rem;
+        --fa-h2: 1.476rem;
+        --fa-h3: 1.383rem;
+        --fa-h4: 1.296rem;
+        --fa-h5: 1.215rem;
+        --fa-h6: 1.138rem;
+        --fa-subtitle: 1.067rem;
+        --fa-body: 1.000rem;
+        --fa-caption: 0.937rem;
+        --fa-label: 0.878rem;
+        --fa-tagline: 0.823rem;
+    }
+  
+    @include bp.min-width(xl) {
+        --fs-large: 2.152rem;
+        --fs-medium: 2.017rem;
+        --fs-small: 1.890rem;
+        --fs-h1: 1.771rem;
+        --fs-h2: 1.660rem;
+        --fs-h3: 1.556rem;
+        --fs-h4: 1.458rem;
+        --fs-h5: 1.367rem;
+        --fs-h6: 1.281rem;
+        --fs-subtitle: 1.200rem;
+        --fs-body: 1.125rem;
+        --fs-caption: 1.054rem;
+        --fs-label: 0.988rem;
+        --fs-tagline: 0.926rem;
+    }
 }

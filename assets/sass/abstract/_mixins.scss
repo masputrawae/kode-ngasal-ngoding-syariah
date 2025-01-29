@@ -3,3 +3,17 @@
     width: $width;
     height: $height;
 }
+
+// GRID SETTING
+@mixins grid-setting($columns, $rows) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+// Flex Justify
+@mixins flex-justify($justify: space-between, $align-items: center ) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align-items;
+}
