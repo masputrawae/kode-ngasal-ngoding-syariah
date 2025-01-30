@@ -72,7 +72,7 @@
         text-decoration: none;
         color: var(--cl-link);
         font-family: var(--font-subtitle);
-        font-size: var(--fs-label);
+        font-size: v.$size-3;
         white-space: nowrap;
 
         &--active {

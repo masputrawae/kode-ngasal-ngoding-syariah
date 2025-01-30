@@ -1,13 +1,13 @@
 <aside class="sidebar sidebar--left">
   <header class="sidebar__header">
-    <a class="logo" href="{{ .Site.BaseURL }}">
-      <img class="logo__img" src="https://placehold.co/50" alt="Logo Image {{ .Site.Title }}">
-      <span class="logo__title">{{ .Site.Title }}</span>
-    </a>
-    
     <button class="btn btn--primary" id="switchTheme">
       <i class="btn__icon bi-moon"></i>
     </button>
+
+    <a class="logo" href="{{ .Site.BaseURL }}">
+      <img class="logo__img" src="https://placehold.co/50" alt="Logo Image {{ .Site.Title }}">
+      <div class="logo__title">{{ .Site.Title }}</div>
+    </a>
     
     <button class="btn btn--primary" id="leftClose">
       <i class="btn__icon bi-x"></i>
@@ -15,18 +15,20 @@
   </header>
   
   <div class="sidebar__tab">
-    <select class="tab-action" data-tabs-group="group1">
-      <option class="tab-action__option" value="filesTab">Files</option>
-      <option class="tab-action__option" value="searchTab">Search</option>
-      <option class="tab-action__option" value="categoriesTab">Categories</option>
-      <option class="tab-action__option" value="tagsTab">Tags</option>
-      <option class="tab-action__option" value="groupsTab">Groups</option>
-      <option class="tab-action__option" value="pinnedTab">Pinned</option>
-    </select>
-    
-    <button class="btn btn--primary" id="toggleCollapseAll">
-      <i class="btn__icon bi-folder2-open"></i>
-    </button>
+    <div class="sidebar__tab--column">
+      <select class="tab-action" data-tabs-group="group1">
+        <option class="tab-action__option" value="filesTab">Files</option>
+        <option class="tab-action__option" value="searchTab">Search</option>
+        <option class="tab-action__option" value="categoriesTab">Categories</option>
+        <option class="tab-action__option" value="tagsTab">Tags</option>
+        <option class="tab-action__option" value="groupsTab">Groups</option>
+        <option class="tab-action__option" value="pinnedTab">Pinned</option>
+      </select>
+      
+      <button class="btn btn--primary" id="toggleCollapseAll">
+        <i class="btn__icon bi-folder2-open"></i>
+      </button>
+    </div>
     
     <div class="tab-area">
       <div class="tab-area__content active" data-tab="filesTab">

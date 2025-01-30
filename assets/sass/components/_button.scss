@@ -5,6 +5,7 @@
 // BUTTON 
 .btn {
     color: var(--cl-btn);
+    padding: v.$size-1 v.$size-2;
     text-shadow: 1px 5px 5px var(--cl-shadow);
     background: none;
     cursor: pointer;
@@ -12,7 +13,7 @@
     // BUTTON PRIMARY 
     &--primary {
         color: var(--cl-accent);
-        font-size: v.$size-5;
+        font-size: v.$size-7;
         transition: transform 0.3s ease;
 
         &:hover {

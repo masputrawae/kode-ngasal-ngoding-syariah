@@ -1,0 +1,52 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+@use "../abstract/breakpoint" as bp;
+
+.prompt {
+    max-width: 300px;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-color: transparent;
+    background: var(--cl-overlay);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+}
+
+.prompt__header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+.prompt__icon {font-size: 2rem;}
+.prompt__title {
+    padding: 0.5rem;
+    border-bottom-right-radius: 1rem;
+}
+.prompt__title--tip {border-bottom: 2px solid var(--cl-tip);}
+.prompt__title--info {border-bottom: 2px solid var(--cl-info);}
+.prompt__title--warning {border-bottom: 2px solid var(--cl-warning);}
+.prompt__title--danger {border-bottom: 2px solid var(--cl-danger);}
+.prompt__title--error {border-bottom: 2px solid var(--cl-error);}
+
+.prompt--tip {
+    animation: animatedTip 2.5s infinite alternate;
+    color: var(--cl-tip);
+}
+.prompt--info {
+    animation: animatedInfo 2s infinite alternate;
+    color: var(--cl-info);
+}
+.prompt--warning {
+    animation: animatedWarning 1.5s infinite alternate;
+    color: var(--cl-warning);
+}
+.prompt--danger {
+    animation: animatedDanger 1s infinite alternate;
+    color: var(--cl-danger);
+}
+.prompt--error {
+    animation: animatedError 0.5s infinite alternate;
+    color: var(--cl-error);
+}

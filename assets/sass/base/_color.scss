@@ -30,11 +30,32 @@
     --cl-btn-active: #d675ff;
     --cl-btn-focus: #ff00ff;
 
-    --cl-info: #00c8ff;
-    --cl-success: #00ff7f;
-    --cl-error: #ff0040;
-    --cl-warning: #ffae00;
-    --cl-danger: #ff0033;
+    --cl-info: rgba(0, 200, 255, 1);
+    --cl-tip: rgba(0, 255, 127, 1);
+    --cl-error: rgba(255, 0, 64, 1);
+    --cl-warning: rgba(255, 174, 0, 1);
+    --cl-danger: rgba(255, 0, 51, 1);
+    
+    /* PROMPT OPACITY 0.7 */
+    --cl-opacity-info: rgba(0, 200, 255, 0.7);
+    --cl-opacity-tip: rgba(0, 255, 127, 0.7);
+    --cl-opacity-error: rgba(255, 0, 64, 0.7);
+    --cl-opacity-warning: rgba(255, 174, 0, 0.7);
+    --cl-opacity-danger: rgba(255, 0, 51, 0.7);
+    
+    /* SHADOW PROMPT 0.1 */
+    --cl-shadow-1-info: rgba(0, 200, 255, 0.1);
+    --cl-shadow-1-tip: rgba(0, 255, 127, 0.1);
+    --cl-shadow-1-error: rgba(255, 0, 64, 0.1);
+    --cl-shadow-1-warning: rgba(255, 174, 0, 0.1);
+    --cl-shadow-1-danger: rgba(255, 0, 51, 0.1);
+    
+    /* SHADOW PROMPT 0.2 */
+    --cl-shadow-2-info: rgba(0, 200, 255, 0.2);
+    --cl-shadow-2-tip: rgba(0, 255, 127, 0.2);
+    --cl-shadow-2-error: rgba(255, 0, 64, 0.2);
+    --cl-shadow-2-warning: rgba(255, 174, 0, 0.2);
+    --cl-shadow-2-danger: rgba(255, 0, 51, 0.2);
 
     --cl-shadow: rgba(255, 0, 255, 0.2);
     --cl-overlay: rgba(0, 0, 0, 0.6);
@@ -68,11 +89,32 @@
     --cl-btn-active: #339dff;
     --cl-btn-focus: #008cff;
 
-    --cl-info: #007bff;
-    --cl-success: #198754;
-    --cl-error: #dc3545;
-    --cl-warning: #fd7e14;
-    --cl-danger: #c82333;
+    --cl-info: rgba(0, 123, 255, 1);
+    --cl-tip: rgba(25, 135, 84, 1);
+    --cl-error: rgba(220, 53, 69, 1);
+    --cl-warning: rgba(253, 126, 20, 1);
+    --cl-danger: rgba(200, 35, 51, 1);
+    
+    /* PROMPT OPACITY 0.5 */
+    --cl-opacity-info: rgba(0, 123, 255, 0.5);
+    --cl-opacity-tip: rgba(25, 135, 84, 0.5);
+    --cl-opacity-error: rgba(220, 53, 69, 0.5);
+    --cl-opacity-warning: rgba(253, 126, 20, 0.5);
+    --cl-opacity-danger: rgba(200, 35, 51, 0.5);
+    
+    /* SHADOW PROMPT 0.1 */
+    --cl-shadow-1-info: rgba(0, 123, 255, 0.1);
+    --cl-shadow-1-tip: rgba(25, 135, 84, 0.1);
+    --cl-shadow-1-error: rgba(220, 53, 69, 0.1);
+    --cl-shadow-1-warning: rgba(253, 126, 20, 0.1);
+    --cl-shadow-1-danger: rgba(200, 35, 51, 0.1);
+    
+    /* SHADOW PROMPT 0.2 */
+    --cl-shadow-2-info: rgba(0, 123, 255, 0.2);
+    --cl-shadow-2-tip: rgba(25, 135, 84, 0.2);
+    --cl-shadow-2-error: rgba(220, 53, 69, 0.2);
+    --cl-shadow-2-warning: rgba(253, 126, 20, 0.2);
+    --cl-shadow-2-danger: rgba(200, 35, 51, 0.2);
 
     --cl-shadow: rgba(0, 86, 210, 0.2);
     --cl-overlay: rgba(255, 255, 255, 0.6);
