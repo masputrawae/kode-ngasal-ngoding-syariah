@@ -1,12 +1,15 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+// BREADCRUMBS
 .breadcrumb {
     position: relative;
     max-width: 100%;
     overflow: auto;
     transition: all 1s ease;
     
+    // BREADCRUMBS OVERFLOW ACTIVE 
     &.has-overflow{
         border-radius: v.$size-2;
         margin: 0px 20px;
@@ -16,19 +19,19 @@
             inset 0px 0px 20px var(--cl-shadow);
     }
 
-    &::-webkit-scrollbar-thumb {
-        display: none;
-    }
-    &::-webkit-scrollbar-track{
+    // SCROLL BAR
+    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track {
         display: none;
     }
 
+    // BREADCRUMBS LIST
     &__list {
         @include m.flex-justify();
         list-style: none;
         padding: v.$size-0;
     }
 
+    // BREADCRUMBS ITEM
     &__item {
         margin-right: v.$size-2;
         padding: v.$size-1 v.$size-4;
@@ -44,6 +47,7 @@
             box-shadow: 
                 0px 3px 10px var(--cl-shadow),
                 inset 0px 1px 5px var(--cl-shadow);
+                
             .breadcrumb__link {
                 color: var(--cl-accent);
             }
@@ -61,6 +65,7 @@
         }
     }
 
+    // BREADCRUMBS LINK
     &__link {
         transition: color 0.3s ease;
         position: relative;
@@ -74,10 +79,12 @@
             pointer-events: none;
         }
     }
-
-    @include bp.min-width(md){
+    
+    // BREAKPOINT MIN-WIDTH (992px)
+    @include bp.min-width(lg){
         left: 50%;
         transform: translateX(-50%);
+        
         &.has-overflow{
             margin: 0px;
         }

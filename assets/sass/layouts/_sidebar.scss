@@ -2,6 +2,7 @@
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
 
+// SIDEBAR
 .sidebar {
     @include m.area-calculation(100%, 100vh);
     padding: v.$size-3;
@@ -35,8 +36,8 @@
         }
     }
 
-    // BREAKPOINT
-    @include bp.min-width(lg){
+    // BREAKPOINT MIN-WIDTH (992px)
+    @include bp.min-width(lg) {
         animation: unset;
         background-color: var(--cl-overlay);
         border-radius: v.$size-5;

@@ -2,12 +2,14 @@
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
 
+// BUTTON 
 .btn {
     color: var(--cl-btn);
     text-shadow: 1px 5px 5px var(--cl-shadow);
     background: none;
     cursor: pointer;
 
+    // BUTTON PRIMARY 
     &--primary {
         color: var(--cl-accent);
         font-size: v.$size-5;

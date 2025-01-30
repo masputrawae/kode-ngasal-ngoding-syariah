@@ -3,16 +3,18 @@
 @use "../abstract/breakpoint" as bp;
 
 .header {
+    @include m.flex-justify();
     z-index: 20;
     margin: v.$size-0 v.$size-2;
-    @include m.flex-justify();
     background: var(--bg-header);
     padding: v.$size-2;
     top: 0;
     position: sticky;
-    border-bottom: 3px solid var(--cl-accent);
-    border-right: 1px solid var(--cl-accent);
-    border-left: 1px solid var(--cl-accent);
+    border-bottom: 3px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    
+    border-color: var(--cl-accent);
     border-bottom-left-radius: v.$size-2;
     border-bottom-right-radius: v.$size-2;
 
