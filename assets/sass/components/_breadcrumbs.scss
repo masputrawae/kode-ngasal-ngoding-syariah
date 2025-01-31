@@ -1,3 +1,38 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+.breadcrumb {
+    position: relative;
+    top: -0.75rem;
+    @include m.flex-justify(center, center);
+    
+    &__list {
+        @include m.flex-justify(space-between, center);
+        @include m.overflow(auto, hidden);
+        max-width: 60%;
+        border-left: v.$border-1 solid;
+        border-right: v.$border-1 solid;
+        border-color: var(--cl-border);
+        padding: v.$size-0 v.$size-2;
+        border-radius: v.$size-1;
+        list-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__item {
+        padding: v.$size-0;
+    }
+
+    &__link {
+        color: var(--cl-link);
+        white-space: nowrap;
+        text-decoration: none;
+    }
+    
+    @include bp.min-width(lg) {top: -1rem;}
+    @include bp.min-width(xxl) {top: -1.75rem;}
+}

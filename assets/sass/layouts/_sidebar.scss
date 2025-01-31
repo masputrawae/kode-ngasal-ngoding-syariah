@@ -1,3 +1,62 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+// SIDEBAR
+.sidebar {
+    @include m.area-calculation(100%, 100%);
+    @include m.overflow(hidden, auto); // X:hidden, Y:auto
+    position: fixed;
+    background-color: var(--bg-sidebar);
+    top: 0;
+    transition: all 0.3s ease-out;
+    z-index: 50;
+
+    // SIDEBAR LEFT
+    &--left {
+        left: -100%;
+
+        &.open{
+            left: 0%;
+        }
+    }
+
+    // SIDEBAR RIGHT
+    &--right {
+        right: -100%;
+
+        &.open{
+            right: 0%;
+        }
+    }
+
+    // BREAK POINT
+    @include bp.min-width(lg){
+        position: relative;
+        width: 20%;
+        min-width: 20%;
+
+        // SIDEBAR LEFT
+        &--left {
+            left: 0;
+            
+
+            &.open{
+                min-width: -0%;
+                width: 0%;
+                left: -20%;
+            }
+        }
+
+        // SIDEBAR RIGHT
+        &--right {
+            right: 0;
+
+            &.open{
+                min-width: -0%;
+                width: 0%;
+                right: -20%;
+            }
+        }
+    }
+}

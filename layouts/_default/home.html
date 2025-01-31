@@ -4,10 +4,6 @@
   <header class="page__header">
     <h1 class="page__title">{{ .Title }}</h1>
     <p class="page__subtitle">{{ .Params.subtitle }}</p>
-    <nav class="nav">
-      <div class="nav__label">Folder Structure</div>
-      {{ template "recursive_folder_list" . }}
-    </nav>
   </header>
 
   <section class="page__article" id="contentArticle">

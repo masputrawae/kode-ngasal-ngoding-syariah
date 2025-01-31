@@ -1,3 +1,47 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+.header {
+    background-color: var(--bg-header);
+    max-height: 100%;
+    padding: v.$size-2;
+    border-bottom: v.$border-2 solid;
+    border-left: v.$border-2 solid;
+    border-right: v.$border-2 solid;
+    border-color: var(--cl-border);
+    border-bottom-right-radius: v.$size-2;
+    border-bottom-left-radius: v.$size-2;
+    box-shadow: 
+        0px 10px 10px var(--cl-shadow);
+    z-index: 10;
+
+    &__top {
+        @include m.flex-justify(space-between, center);
+
+        .site-title {
+            color: var(--cl-accent);
+            font-family: var(--font-title);
+            text-decoration: none;
+            font-size: var(--fs-h3);
+            text-shadow: 
+                0px 0px 20px var(--cl-shadow);
+        }
+
+        .btn {
+            transform: translateY(10%);
+            z-index: 15;
+
+            @include bp.min-width(lg){
+                padding: v.$size-0 v.$size-5;
+                font-size: var(--fs-h1);
+                transform: translateY(30%);
+            }
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        margin-bottom: v.$size-1;
+    }
+}

@@ -1,3 +1,51 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
+
+body {
+    @include m.area-calculation(100vw, 100vh);
+    @include m.overflow(hidden, hidden); // X:hidden, Y:hidden
+    color: var(--cl-text);
+    background-color: var(--bg-body);
+}
+
+// LAYOUT
+.layout {
+    @include m.area-calculation(100%, 100%);
+
+    &__top {
+        position: sticky;
+        top: 0;
+        height: 10%;
+    }
+
+    &__main {
+        height: 90%;
+
+        .main-page {
+            @include m.overflow(hidden, auto); // X:hidden, Y:auto
+            height: 100%;
+        }
+        // SIDEBAR SETTING IN: "sass/layout/_sidebar.scss"
+    }
+
+    @include bp.min-width(lg){
+        &__top {
+            height: 15%;
+        }
+
+        &__main {
+            display: flex;
+            justify-content: center;
+            height: 85%;
+
+            .main-page {
+                height: 100%;
+                min-width: 60%;
+                max-width: 100%;
+                flex-grow: 1;
+            }
+            // SIDEBAR SETTING IN: "sass/layout/_sidebar.scss"
+        }
+    }
+}

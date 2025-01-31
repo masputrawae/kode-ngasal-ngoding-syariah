@@ -103,6 +103,25 @@
 
         --line-height: 1.6;
     }
+
+    @include bp.min-width(xxl) {
+        --fs-large: 4.059rem;
+        --fs-medium: 3.608rem;
+        --fs-small: 3.207rem;
+        --fs-h1: 2.851rem;
+        --fs-h2: 2.534rem;
+        --fs-h3: 2.253rem;
+        --fs-h4: 2.002rem;
+        --fs-h5: 1.780rem;
+        --fs-h6: 1.582rem;
+        --fs-subtitle: 1.406rem;
+        --fs-body: 1.250rem;
+        --fs-caption: 1.111rem;
+        --fs-label: 0.988rem;
+        --fs-tagline: 0.878rem;
+
+        --line-height: 1.7;
+    }
 }
 
 html {
