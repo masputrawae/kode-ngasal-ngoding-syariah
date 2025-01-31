@@ -1,23 +1,17 @@
 <header class="header">
-  
-  <div class="header__left">
-    <button class="btn btn--primary" id="leftOpen"> 
-      <i class="btn__icon bi-layout-text-window-reverse"></i>
+  <div class="header__top">
+    <button class="btn btn--icon" id="leftOpen"> 
+      <i class="bi-layout-text-window-reverse"></i>
+    </button>
+    
+    <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    
+    <button class="btn btn--icon" id="rightOpen">
+      <i class="bi-book"></i>
     </button>
   </div>
-  
-  <div class="header__main">
-    <a class="site-title" href="">{{ .Site.Title }}</a>
-  </div>
-  
-  <div class="header__right">
-    <button class="btn btn--primary" id="rightOpen">
-      <i class="btn__icon bi-book"></i>
-    </button>
-  </div>
-  
+
   <div class="header__bottom">
     {{ partial "elements/breadcrumbs.html" . }}
   </div>
-  
 </header>

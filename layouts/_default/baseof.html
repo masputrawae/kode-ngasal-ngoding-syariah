@@ -1,41 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ or .Site.Language.LanguageCode .Site.Language.Lang }}" data-theme="dark">
 {{ partial "head.html" . }}
-<body class="container">
-  
-  <!-- START : LAYOUT -->
+<body>
   <div class="layout">
+
     <div class="layout__top">
       {{ partial "header.html" . }}
     </div>
-    
-    <!-- START : LAYOUT MAIN -->
+
     <div class="layout__main">
-      
-      <!-- START : SIDEBAR LEFT -->
       <aside class="sidebar sidebar--left">
         {{ partial "left-sidebar.html" . }}
       </aside>
-      <!-- END : SIDEBAR LEFT -->
-      
-      <!-- START : MAIN PAGE -->
       <div class="main-page">
         <main>{{ block "main" . }}{{ end }}</main>
         <footer>{{ partial "footer.html" . }}</footer>
       </div>
-      <!-- END : MAIN PAGE -->
-      
-      <!-- START : SIDEBAR RIGHT -->
       <aside class="sidebar sidebar--right">
         {{ partial "right-sidebar.html" . }}
       </aside>
-      <!-- END : SIDEBAR RIGHT -->
-      
     </div>
-    <!-- END : LAYOUT MAIN -->
-    
+
   </div>
-  <!-- END : LAYOUT -->
   {{ partial "script.html" . }}
 </body>
 </html>

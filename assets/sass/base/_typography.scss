@@ -4,7 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..700&family=Orbitron:wght@400..700&family=Barlow:wght@300..700&family=Saira+Condensed:wght@400..700&display=swap');
 :root {
-    /* Font Variables */
     --font-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-article: "Inter", sans-serif;
     --font-heading: "Space Grotesk", sans-serif;
@@ -13,22 +12,40 @@
     --font-subtitle: "Barlow", sans-serif;
     --font-caption: "Saira Condensed", sans-serif;
 
-    --fs-large: 2.435rem;
-    --fs-medium: 2.165rem;
-    --fs-small: 1.924rem;
-    --fs-h1: 1.711rem;
-    --fs-h2: 1.520rem;
-    --fs-h3: 1.352rem;
-    --fs-h4: 1.201rem;
-    --fs-h5: 1.068rem;
-    --fs-h6: 0.949rem;
-    --fs-subtitle: 0.844rem;
-    --fs-body: 0.750rem;
-    --fs-caption: 0.667rem;
-    --fs-label: 0.593rem;
-    --fs-tagline: 0.527rem;
+    --fs-large: 2.030rem;
+    --fs-medium: 1.804rem;
+    --fs-small: 1.604rem;
+    --fs-h1: 1.425rem;
+    --fs-h2: 1.267rem;
+    --fs-h3: 1.126rem;
+    --fs-h4: 1.001rem;
+    --fs-h5: 0.890rem;
+    --fs-h6: 0.791rem;
+    --fs-subtitle: 0.703rem;
+    --fs-body: 0.625rem;
+    --fs-caption: 0.556rem;
+    --fs-label: 0.494rem;
+    --fs-tagline: 0.439rem;
 
-    --line-height: 1.3;
+    --line-height: 1.2;
+    @include bp.min-width(sm) {
+        --fs-large: 2.435rem;
+        --fs-medium: 2.165rem;
+        --fs-small: 1.924rem;
+        --fs-h1: 1.711rem;
+        --fs-h2: 1.520rem;
+        --fs-h3: 1.352rem;
+        --fs-h4: 1.201rem;
+        --fs-h5: 1.068rem;
+        --fs-h6: 0.949rem;
+        --fs-subtitle: 0.844rem;
+        --fs-body: 0.750rem;
+        --fs-caption: 0.667rem;
+        --fs-label: 0.593rem;
+        --fs-tagline: 0.527rem;
+
+        --line-height: 1.3;
+    }
 
     @include bp.min-width(md) {
         --fs-large: 2.841rem;
@@ -99,11 +116,12 @@ body {
     color: var(--cl-text);
     line-height: var(--line-height);
 }
-.btn__name, .link__name {font-size: var(--fs-subtitle);}
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: bolder;
     line-height: 1.15;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 #contentArticle, p {

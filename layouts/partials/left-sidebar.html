@@ -1,74 +1,55 @@
-<aside class="sidebar sidebar--left">
-  <header class="sidebar__header">
-    <button class="btn btn--primary" id="switchTheme">
-      <i class="btn__icon bi-moon"></i>
-    </button>
+<header class="sidebar__header">
+  <button class="btn btn--icon" id="switchTheme">
+    <i class="bi-moon"></i>
+  </button>
 
-    <a class="logo" href="{{ .Site.BaseURL }}">
-      <img class="logo__img" src="https://placehold.co/50" alt="Logo Image {{ .Site.Title }}">
-      <div class="logo__title">{{ .Site.Title }}</div>
-    </a>
-    
-    <button class="btn btn--primary" id="leftClose">
-      <i class="btn__icon bi-x"></i>
+  <a class="sidebar__title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+
+  <button class="btn btn--icon" id="leftClose">
+    <i class="bi-x"></i>
+  </button>
+</header>
+
+<div class="sidebar__pane">
+  <div class="sidebar__pane--column">
+    <select class="tab-action" data-tabs-group="group1">
+      <option value="filesTab">Files</option>
+      <option value="searchTab">Search</option>
+      <option value="categoriesTab">Categories</option>
+      <option value="tagsTab">Tags</option>
+      <option value="groupsTab">Groups</option>
+      <option value="pinnedTab">Pinned</option>
+    </select>
+
+    <button class="btn btn--icon" id="toggleCollapseAll">
+      <i class="bi-folder2-open"></i>
     </button>
-  </header>
-  
-  <div class="sidebar__tab">
-    <div class="sidebar__tab--column">
-      <select class="tab-action" data-tabs-group="group1">
-        <option class="tab-action__option" value="filesTab">Files</option>
-        <option class="tab-action__option" value="searchTab">Search</option>
-        <option class="tab-action__option" value="categoriesTab">Categories</option>
-        <option class="tab-action__option" value="tagsTab">Tags</option>
-        <option class="tab-action__option" value="groupsTab">Groups</option>
-        <option class="tab-action__option" value="pinnedTab">Pinned</option>
-      </select>
-      
-      <button class="btn btn--primary" id="toggleCollapseAll">
-        <i class="btn__icon bi-folder2-open"></i>
-      </button>
+  </div>
+
+  <div class="tab-area">
+    <div class="tab-area__content tab-area__content--active" data-tab="filesTab">
+      <nav class="nav">
+        <ul class="nav__list">
+          {{ template "collapsible_nav" .Site.Home }}
+        </ul>
+      </nav>
     </div>
     
-    <div class="tab-area">
-      <div class="tab-area__content active" data-tab="filesTab">
-        <nav class="nav">
-          <ul class="nav__list">
-            {{ template "nav_list" .Site.Home }}
-          </ul>
-        </nav>
-      </div>
-      
-      <div class="tab-area__content" data-tab="searchTab">
-        <div class="search">
-          <form class="search__form" id="search" onsubmit="return handleSearch(event);">
-            <input class="search__input" type="text" id="search-input" name="query" placeholder="🔍 Ketik untuk mencari">
-            <button class="btn btn--search" type="submit">
-              <i class="btn__icon bi-search"></i>
-            </button>
-          </form>
-
-          <strong class="search__title" id="search-title"></strong>
-          <ul class="search__list" id="results">
-            <li class="search__item">
-              Hasil pencarian akan ditampilkan di sini.
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="tab-area__content" data-tab="categoriesTab">
-        {{ template "categories_list" . }}
-      </div>
-      <div class="tab-area__content" data-tab="tagsTab">
-        {{ template "tags_list" . }}
-      </div>
-      <div class="tab-area__content" data-tab="groupsTab">
-        {{ template "groups_list" . }}
-      </div>
-      <div class="tab-area__content" data-tab="pinnedTab">
-        {{ template "pinned_list" . }}
-      </div>
+    <div class="tab-area__content" data-tab="searchTab">
+      {{ partial "elements/search-bar.html" . }}
+    </div>
+    
+    <div class="tab-area__content" data-tab="categoriesTab">
+      {{ template "categories_list" . }}
+    </div>
+    <div class="tab-area__content" data-tab="tagsTab">
+      {{ template "tags_list" . }}
+    </div>
+    <div class="tab-area__content" data-tab="groupsTab">
+      {{ template "groups_list" . }}
+    </div>
+    <div class="tab-area__content" data-tab="pinnedTab">
+      {{ template "pinned" . }}
     </div>
   </div>
-</aside>
+</div>

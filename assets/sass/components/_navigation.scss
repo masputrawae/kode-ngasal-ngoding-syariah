@@ -1,29 +1,3 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../abstract/breakpoint" as bp;
-
-.nav {
-    &__list {
-        list-style: none;
-        padding: v.$size-1;
-        
-        &--collapse {
-            display: none;
-            list-style: none;
-            padding-left: 20px;
-            
-            &.is-visible {
-                display: block;
-            }
-        }
-    }
-}
-
-// TABS MENU
-.tab-area__content {
-    display: none;
-    
-    &.active {
-        display: block;
-    }
-}
