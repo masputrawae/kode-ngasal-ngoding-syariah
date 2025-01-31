@@ -1,0 +1,17 @@
+<nav class="breadcrumb" id="breadcrumbElement">
+  <ul class="breadcrumb__list">
+  {{ range .Ancestors.Reverse }}
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="{{ .RelPermalink }}">
+        <span>{{ .Title }}</span>
+        <i class="bi-chevron-right"></i>
+      </a>
+    </li>
+  {{ end }}
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="{{ .RelPermalink }}">
+        <span>{{ .Title }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>

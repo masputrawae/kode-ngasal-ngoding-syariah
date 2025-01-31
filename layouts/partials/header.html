@@ -1,29 +1,23 @@
 <header class="header">
   
-  <button class="btn btn--primary" id="leftOpen"> 
-    <i class="btn__icon bi-layout-text-window-reverse"></i>
-  </button>
-
-  <nav class="breadcrumb" id="breadcrumbElement">
-    <ul class="breadcrumb__list">
-      {{ range .Ancestors.Reverse }}
-      <li class="breadcrumb__item">
-        <a class="breadcrumb__link" href="{{ .RelPermalink }}">
-          <span class="breadcrumb__link-name">{{ .Title }}</span>
-          <i class="breadcrumb__link-icon bi-chevron-right"></i>
-        </a>
-      </li>
-      {{ end }}
-      <li class="breadcrumb__item">
-        <a class="breadcrumb__link breadcrumb__link--active" href="{{ .RelPermalink }}">
-          <span class="breadcrumb__link-name">{{ .Title }}</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <button class="btn btn--primary" id="rightOpen">
-    <i class="btn__icon bi-book"></i>
-  </button>
+  <div class="header__left">
+    <button class="btn btn--primary" id="leftOpen"> 
+      <i class="btn__icon bi-layout-text-window-reverse"></i>
+    </button>
+  </div>
+  
+  <div class="header__main">
+    <a class="site-title" href="">{{ .Site.Title }}</a>
+  </div>
+  
+  <div class="header__right">
+    <button class="btn btn--primary" id="rightOpen">
+      <i class="btn__icon bi-book"></i>
+    </button>
+  </div>
+  
+  <div class="header__bottom">
+    {{ partial "elements/breadcrumbs.html" . }}
+  </div>
   
 </header>
