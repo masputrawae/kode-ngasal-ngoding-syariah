@@ -1,0 +1,34 @@
+---
+import '../styles/global.css'
+
+import Headed from '../components/Headed.astro'
+import Sidebar from '../components/Sidebar.astro'
+import MobileTopBar from '../components/MobileTopBar.astro'
+
+const { props } = Astro.props
+---
+
+<html
+	lang="id"
+	class="bg-radial-[at_25%_25%] from-neutral-800 to-neutral-950 to-75% font-['Noto_Sans',sans-serif] text-neutral-300"
+>
+	<Headed meta={props} />
+	<body class="lg:grid lg:grid-cols-[320px_minmax(0,1fr)]">
+		<MobileTopBar />
+		<Sidebar />
+		<div class="px-5 max-w-full md:px-10">
+			<slot />
+		</div>
+	</body>
+</html>
+
+<script is:inline>
+	function sidebarOpen() {
+		document.getElementById('sidebar').classList.remove('-translate-x-full', 'invisible')
+		document.getElementById('overlay').classList.remove('opacity-0', 'invisible')
+	}
+	function sidebarClose() {
+		document.getElementById('sidebar').classList.add('-translate-x-full', 'invisible')
+		document.getElementById('overlay').classList.add('opacity-0', 'invisible')
+	}
+</script>
