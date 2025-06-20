@@ -1,0 +1,14 @@
+---
+import { SITE_CONFIG } from '../SiteConfig'
+---
+
+<footer class="flex flex-col items-center text-xs border-t border-dashed border-t-neutral-700 m-auto md:flex-row md:justify-between">
+	<p>
+		© {new Date().getFullYear()} · {SITE_CONFIG.author} · All rights reserved. | <a
+			href="/disclaimer/">Disclaimer</a>
+	</p>
+	<p>
+		Made with ❤️ using <a href="https://astro.build/" target="_blank" rel="noopener noreferrer"
+			>{Astro.generator}</a>
+	</p>
+</footer>

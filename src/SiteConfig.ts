@@ -29,7 +29,7 @@ export const SITE_CONFIG: SiteConfig = {
 	title: 'MasPutraWae',
 	author: 'Putra Jaya',
 	logo: '/logo.webp',
-	thumbnail: 'https://placehold.co/600x400',
+	thumbnail: '/default-thumbnail.webp',
 	tagline: 'Manusia Biasa',
 	description: 'Consectetur incididunt velit commodo id voluptate elit.',
 	keyword: ['Portfolio', 'Blog', 'About Me', 'Projects'],
@@ -45,7 +45,8 @@ export const MENUS: MenuConfig = {
 		{ label: 'Home', url: '/', icon: 'icon-home' },
 		{ label: 'About', url: '/about/', icon: 'icon-person-circle' },
 		{ label: 'Projects', url: '/projects/', icon: 'icon-wrench-screwdriver' },
-		{ label: 'Notes', url: '/notes/', icon: 'icon-pencil-square' }
+		{ label: 'Notes', url: '/notes/', icon: 'icon-pencil-square' },
+		// { label: 'Tags', url: '/tags/', icon: 'icon-tag' }
 	],
 	footer: [
 		{ label: 'Disclaimer', url: '/disclaimer/' },

@@ -4,15 +4,10 @@ import { defineConfig } from 'astro/config'
 import { brainDbAstro, generateSlug } from '@braindb/astro'
 
 import tailwindcss from '@tailwindcss/vite'
-
 import mdx from '@astrojs/mdx'
-
 import icon from 'astro-icon'
-
 import netlify from '@astrojs/netlify'
-
 import sitemap from '@astrojs/sitemap'
-
 import react from '@astrojs/react'
 
 // https://astro.build/config
