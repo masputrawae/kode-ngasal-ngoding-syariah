@@ -5,6 +5,7 @@ const { items } = Astro.props
 ---
 
 <nav class="flex flex-col gap-2">
+  <h2 class="text-2xl text-white pb-3 border-b border-b-neutral-700">All Notes</h2>
 	{
 		items.map((item: any) => {
 			const href = `/${item.id}/`
@@ -15,14 +16,12 @@ const { items } = Astro.props
 			const featured = item.data.featured
 
 			return (
-				<a href={href} class="grid border-t border-t-neutral-700 py-5 group">
-					<span class="text-xl text-white flex items-center gap-2 group-hover:text-amber-500">
+				<a href={href} class="grid py-3 px-6 border border-neutral-700 rounded-lg shadow-sm shadow-black group">
+					<strong class="flex gap-1 items-center group-hover:text-amber-500">
 						<span>{title}</span>
-						{featured && (
-							<Icon name="icon-sparkles" class="size-5 text-amber-500" />
-						)}
-					</span>
-					<time datetime={timeIso} class="text-sm text-neutral-400">
+						{featured && <Icon name="icon-sparkles" class="size-4 text-amber-500" />}
+					</strong>
+					<time datetime={timeIso} class="text-neutral-400 text-sm">
 						<span>Create On: </span>
 						<span class="hidden lg:inline">{fullDate}</span>
 						<span class="lg:hidden">{simpleDate}</span>

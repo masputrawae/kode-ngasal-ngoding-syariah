@@ -5,10 +5,14 @@ import { brainDbAstro, generateSlug } from '@braindb/astro'
 import tailwindcss from '@tailwindcss/vite'
 import icon from 'astro-icon'
 import mdx from '@astrojs/mdx'
+import pagefind from "astro-pagefind";
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://masputrawae.github.io',
+  build: {
+    format: "file",
+  },
 	image: {
 		domains: ['astro.build'],
 		remotePatterns: [{ protocol: 'https' }]
@@ -29,6 +33,7 @@ export default defineConfig({
 			}
 		}),
 		icon(),
-		mdx()
+		mdx(),
+    pagefind()
 	]
 })

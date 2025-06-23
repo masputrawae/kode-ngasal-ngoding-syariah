@@ -51,7 +51,7 @@ import Sidebar from '../components/Sidebar.astro'
 
 	<body class="grid bg-neutral-900 text-neutral-300 lg:grid-cols-[320px_minmax(0,1fr)]">
 		<Sidebar />
-		<div class="mx-auto w-full max-w-full xl:max-w-6xl">
+		<div class="mx-auto w-full max-w-full overflow-x-hidden xl:max-w-6xl">
 			<MobileTopBar />
 			<slot />
 			<Footer />

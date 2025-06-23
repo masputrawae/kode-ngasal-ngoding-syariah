@@ -58,23 +58,5 @@
 		"title": "Linux Fundamentals",
 		"thumbnail": "https://picsum.photos/1920/1080?10",
 		"description": "Dasar penggunaan Linux, command line, manajemen sistem, dan tools penting dalam ekosistem Linux."
-	},
-	{
-		"id": "Web Development",
-		"title": "Web Development",
-		"thumbnail": "https://picsum.photos/1920/1080?11",
-		"description": "Catatan seputar pengembangan web, termasuk HTML, CSS, JavaScript, dan praktik terbaik front-end maupun back-end."
-	},
-	{
-		"id": "Uncategorized",
-		"title": "Uncategorized",
-		"thumbnail": "https://picsum.photos/1920/1080?12",
-		"description": "Catatan yang belum dikategorikan. Bersifat sementara sebelum dipindahkan ke kategori yang sesuai."
-	},
-	{
-		"id": "Assignments and Practices",
-		"title": "Assignments and Practices",
-		"thumbnail": "https://picsum.photos/1920/1080?13",
-		"description": "Kumpulan Proyek ataupun Praktik dalam belajar pemrograman"
 	}
 ]
