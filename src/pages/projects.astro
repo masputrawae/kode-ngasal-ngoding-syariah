@@ -1,0 +1,42 @@
+---
+// IMPORTER
+import Prose from '../components/Prose.astro'
+import ProjectCards from '../components/ProjectCards.astro'
+import Layout from '../layouts/Layout.astro'
+
+import { sortCollection } from '../utils/posts'
+
+// GET PROJECTS
+const allProjects = await sortCollection('Projects')
+---
+
+<Layout>
+	<div class="px-5 pt-10 lg:px-10">
+		<header>
+			<Prose>
+				<h1>Proyek-proyek Saya</h1>
+				<p>
+					Berikut adalah beberapa proyek kecil yang saya buat selama proses belajar pemrograman
+					secara otodidak. Tidak ada yang sempurna, tapi setiap baris kodenya adalah bagian dari
+					perjalanan saya memahami dunia teknologi.
+				</p>
+
+				<p>
+					Saya membuat proyek-proyek ini untuk bersenang-senang, bereksperimen, dan mengasah
+					kemampuan. Kadang iseng, kadang serius—tapi semuanya adalah langkah kecil yang berarti.
+				</p>
+
+				<hr />
+
+				<p>
+					Catatan: Semua proyek di sini masih dalam tahap belajar. Kalau ada yang menarik atau ingin
+					memberi masukan, saya akan sangat menghargainya!
+				</p>
+			</Prose>
+		</header>
+
+		<main class="mt-14">
+			<ProjectCards items={allProjects} />
+		</main>
+	</div>
+</Layout>

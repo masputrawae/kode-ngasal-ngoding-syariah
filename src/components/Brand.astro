@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+import { SITE_PARAMS } from '../siteConfig'
+const logo = SITE_PARAMS.logo
+const title = SITE_PARAMS.title
+const tagline = SITE_PARAMS.tagline
+---
+
+<figure class="flex items-center gap-2 cursor-pointer">
+	<Image
+		src={logo}
+		alt={title}
+		width={50}
+		height={50}
+		layout="full-width"
+    loading="eager"
+		class="rounded-full border-2 border-neutral-900 shadow-sm shadow-black"
+	/>
+
+	<figcaption class="grid text-shadow-black text-shadow-md">
+		<strong class="text-lg text-white">{title}</strong>
+		<em class="text-xs not-italic">{tagline}</em>
+	</figcaption>
+</figure>

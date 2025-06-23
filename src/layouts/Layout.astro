@@ -1,0 +1,60 @@
+---
+import '../styles/global.css'
+
+import Footer from '../components/Footer.astro'
+import MobileTopBar from '../components/MobileTopBar.astro'
+import Sidebar from '../components/Sidebar.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Document</title>
+
+		<style is:inline>
+			@font-face {
+				font-display: swap;
+				font-family: 'Noto Sans';
+				font-style: normal;
+				font-weight: 400;
+				src: url('/fonts/noto-sans-v39-latin-regular.woff2') format('woff2');
+			}
+			@font-face {
+				font-display: swap;
+				font-family: 'Noto Sans';
+				font-style: normal;
+				font-weight: 700;
+				src: url('/fonts/noto-sans-v39-latin-700.woff2') format('woff2');
+			}
+			@font-face {
+				font-display: swap;
+				font-family: 'Fira Code';
+				font-style: normal;
+				font-weight: 400;
+				src: url('/fonts/fira-code-v26-latin-regular.woff2') format('woff2');
+			}
+		</style>
+
+		<script is:inline>
+			function sidebarOpen() {
+				document.getElementById('sidebar').classList.remove('-translate-x-full', 'invisible')
+				document.getElementById('overlay').classList.remove('opacity-0', 'invisible')
+			}
+			function sidebarClose() {
+				document.getElementById('sidebar').classList.add('-translate-x-full', 'invisible')
+				document.getElementById('overlay').classList.add('opacity-0', 'invisible')
+			}
+		</script>
+	</head>
+
+	<body class="grid bg-neutral-900 text-neutral-300 lg:grid-cols-[320px_minmax(0,1fr)]">
+		<Sidebar />
+		<div class="mx-auto w-full max-w-full xl:max-w-6xl">
+			<MobileTopBar />
+			<slot />
+			<Footer />
+		</div>
+	</body>
+</html>

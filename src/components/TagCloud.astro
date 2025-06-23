@@ -1,0 +1,26 @@
+---
+import { tagCloud } from '../utils/posts'
+import { titleWord } from '../utils/titleWord'
+import Badge from '../components/Badge.astro'
+import { Icon } from 'astro-icon/components'
+
+const tags = await tagCloud()
+---
+
+<nav class="flex flex-wrap items-center gap-2">
+	{
+		tags.map(tag => {
+			const name = titleWord(tag.tag)
+			const count = tag.count
+			const slug = `/tag/${tag.tag}/`
+
+			return (
+				<Badge href={slug}>
+					{count >= 5 && <Icon name="icon-sparkles" class="size-4 text-amber-500" />}
+					<span>{name}</span>
+					<span>{count}</span>
+				</Badge>
+			)
+		})
+	}
+</nav>

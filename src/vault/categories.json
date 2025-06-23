@@ -1,0 +1,80 @@
+[
+	{
+		"id": "Thinking",
+		"title": "Thinking",
+		"thumbnail": "https://picsum.photos/1920/1080?1",
+		"description": "Catatan refleksi, pemikiran mendalam, dan ide-ide mentah yang belum terstruktur sepenuhnya. Tempat untuk menjelajah gagasan."
+	},
+	{
+		"id": "Random",
+		"title": "Random",
+		"thumbnail": "https://picsum.photos/1920/1080?2",
+		"description": "Kumpulan catatan acak yang tidak memiliki kategori khusus. Cocok untuk ide spontan, eksperimen, atau hal-hal yang belum diklasifikasikan."
+	},
+	{
+		"id": "References and Resources",
+		"title": "References and Resources",
+		"thumbnail": "https://picsum.photos/1920/1080?3",
+		"description": "Sumber belajar, tautan penting, buku, artikel, dokumentasi, dan referensi yang relevan dengan berbagai topik."
+	},
+	{
+		"id": "Tools and Plugins",
+		"title": "Tools and Plugins",
+		"thumbnail": "https://picsum.photos/1920/1080?4",
+		"description": "Catatan seputar alat bantu, plugin, ekstensi, atau software yang mendukung produktivitas dan pengembangan."
+	},
+	{
+		"id": "Fundamental Mathematics",
+		"title": "Fundamental Mathematics",
+		"thumbnail": "https://picsum.photos/1920/1080?5",
+		"description": "Dasar-dasar matematika seperti aljabar, logika, geometri, dan konsep-konsep inti lain yang penting untuk pembelajaran lanjutan."
+	},
+	{
+		"id": "General Topics",
+		"title": "General Topics",
+		"thumbnail": "https://picsum.photos/1920/1080?6",
+		"description": "Topik-topik umum yang tidak terlalu teknis atau bisa lintas bidang. Bisa berupa catatan personal, opini, atau pembelajaran umum."
+	},
+	{
+		"id": "JavaScript Fundamentals",
+		"title": "JavaScript Fundamentals",
+		"thumbnail": "https://picsum.photos/1920/1080?7",
+		"description": "Catatan dasar-dasar JavaScript, konsep inti bahasa, teknik pemrograman, serta praktik terbaik."
+	},
+	{
+		"id": "Python Fundamentals",
+		"title": "Python Fundamentals",
+		"thumbnail": "https://picsum.photos/1920/1080?8",
+		"description": "Pembahasan mengenai dasar-dasar Python, sintaksis, struktur data, serta penggunaan dalam pemrograman sehari-hari."
+	},
+	{
+		"id": "Framework",
+		"title": "Framework",
+		"thumbnail": "https://picsum.photos/1920/1080?9",
+		"description": "Catatan tentang framework yang digunakan dalam pengembangan perangkat lunak atau web, seperti React, Django, dan lainnya."
+	},
+	{
+		"id": "Linux Fundamentals",
+		"title": "Linux Fundamentals",
+		"thumbnail": "https://picsum.photos/1920/1080?10",
+		"description": "Dasar penggunaan Linux, command line, manajemen sistem, dan tools penting dalam ekosistem Linux."
+	},
+	{
+		"id": "Web Development",
+		"title": "Web Development",
+		"thumbnail": "https://picsum.photos/1920/1080?11",
+		"description": "Catatan seputar pengembangan web, termasuk HTML, CSS, JavaScript, dan praktik terbaik front-end maupun back-end."
+	},
+	{
+		"id": "Uncategorized",
+		"title": "Uncategorized",
+		"thumbnail": "https://picsum.photos/1920/1080?12",
+		"description": "Catatan yang belum dikategorikan. Bersifat sementara sebelum dipindahkan ke kategori yang sesuai."
+	},
+	{
+		"id": "Assignments and Practices",
+		"title": "Assignments and Practices",
+		"thumbnail": "https://picsum.photos/1920/1080?13",
+		"description": "Kumpulan Proyek ataupun Praktik dalam belajar pemrograman"
+	}
+]

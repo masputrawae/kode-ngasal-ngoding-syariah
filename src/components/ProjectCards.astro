@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import { titleWord } from '../utils/titleWord'
+
+import Button from './Button.astro'
+import Badge from './Badge.astro'
+
+const { items } = Astro.props
+---
+
+{
+	items.map((item: any) => {
+		const id = `/${item.id}/`
+		const thumbnail = item.data.thumbnail
+		const title = item.data.title
+		const featured = item.data.featured
+		const tags = item.data.tags
+		const description = item.data.description
+
+		return (
+			<article class="grid items-center gap-1.5 overflow-hidden border-t border-t-neutral-700 py-10 md:grid-cols-2 md:gap-10">
+				<picture class="block aspect-video overflow-hidden rounded-lg shadow-sm shadow-black">
+					<Image
+						src={thumbnail}
+						alt={title}
+						width={1920}
+						height={1080}
+						layout={`constrained`}
+						fit={`fill`}
+					/>
+				</picture>
+				<section class="leading-relaxed">
+					<h2 class="flex items-center gap-1 pb-3 text-2xl text-shadow-black text-shadow-sm">
+						{featured && <Icon name="icon-sparkles" class="size-5 text-amber-500" />}
+						<span class="text-white">{title}</span>
+					</h2>
+					<nav class="flex items-center gap-2">
+						{tags.map((tag: any) => (
+							<Badge label={titleWord(tag)} />
+						))}
+					</nav>
+					<p class="py-5 text-sm text-neutral-400">{description}</p>
+					<Button label="Lihat Proyek" onclick={`window.location.href="${id}"`} />
+				</section>
+			</article>
+		)
+	})
+}
