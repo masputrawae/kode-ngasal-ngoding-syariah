@@ -1,0 +1,43 @@
+---
+// src/pages/[tag].astro
+import Layout from '../../layouts/Layout.astro'
+import ListNotes from '../../components/ListNotes.astro'
+
+import { titleWord } from '../../utils/titleWord'
+import { getCollection } from 'astro:content'
+import type { GetStaticPaths } from 'astro'
+
+export const getStaticPaths = (async () => {
+  const allNotes = await getCollection('notes');
+
+  // Kumpulkan semua tag unik
+  const categories = new Set<string>();
+  for (const note of allNotes) {
+    const noteCategories = note.data.categories ?? [];
+    noteCategories.forEach((category: string) => categories.add(category));
+  }
+
+  // Generate path untuk setiap tag
+  return Array.from(categories).map(category => ({
+    params: { category },
+    props: { category },
+  }));
+}) satisfies GetStaticPaths;
+
+const { category } = Astro.props;
+const allNotes = await getCollection('notes');
+const getContentCategory = await getCollection('categories');
+
+const filtered = allNotes.filter(i => i.data.categories?.includes(category));
+const contentCategory = getContentCategory.filter(i => i.data.title?.includes(category));
+
+---
+
+<Layout>
+	<header class="px-5 pt-10 lg:px-10">
+    <figure>
+      <img src={contentCategory[0]?.data.thumbnail} alt={contentCategory[0]?.data.thumbnail}>
+    </figure>
+		<ListNotes items={filtered} label={`Catatan Dengan Kategori: ${titleWord(category)}`}/>
+	</header>
+</Layout>

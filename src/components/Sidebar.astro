@@ -31,9 +31,9 @@ const menus = [main, social]
 	</div>
 
 	{
-		menus.map(menu => (
+		menus.map((menu) => (
 			<nav class="mt-2 flex flex-col gap-1.5">
-				{menu.map(item => {
+				{menu.map((item) => {
 					const href = item.href
 					const icon = item.icon
 					const label = item.label

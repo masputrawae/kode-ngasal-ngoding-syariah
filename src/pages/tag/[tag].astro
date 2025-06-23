@@ -1,0 +1,36 @@
+---
+// src/pages/[tag].astro
+import Layout from '../../layouts/Layout.astro'
+import ListNotes from '../../components/ListNotes.astro'
+
+import { titleWord } from '../../utils/titleWord'
+import { getCollection } from 'astro:content'
+import type { GetStaticPaths } from 'astro'
+
+export const getStaticPaths = (async () => {
+  const allNotes = await getCollection('notes');
+
+  // Kumpulkan semua tag unik
+  const tags = new Set<string>();
+  for (const note of allNotes) {
+    const noteTags = note.data.tags ?? [];
+    noteTags.forEach((tag: string) => tags.add(tag));
+  }
+
+  // Generate path untuk setiap tag
+  return Array.from(tags).map(tag => ({
+    params: { tag },
+    props: { tag },
+  }));
+}) satisfies GetStaticPaths;
+
+const { tag } = Astro.props;
+const allNotes = await getCollection('notes');
+const filtered = allNotes.filter(note => note.data.tags?.includes(tag));
+---
+
+<Layout>
+	<header class="px-5 pt-10 lg:px-10">
+		<ListNotes items={filtered} label={`Catatan Dengan Tag: ${titleWord(tag)}`}/>
+	</header>
+</Layout>

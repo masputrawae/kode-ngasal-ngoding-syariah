@@ -10,7 +10,7 @@ const tags = await tagCloud()
 
 <nav class="flex flex-wrap items-center gap-2">
 	{
-		tags.map(tag => {
+		tags.map((tag) => {
 			const name = titleWord(tag.tag)
 			const count = tag.count
 			const slug = `/tag/${tag.tag}/`

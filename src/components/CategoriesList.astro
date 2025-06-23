@@ -15,8 +15,8 @@ const categories = await getCollection('categories')
 
 <div class="cs-scrollbar mb-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth">
 	{
-		categories.map(category => {
-			const href = category.id
+		categories.map((category) => {
+			const href = `/category/${category.id}/`
 			const title = category.data.title
 			const thumbnail = category.data.thumbnail
 			const description = category.data.description

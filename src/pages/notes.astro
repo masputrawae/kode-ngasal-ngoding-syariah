@@ -4,7 +4,8 @@ import Prose from '../components/Prose.astro'
 import Layout from '../layouts/Layout.astro'
 import TagCloud from '../components/TagCloud.astro'
 import ListNotes from '../components/ListNotes.astro'
-import Search from "astro-pagefind/components/Search";
+//@ts-ignore
+import Search from 'astro-pagefind/components/Search'
 
 import { sortCollection } from '../utils/posts'
 import CategoriesList from '../components/CategoriesList.astro'
@@ -43,13 +44,13 @@ const allNotes = await sortCollection('NotProject')
 				--pagefind-ui-primary: white;
 				--pagefind-ui-text: white;
 				--pagefind-ui-border: var(--color-neutral-800);
-        --pagefind-ui-background: rgba(0, 0, 0, 0.1);
+				--pagefind-ui-background: rgba(0, 0, 0, 0.1);
 				--pagefind-ui-border-width: 1px;
 				--pagefind-ui-border-radius: 0.25rem;
 				--pagefind-ui-font: sans-serif;
 
 				width: 100%;
-        margin-top: 1rem;
+				margin-top: 1rem;
 			}
 
 			.pagefind-ui .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
