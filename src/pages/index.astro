@@ -18,32 +18,30 @@ const featuredProjects = await sortCollection('Projects', true, 2)
 ---
 
 <Layout>
-	<div class="px-5 pt-10 lg:px-10">
-		<header>
-			<Prose>
-				<h1>Selamat datang!</h1>
-				<em class="not-italic"
-					>Ini ruang pribadiku untuk belajar, bereksperimen, dan bersenang-senang.</em
-				>
-				<p>
-					Saya seorang pembelajar otodidak yang suka ngoprek kode, menjelajahi ide, dan membangun
-					hal-hal menarik. Yuk, kenalan lebih jauh atau lihat beberapa proyekku!
-				</p>
-			</Prose>
-			<nav class="mt-5 flex items-center gap-2.5">
-				{cta.map((item) => <Button href={item.href} label={item.label} primary={item.primary} />)}
-			</nav>
-		</header>
+	<header>
+		<Prose>
+			<h1>Selamat datang!</h1>
+			<em class="not-italic"
+				>Ini ruang pribadiku untuk belajar, bereksperimen, dan bersenang-senang.</em
+			>
+			<p>
+				Saya seorang pembelajar otodidak yang suka ngoprek kode, menjelajahi ide, dan membangun
+				hal-hal menarik. Yuk, kenalan lebih jauh atau lihat beberapa proyekku!
+			</p>
+		</Prose>
+		<nav class="mt-5 flex items-center gap-2.5">
+			{cta.map((item) => <Button href={item.href} label={item.label} primary={item.primary} />)}
+		</nav>
+	</header>
 
-		<main class="mt-14">
-			<h2 class="text-2xl text-white">Top Project</h2>
-			<ProjectCards items={featuredProjects} />
-			<hr class="text-neutral-600" />
-			<Button href="/projects/" className="my-10 text-amber-500">
-				<Icon name="icon-chevron-double-right" class="size-6" />
-				<span class="">Lihat Proyek Lainnya</span>
-				<Icon name="icon-chevron-double-right" class="size-6" />
-			</Button>
-		</main>
-	</div>
+	<main class="mt-14">
+		<h2 class="text-2xl text-white">Top Project</h2>
+		<ProjectCards items={featuredProjects} />
+		<hr class="text-neutral-600" />
+		<Button href="/projects/" className="my-10 text-amber-500">
+			<Icon name="icon-chevron-double-right" class="size-6" />
+			<span class="">Lihat Proyek Lainnya</span>
+			<Icon name="icon-chevron-double-right" class="size-6" />
+		</Button>
+	</main>
 </Layout>

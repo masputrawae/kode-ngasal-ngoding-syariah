@@ -1,5 +1,5 @@
 ---
-title: 'Example Blog 2'
+title: 'Callout Test'
 description: 'Mollit irure consectetur sunt magna consectetur duis enim laborum aliqua laborum.'
 thumbnail: 'https://picsum.photos/600/400?2'
 tags:
@@ -8,15 +8,92 @@ tags:
 date: 2025-06-10T15:38:21+07:00
 update: 2025-06-10T15:38:21+07:00
 categories:
-  - JavaScript Fundamentals
+  - Random
 featured: true
 type: Permanent
 ---
 
-# Example Blog 2
+> [!note]- Collapse Test
+> Lorem ipsum dolor sit amet
+>
+> ```
+> Testing
+> ```
 
-Ea elit eiusmod duis cillum consectetur consequat veniam est. Dolore esse deserunt laborum est proident tempor qui pariatur magna irure et dolor est incididunt. Excepteur nisi ex exercitation qui tempor id aliqua. Laboris dolore mollit culpa aute consequat minim magna aliqua consectetur aute sunt laboris eu irure. Esse exercitation nulla sit nostrud sit magna eiusmod. Cillum dolor occaecat commodo ullamco ut est minim cupidatat elit deserunt.
+> [!abstract]
+> Lorem ipsum dolor sit amet
 
-## SubTitle Here
+> [!summary]
+> Lorem ipsum dolor sit amet
 
-Occaecat cupidatat aute veniam reprehenderit excepteur elit qui tempor non ipsum non sunt occaecat. In consectetur voluptate ea incididunt laborum sit nisi sit consequat. Mollit consequat consectetur ipsum enim. Lorem nisi aliquip occaecat ipsum sit nostrud cupidatat. Esse voluptate ea in labore Lorem deserunt ad amet incididunt. Tempor nostrud excepteur magna minim id dolore. Labore aliqua deserunt laborum labore consectetur consequat.
+> [!tldr]
+> Lorem ipsum dolor sit amet
+
+> [!info]
+> Lorem ipsum dolor sit amet
+
+> [!todo]
+> Lorem ipsum dolor sit amet
+
+> [!tip]
+> Lorem ipsum dolor sit amet
+
+> [!hint]
+> Lorem ipsum dolor sit amet
+
+> [!important]
+> Lorem ipsum dolor sit amet
+
+> [!success]
+> Lorem ipsum dolor sit amet
+
+> [!check]
+> Lorem ipsum dolor sit amet
+
+> [!done]
+> Lorem ipsum dolor sit amet
+
+> [!question]
+> Lorem ipsum dolor sit amet
+
+> [!help]
+> Lorem ipsum dolor sit amet
+
+> [!faq]
+> Lorem ipsum dolor sit amet
+
+> [!warning]
+> Lorem ipsum dolor sit amet
+
+> [!caution]
+> Lorem ipsum dolor sit amet
+
+> [!attention]
+> Lorem ipsum dolor sit amet
+
+> [!failure]
+> Lorem ipsum dolor sit amet
+
+> [!fail]
+> Lorem ipsum dolor sit amet
+
+> [!missing]
+> Lorem ipsum dolor sit amet
+
+> [!danger]
+> Lorem ipsum dolor sit amet
+
+> [!error]
+> Lorem ipsum dolor sit amet
+
+> [!bug]
+> Lorem ipsum dolor sit amet
+
+> [!example]
+> Lorem ipsum dolor sit amet
+
+> [!quote]
+> Lorem ipsum dolor sit amet
+
+> [!cite]
+> Lorem ipsum dolor sit amet

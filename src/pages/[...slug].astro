@@ -1,5 +1,7 @@
 ---
 // src/pages/[...slug].astro
+import '../styles/callout.css'
+
 import Layout from '../layouts/Layout.astro'
 import Prose from '../components/Prose.astro'
 
@@ -10,7 +12,7 @@ import type { GetStaticPaths } from 'astro'
 export const getStaticPaths = (async () => {
 	const allNotes = await getCollection('notes')
 
-	return allNotes.map(note => {
+	return allNotes.map((note) => {
 		const slug = note.id
 
 		return {
@@ -22,15 +24,18 @@ export const getStaticPaths = (async () => {
 
 const { note } = Astro.props
 const { Content } = await render(note)
+
+const meta = {
+	title: note.data.title,
+	description: note.data.description || `Catatan yang membahas tentang ${note.data.title}`,
+	thumbnail: note.data.thumbnail
+}
 ---
 
-<Layout>
-	<header>
-		<h1>Title</h1>
-	</header>
+<Layout meta={meta}>
 	<main>
 		<Prose>
-			<article>
+			<article class="dark">
 				<Content />
 			</article>
 		</Prose>

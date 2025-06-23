@@ -4,14 +4,14 @@ import '../styles/global.css'
 import Footer from '../components/Footer.astro'
 import MobileTopBar from '../components/MobileTopBar.astro'
 import Sidebar from '../components/Sidebar.astro'
+import Headed from '../components/Headed.astro'
+
+const { meta } = Astro.props
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Document</title>
+		<Headed meta={meta} />
 
 		<style is:inline>
 			@font-face {
@@ -53,8 +53,10 @@ import Sidebar from '../components/Sidebar.astro'
 		<Sidebar />
 		<div class="mx-auto w-full max-w-full overflow-x-hidden xl:max-w-6xl">
 			<MobileTopBar />
-			<slot />
-			<Footer />
+			<div class="px-5 pt-10 lg:px-10">
+				<slot />
+				<Footer />
+			</div>
 		</div>
 	</body>
 </html>

@@ -5,8 +5,8 @@ import { timeFormat } from '../utils/timeFormat'
 const { items, label } = Astro.props
 ---
 
-<nav class="flex flex-col gap-2">
-	<h2 class="border-b border-b-neutral-700 pb-3 text-2xl text-white">{label ?? `All Notes`}</h2>
+<h2 class="mb-4 border-b border-b-neutral-700 pb-3 text-2xl text-white">{label ?? `All Notes`}</h2>
+<nav class="grid gap-2 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
 	{
 		items.map((item: any) => {
 			const href = `/${item.id}/`

@@ -1,43 +1,74 @@
 ---
-// src/pages/[tag].astro
+// src/pages/category/[category].astro
 import Layout from '../../layouts/Layout.astro'
 import ListNotes from '../../components/ListNotes.astro'
 
 import { titleWord } from '../../utils/titleWord'
 import { getCollection } from 'astro:content'
 import type { GetStaticPaths } from 'astro'
+import { Image } from 'astro:assets'
+import Prose from '../../components/Prose.astro'
 
 export const getStaticPaths = (async () => {
-  const allNotes = await getCollection('notes');
+	const allNotes = await getCollection('notes')
 
-  // Kumpulkan semua tag unik
-  const categories = new Set<string>();
-  for (const note of allNotes) {
-    const noteCategories = note.data.categories ?? [];
-    noteCategories.forEach((category: string) => categories.add(category));
-  }
+	// Kumpulkan semua kategori unik
+	const categories = new Set<string>()
+	for (const note of allNotes) {
+		const noteCategories = note.data.categories ?? []
+		noteCategories.forEach((category: string) => categories.add(category))
+	}
 
-  // Generate path untuk setiap tag
-  return Array.from(categories).map(category => ({
-    params: { category },
-    props: { category },
-  }));
-}) satisfies GetStaticPaths;
+	// Generate path untuk setiap kategori
+	return Array.from(categories).map((category) => ({
+		params: { category },
+		props: { category }
+	}))
+}) satisfies GetStaticPaths
 
-const { category } = Astro.props;
-const allNotes = await getCollection('notes');
-const getContentCategory = await getCollection('categories');
+const { category } = Astro.props
+const allNotes = await getCollection('notes')
+const getContentCategory = await getCollection('categories')
 
-const filtered = allNotes.filter(i => i.data.categories?.includes(category));
-const contentCategory = getContentCategory.filter(i => i.data.title?.includes(category));
+const filtered = allNotes.filter((i) => i.data.categories?.includes(category))
+const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, '-')
 
+const contentCategory = getContentCategory.find(
+	(item) => normalize(item.data.title) === normalize(category)
+)
+
+const meta = {
+	title: contentCategory?.data.title,
+	description:
+		contentCategory?.data.description || `Daftar Catatan yang terkait dengan Kategori ${category}`,
+	thumbnail: contentCategory?.data.thumbnail
+}
 ---
 
-<Layout>
-	<header class="px-5 pt-10 lg:px-10">
-    <figure>
-      <img src={contentCategory[0]?.data.thumbnail} alt={contentCategory[0]?.data.thumbnail}>
-    </figure>
-		<ListNotes items={filtered} label={`Catatan Dengan Kategori: ${titleWord(category)}`}/>
-	</header>
+<Layout meta={meta}>
+	{
+		contentCategory ? (
+			<header class="relative">
+				<Prose>
+					<div class="top-4 left-4 z-10 text-shadow-black text-shadow-sm">
+						<h1>{contentCategory.data.title}</h1>
+						<p>{contentCategory.data.description}</p>
+					</div>
+					<Image
+						src={contentCategory.data.thumbnail}
+						alt={contentCategory.data.title}
+						width={1920}
+						height={1080}
+						loading={`eager`}
+						class="aspect-video rounded-2xl shadow-md shadow-black brightness-50"
+					/>
+				</Prose>
+			</header>
+		) : (
+			<p>Tidak data terkait kategori {category}</p>
+		)
+	}
+	<main class="mt-10">
+		<ListNotes items={filtered} label={`Catatan Dengan Kategori: ${titleWord(category)}`} />
+	</main>
 </Layout>

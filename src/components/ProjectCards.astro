@@ -37,7 +37,7 @@ const { items } = Astro.props
 					</h2>
 					<nav class="flex items-center gap-2">
 						{tags.map((tag: any) => (
-							<Badge label={titleWord(tag)} />
+							<Badge href={`/tag/${tag}/`} label={titleWord(tag)} />
 						))}
 					</nav>
 					<p class="py-5 text-sm text-neutral-400">{description}</p>
