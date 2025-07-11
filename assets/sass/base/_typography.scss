@@ -1,11 +1,5 @@
 @use '../abstracts/variables' as v;
 
-html {
-  font-size: v.$text-base;
-  background-color: var(--cl-bg-00);
-  color: var(--cl-text-03);
-}
-
 .markdown {
   line-height: 1.65;
   font-family: var(--font-sans);
@@ -15,7 +9,7 @@ html {
   :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--cl-border-01);
+    border-bottom: 1px solid var(--cl-border);
     text-shadow: var(--text-shadow-sm);
   }
 

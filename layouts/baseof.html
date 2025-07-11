@@ -10,18 +10,16 @@
   <body>
     <div class="layout">
 
-      <aside id="offcanvasLeftOnMobile" class="offcanvas offcanvas--on-mobile offcanvas--left">{{ partial "left-sidebar.html" . }}</aside>
+      <aside id="sidebar" class="sidebar">
+        {{ partial "left-sidebar.html" . }}
+      </aside>
 
       <div class="main">
         <header class="header">{{ partial "header.html" . }}</header>
         <main class="content">{{ block "main" . }}{{ end }}</main>
         <footer class="footer">{{ partial "footer.html" . }}</footer>
       </div>
-
-      <aside id="offcanvasRightOnMobile" class="offcanvas offcanvas--on-mobile offcanvas--right">{{ partial "right-sidebar.html" . }}</aside>
-      <aside id="offcanvasLeftOnGlobal" class="offcanvas offcanvas--right offcanvas--on-global">{{ partial "global-offcanvas.html" . }}</aside>
-
+      
     </div>
-    <script></script>
   </body>
 </html>

@@ -1,5 +1,77 @@
-<header class="sidebar-header">
-  {{ partial "components/brand" . }}
-  <button>x</button>  
+<header class="sidebar__header">
+  {{ partial "components/brand.html" . }}
+  <button>
+    {{ partial "components/icons.html" (dict "icon" "icon--x") }}
+  </button>
 </header>
-{{ partial "components/menu.html" (dict "menuID" "main" "page" .) }}
+
+<div class="sidebar__header-second">
+  <div>
+    <button id="switchTheme" class="button-theme">
+      {{ partial "components/icons.html" (dict "icon" "icon--moon-stars") }}
+      {{ partial "components/icons.html" (dict "icon" "icon--sun") }}
+    </button>
+  </div>
+  <div class="form">
+    <div class="form__input-wrapper">
+      <label for="search" class="form__label">Search: </label>
+      <input type="search" name="search" id="search" class="form__input" placeholder="Tap to search...">
+    </div>
+    <ul id="results" class="form__results">
+      <li class="form__item">
+        <a href="#" class="form__link">Not Found...</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<nav class="sidebar__navigation">
+  <ul class="tree">
+    {{- template "tree_view" (dict "Page" .Site.Home "CurrentPage" .) -}}
+  </ul>
+</nav>
+
+{{- define "tree_view" -}}
+  {{- $page := .Page -}}
+  {{- $current := .CurrentPage -}}
+  {{- if and $page $page.Pages -}}
+    {{- $sortedPages := ($page.Pages | sort).ByLinkTitle -}}
+    
+    <!-- Folders -->
+    {{- range $sortedPages -}}
+      {{- if .IsSection -}}
+        {{- $isActive := eq $current.RelPermalink .RelPermalink -}}
+        {{- $hasActiveDescendant := $current.IsDescendant . -}}
+        {{- $isOpen := or $isActive $hasActiveDescendant -}}
+
+        <li class="tree__folder{{ if $isActive }} tree__folder--is-active{{ end }}">
+          
+          <button class="tree__btn{{ if $isActive }} tree__btn--is-active{{ end }}" data-folder-target="{{ .RelPermalink | md5 }}">
+            {{ partial "components/icons.html" (dict "icon" "icon--chevron-right") }}
+            {{ .LinkTitle }}
+          </button>
+
+          <ul id="{{ .RelPermalink | md5 }}" class="tree__collapse{{ if $isOpen }} tree__collapse--is-active{{ end }}">
+            {{- template "tree_view" (dict "Page" . "CurrentPage" $current) -}}
+          </ul>
+
+        </li>
+
+      {{- end -}}
+    {{- end -}}
+    
+    <!-- Files -->
+    {{- range $sortedPages -}}
+      {{- if and .IsPage .File.BaseFileName -}}
+        {{- $isActive := eq $current.RelPermalink .RelPermalink -}}
+
+        <li class="tree__file">
+          <a class="tree__link {{ if $isActive }} tree__link--is-active{{ end }}" href="{{ .RelPermalink }}">
+            {{ .LinkTitle }}
+          </a>
+        </li>
+
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

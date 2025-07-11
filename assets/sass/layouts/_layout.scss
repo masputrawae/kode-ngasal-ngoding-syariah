@@ -1,59 +1,12 @@
 @use '../abstracts/variables' as v;
+
+body {
+  font-size: v.$text-base;
+  background-color: var(--bg-body);
+  color: var(--cl-text-base);
+}
+
 .layout {
   isolation: isolate;
   display: grid;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  &__logo {
-    border-radius: 50%;
-    border: 2px solid var(--cl-border-01);
-    box-shadow: var(--shadow-sm);
-    width: 58px;
-    height: 58px;
-  }
-
-  &__body {
-    display: grid;
-    text-shadow: var(--text-shadow-sm);
-  }
-
-  &__title {
-    font-size: v.$text-xl;
-    color: var(--cl-text-01);
-  }
-
-  &__tagline {
-    font-size: v.$text-sm;
-    font-style: normal;
-    color: var(--cl-text-04);
-  }
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.offcanvas {
-  position: fixed;
-  background-color: var(--cl-bg-00);
-  top: 0;
-  width: 16rem;
-  height: 100dvh;
-
-  &--left {
-    left: 0;
-  }
-
-  &--right {
-    right: 0;
-  }
-
-  &--on-mobile {}
 }

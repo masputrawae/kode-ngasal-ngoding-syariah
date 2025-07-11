@@ -1,0 +1,26 @@
+{{- $u := urls.Parse .Destination -}}
+{{- $href := .Destination -}}
+
+{{- if strings.HasPrefix $u.String "#" -}}
+  {{- $href = printf "%s#%s" .PageInner.RelPermalink $u.Fragment -}}
+
+{{- else if $u.IsAbs -}}
+  <a href="{{ $href }}" target="_blank" rel="noopener noreferrer nofollow" class="link link--external">{{ .Text }}</a>
+
+{{- else -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path -}}
+  
+  {{- $page := .PageInner.GetPage $path -}}
+  {{- $resource := .PageInner.Resources.Get $path -}}
+  {{- $contentExists := or $page $resource -}}
+
+  {{- if $contentExists -}}
+    {{- with $contentExists }}
+      {{- $href = .RelPermalink -}}
+    {{- end -}}
+    <a href="{{ $href }}" class="link link--internal">{{ .Text }}</a>
+  {{- else -}}
+    <a href="{{ $href }}" class="link link--error">{{ .Text }}</a>
+  {{- end -}}
+
+{{- end -}}

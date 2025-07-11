@@ -1,0 +1,94 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-body);
+  width: 20rem;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: repeat(2, auto) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+
+  &__header {
+    @include m.flex-between;
+  }
+
+  &__navigation {
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--cl-acc) var(--bg-body);
+  }
+}
+
+.form {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+
+  &__input-wrapper {
+    @include m.flex-center;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    width: 100%;
+    border: 1px solid var(--cl-border);
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  &__input {
+    border: 1px solid var(--cl-border);
+    color: var(--cl-text-muted);
+    padding: 0 1rem;
+    border-radius: 0.25rem;
+  }
+
+  &__results {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+.tree {
+  &__collapse {
+    padding-bottom: 0.5rem;
+    display: none;
+    &--is-active {
+      display: block;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+
+    &--is-active {
+      .icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__folder &__folder,
+  &__file {
+    border-left: 1px solid var(--cl-acc);
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  &__link {
+    padding: 0.25rem 0.5rem;
+    display: block;
+    @include m.text-ellipsis;
+    &--is-active {
+      color: var(--cl-acc);
+    }
+  }
+}

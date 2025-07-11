@@ -27,7 +27,53 @@ title = 'My New Hugo Site'
     pageRef = '/tags'
     weight = 30
 
+[markup]
+  # [markup.tableOfContents]
+  #   endLevel    = 6
+  #   ordered     = false
+  #   startLevel  = 2
+
+  [markup.highlight]
+    codeFences          = true
+    guessSyntax         = true
+    style               = "github-dark"
+    noClasses           = false
+    lineNumbersInTable  = false
+    lineNos             = false
+    anchorLineNos       = false
+    lineAnchors         = ''
+    lineNoStart         = 1
+    tabWidth            = 4
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe    = true
+
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+        
 [module]
   [module.hugoVersion]
-    extended = false
+    extended = true
     min = '0.146.0'
+
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+    excludeFiles = "99_templates/*"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+    excludeFiles = ".obsidian/*"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+    excludeFiles = ".trash/*"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+    excludeFiles = "private/*"

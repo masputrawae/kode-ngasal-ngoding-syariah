@@ -1,10 +1,12 @@
-import { } from './offcanvas.js';
-import { } from './collapse.js';
-import { } from './modal.js';
-import { } from './switchThemes.js';
+// import { } from './offcanvas.js';
+import { treeCollapse } from './collapse.js';
+// import { } from './modal.js';
+import { initTheme, switchThemes } from './switchThemes.js';
 
 function main(){
-
+  initTheme();
+  switchThemes();
+  treeCollapse()
 }
 
 document.addEventListener('DOMContentLoaded', main)

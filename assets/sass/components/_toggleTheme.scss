@@ -1,0 +1,71 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.button-theme {
+  @include m.flex-center;
+  position: relative;
+  gap: 0.5rem;
+  color: var(--cl-text-title);
+  border: 2px solid var(--cl-border-alt);
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999rem;
+  box-shadow: var(--shadow-sm), inset 1px 1px 5px rgba(0, 0, 0, 0.694);
+  overflow: hidden;
+  @include m.transition(border-color);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 9999rem;
+    transform: translateX(75%);
+    background-color: var(--bg-second);
+    box-shadow: var(--shadow-sm), inset 0px 0px 5px 3px rgba(0, 0, 0, 0.8);
+    @include m.transition(transform);
+  }
+
+  &.isDark::before {
+    left: unset;
+    transform: translateX(-75%);
+  }
+
+  .icon {
+    width: 0.95rem;
+    height: 0.95rem;
+    color: var(--cl-acc);
+    @include m.transition(transform);
+  }
+
+  .icon--moon-stars {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .icon--sun {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.isDark {
+    .icon--moon-stars {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .icon--sun {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    border-color: var(--cl-acc);
+    &::before {
+      background-color: var(--cl-acc);
+    }
+    .icon {
+      color: var(--cl-acc-hover);
+    }
+  }
+}
