@@ -1,0 +1,72 @@
+:root {
+  --font-sans: 'Noto Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+:root[data-theme="dark"]{
+  --cl-bg-00: oklch(.129 .042 264.695);
+  --cl-bg-01: oklch(.208 .042 265.755);
+  --cl-bg-02: oklch(.279 .041 260.031);
+
+  --cl-text-01: oklch(.984 .003 247.858);
+  --cl-text-02: oklch(.968 .007 247.896);
+  --cl-text-03: oklch(.929 .013 255.508);
+  --cl-text-04: oklch(.869 .022 252.894);
+
+  --cl-border-00: oklch(.279 .041 260.031);
+  --cl-border-01: oklch(.279 .041 260.031);
+  --cl-border-02: oklch(.446 .043 257.281);
+
+  --cl-accent-01: oklch(.623 .214 259.815);
+  --cl-accent-02: oklch(.546 .245 262.881);
+  --cl-accent-03: oklch(.488 .243 264.376);
+
+  --cl-link-broken-01: oklch(.637 .237 25.331);
+  --cl-link-broken-02: oklch(.577 .245 27.325);
+
+  --shadow-sm: rgba(0, 0, 0) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  --shadow-md: rgba(0, 0, 0) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --shadow-lg: rgba(0, 0, 0) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --shadow-xl: rgba(0, 0, 0) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  --text-shadow-sm: rgba(0, 0, 0) 1px 1px 3px;
+  --text-shadow-md: rgba(0, 0, 0) 4px 4px 6px;
+  --text-shadow-lg: rgba(0, 0, 0) 8px 8px 9px;
+  --text-shadow-xl: rgba(0, 0, 0) 12px 12px 12px;
+
+  /* Syntax Highlight Nanti, belum ada token */
+}
+
+:root[data-theme="light"]{
+  --cl-bg-00: oklch(.984 .003 247.858);
+  --cl-bg-01: oklch(.968 .007 247.896);
+  --cl-bg-02: oklch(.929 .013 255.508);
+
+  --cl-text-01: oklch(.129 .042 264.695);
+  --cl-text-02: oklch(.208 .042 265.755);
+  --cl-text-03: oklch(.279 .041 260.031);
+  --cl-text-04: oklch(.372 .044 257.287);
+
+  --cl-border-00: oklch(.929 .013 255.508);
+  --cl-border-01: oklch(.869 .022 252.894);
+  --cl-border-02: oklch(.704 .04 256.788);
+
+  --cl-accent-01: oklch(.546 .245 262.881);
+  --cl-accent-02: oklch(.488 .243 264.376);
+  --cl-accent-03: oklch(.424 .199 265.638);
+
+  --cl-link-broken-01: oklch(.577 .245 27.325);
+  --cl-link-broken-02: oklch(.505 .213 27.518);
+
+  --shadow-sm: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  --shadow-md: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --shadow-lg: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --shadow-xl: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  --text-shadow-sm: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+  --text-shadow-md: rgba(0, 0, 0, 0.2) 4px 4px 6px;
+  --text-shadow-lg: rgba(0, 0, 0, 0.2) 8px 8px 9px;
+  --text-shadow-xl: rgba(0, 0, 0, 0.2) 12px 12px 12px;
+
+  /* Syntax Highlight Nanti, belum ada token */
+}
