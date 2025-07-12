@@ -1,21 +1,25 @@
 @use '../abstracts/variables' as v;
-
+@use '../abstracts/breakpoints'as b;
 html {
   font-size: v.$text-base;
+  background-color: var(--bg-body);
+  color: var(--cl-text-base);
 }
-
 .markdown {
   line-height: 1.65;
   font-family: var(--font-sans);
-  max-width: 100%;
   font-weight: 400;
   color: var(--cl-text);
+  padding-inline: 1rem;
+  margin-inline: auto;
 
   :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid var(--cl-border);
     text-shadow: var(--text-shadow-sm);
+    display: flex;
+    gap: 0.5rem;
   }
 
   h1 {
@@ -37,6 +41,11 @@ html {
     font-size: v.$text-xl;
   }
 
+  p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+  }
+
   hr {
     border: none;
     display: block;
@@ -48,8 +57,11 @@ html {
   a {
     color: var(--cl-link);
     display: inline-flex;
+    flex-wrap: wrap;
+    word-break: break-all;
     align-items: center;
     gap: 0.25rem;
+    text-decoration: underline;
 
     &:hover {
       color: var(--cl-link);
@@ -58,5 +70,17 @@ html {
 
   b, strong {
     color: var(--cl-text-title);
+  }
+
+  pre {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+    border: 1px solid var(--cl-border);
+    border-radius: 0.5rem;
+  }
+
+  @include b.min(lg){
+    padding-inline: 2rem;
   }
 }

@@ -16,6 +16,8 @@ LIST ICONS USED:
 - icon--grid
 - icon--search
 - icon--chevron-right
+- icon--folder-symlink
+- icon--globe
 */}}
 {{ $icon := .icon }} 
 {{ $width := .width | default 16 }} 
@@ -252,7 +254,7 @@ LIST ICONS SOCIAL USED:
   </svg>
 
 {{/*  FILE TYPE
-- icon--f
+- icon--css
 */}}
 {{ else if eq $icon "icon--css"}}
   <svg 

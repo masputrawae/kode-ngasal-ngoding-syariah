@@ -7,17 +7,15 @@
   <head>
     {{ partial "head/head.html" . }}
   </head>
-  <body>
-    <div class="layout">
-      <aside id="sidebar" class="sidebar">
-        {{ partial "left-sidebar.html" . }}
-      </aside>
+  <body class="layout">
+    <aside id="sidebar" class="sidebar">
+      {{ partial "left-sidebar.html" . }}
+    </aside>
 
-      <div class="main">
-        <header class="header">{{ partial "header.html" . }}</header>
-        <main class="content">{{ block "main" . }}{{ end }}</main>
-        <footer class="footer">{{ partial "footer.html" . }}</footer>
-      </div>
+    <div class="main">
+      <header class="header">{{ partial "header.html" . }}</header>
+      <main class="content">{{ block "main" . }}{{ end }}</main>
+      <footer class="footer">{{ partial "footer.html" . }}</footer>
     </div>
 
     {{ partial "components/preview-link.html" . }}
