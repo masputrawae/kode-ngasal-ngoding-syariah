@@ -9,7 +9,6 @@
   </head>
   <body>
     <div class="layout">
-
       <aside id="sidebar" class="sidebar">
         {{ partial "left-sidebar.html" . }}
       </aside>
@@ -19,7 +18,8 @@
         <main class="content">{{ block "main" . }}{{ end }}</main>
         <footer class="footer">{{ partial "footer.html" . }}</footer>
       </div>
-      
     </div>
+
+    {{ partial "components/preview-link.html" . }}
   </body>
 </html>

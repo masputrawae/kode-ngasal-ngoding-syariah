@@ -44,14 +44,14 @@
         {{- $hasActiveDescendant := $current.IsDescendant . -}}
         {{- $isOpen := or $isActive $hasActiveDescendant -}}
 
-        <li class="tree__folder{{ if $isActive }} tree__folder--is-active{{ end }}">
+        <li class="tree__folder {{ if $isOpen }} tree__folder--is-open {{ end }}">
           
-          <button class="tree__btn{{ if $isActive }} tree__btn--is-active{{ end }}" data-folder-target="{{ .RelPermalink | md5 }}">
+          <button class="tree__btn {{ if $isOpen}} tree__btn--is-open {{ end }}" data-folder-target="{{ .RelPermalink | md5 }}">
             {{ partial "components/icons.html" (dict "icon" "icon--chevron-right") }}
             {{ .LinkTitle }}
           </button>
 
-          <ul id="{{ .RelPermalink | md5 }}" class="tree__collapse{{ if $isOpen }} tree__collapse--is-active{{ end }}">
+          <ul id="{{ .RelPermalink | md5 }}" class="tree__collapse {{ if $isOpen }} tree__collapse--is-open {{ end }}">
             {{- template "tree_view" (dict "Page" . "CurrentPage" $current) -}}
           </ul>
 

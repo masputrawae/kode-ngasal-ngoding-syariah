@@ -1,13 +1,39 @@
+const TREE_KEY = 'TREE'
+const folderButtons = document.querySelectorAll('[data-folder-target]')
+
+export function initTree() {
+  const treeState = JSON.parse(sessionStorage.getItem(TREE_KEY)) || {}
+
+  folderButtons.forEach(button => {
+    const targetId = button.getAttribute('data-folder-target')
+    const targetEl = document.getElementById(targetId)
+
+    // Apply saved state
+    if (treeState[targetId]) {
+      targetEl.classList.add('tree__collapse--is-open')
+      button.classList.add('tree__btn--is-open')
+    } else {
+      targetEl.classList.remove('tree__collapse--is-open')
+      button.classList.remove('tree__btn--is-open')
+    }
+  })
+}
+
 export function treeCollapse() {
-  const folderButtons = document.querySelectorAll('[data-folder-target]')
+  folderButtons.forEach(button => {
+    const targetId = button.getAttribute('data-folder-target')
+    const targetEl = document.getElementById(targetId)
 
-  folderButtons.forEach(data => {
-    const getAttr = data.getAttribute('data-folder-target')
-    const targetId = document.getElementById(getAttr)
+    button.addEventListener('click', () => {
+      const treeState = JSON.parse(sessionStorage.getItem(TREE_KEY)) || {}
 
-    data.addEventListener('click', () => {
-      targetId.classList.toggle('tree__collapse--is-active')
-      data.classList.toggle('tree__btn--is-active')
+      targetEl.classList.toggle('tree__collapse--is-open')
+      button.classList.toggle('tree__btn--is-open')
+
+      const isOpen = targetEl.classList.contains('tree__collapse--is-open')
+      treeState[targetId] = isOpen
+
+      sessionStorage.setItem(TREE_KEY, JSON.stringify(treeState))
     })
   })
 }

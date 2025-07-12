@@ -1,5 +1,8 @@
 @use '../abstracts/variables' as v;
 
+html {
+  font-size: v.$text-base;
+}
 .markdown {
   line-height: 1.65;
   font-family: var(--font-sans);
