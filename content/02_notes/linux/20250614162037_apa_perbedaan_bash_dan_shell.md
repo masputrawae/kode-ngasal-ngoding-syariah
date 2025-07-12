@@ -38,5 +38,5 @@ Jadi, shell adalah kategori umum, sedangkan bash dan lainnya adalah jenis-jenisn
 
 **Terkait**:
 
-- [Perintah Dasar Linux Yang Sering Digunakan](Perintah Dasar Linux Yang Sering Digunakan)
-- [Install Zsh](Install Zsh)
+- [[Perintah Dasar Linux Yang Sering Digunakan]]
+- [[Install Zsh]]

@@ -9,7 +9,7 @@ created: 2025-06-28T21:13:05+07:00
 updated: 2025-07-10T17:49:18+07:00
 ---
 
-Lanjutan dari [20250628205351_if_statement_di_javascript](20250628205351_if_statement_di_javascript)
+Lanjutan dari [[20250628205351_if_statement_di_javascript]]
 
 Untuk membuat alur yang lebih kompleks, Kita bisa gunakan else if (jika tidak) atau else (kalau tidak) misalnya:
 
@@ -32,11 +32,11 @@ if (nilai > 90) {
 - Jika tidak sama sekali makan cetak Great C
 
 else sebagai kondisi akhir jika kondisi diatasnya tidak ada yang terpenuhi.
-untuk operator perbandingan bisa lihat 👉 [20250628171342_operator_perbandingan_di_javascript](20250628171342_operator_perbandingan_di_javascript)
+untuk operator perbandingan bisa lihat 👉 [[20250628171342_operator_perbandingan_di_javascript]]
 
 **Terkait**:
 
-- [Switch Statement Di JavaScript](Switch Statement Di JavaScript)
-- [20250628171342_operator_perbandingan_di_javascript](20250628171342_operator_perbandingan_di_javascript)
-- [20250701054353_ternary_operator_di_javascript](20250701054353_ternary_operator_di_javascript)
-- [20250628212840_contoh_pengkondisian_yang_lebih_kompleks_di_javascript](20250628212840_contoh_pengkondisian_yang_lebih_kompleks_di_javascript)
+- [[Switch Statement Di JavaScript]]
+- [[20250628171342_operator_perbandingan_di_javascript]]
+- [[20250701054353_ternary_operator_di_javascript]]
+- [[20250628212840_contoh_pengkondisian_yang_lebih_kompleks_di_javascript]]

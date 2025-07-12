@@ -31,6 +31,6 @@ getData(API_URL)
 
 **Terkait**:
 
-- [20250627234640_asynchronous_di_javascript](20250627234640_asynchronous_di_javascript)
-- [20250628070829_promise_di_javascript](20250628070829_promise_di_javascript)
-- [20250628071334_callback_function_di_javascript](20250628071334_callback_function_di_javascript)
+- [[20250627234640_asynchronous_di_javascript]]
+- [[20250628070829_promise_di_javascript]]
+- [[20250628071334_callback_function_di_javascript]]

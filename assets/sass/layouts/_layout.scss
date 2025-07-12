@@ -1,3 +1,4 @@
+@use '../abstracts/breakpoints' as b;
 @use '../abstracts/variables' as v;
 
 body {
@@ -9,4 +10,17 @@ body {
 .layout {
   isolation: isolate;
   display: grid;
+  max-width: 100rem;
+  margin-inline: auto;
+
+  @include b.min(md) {
+    grid-template-columns: 20rem minmax(0, 1fr);
+  }
+
+  .main {
+    padding-inline: 1rem;
+    max-width: 75rem;
+    margin-inline: auto;
+    width: 100%;
+  }
 }

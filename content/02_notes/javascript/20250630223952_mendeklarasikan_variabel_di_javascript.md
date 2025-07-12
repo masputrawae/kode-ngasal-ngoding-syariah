@@ -40,10 +40,10 @@ let isBelajar = true
 
 ## 🔗 Terkait
 
-- [20250630124757_alasan_let_dan_const_lebih_direkomendasikan](20250630124757_alasan_let_dan_const_lebih_direkomendasikan)
-- [20250630160418_perbedaan_var_let_dan_const](20250630160418_perbedaan_var_let_dan_const)
-- [20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan](20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan)
-- [20250621095130_tipe_data_di_javascript](20250621095130_tipe_data_di_javascript)
-- [Conversation Naming Variabel Di JavaScript](Conversation Naming Variabel Di JavaScript)
-- [20250701030227_kontrol_alur_if_else_di_javascript](20250701030227_kontrol_alur_if_else_di_javascript)
-- [Looping Di JavaScript](Looping Di JavaScript)
+- [[20250630124757_alasan_let_dan_const_lebih_direkomendasikan]]
+- [[20250630160418_perbedaan_var_let_dan_const]]
+- [[20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan]]
+- [[20250621095130_tipe_data_di_javascript]]
+- [[Conversation Naming Variabel Di JavaScript]]
+- [[20250701030227_kontrol_alur_if_else_di_javascript]]
+- [[Looping Di JavaScript]]

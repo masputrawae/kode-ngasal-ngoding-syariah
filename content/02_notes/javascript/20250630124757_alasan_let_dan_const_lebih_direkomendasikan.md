@@ -57,7 +57,7 @@ console.log(nama)
 
 ## 🔗 Terkait
 
-- [20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan](20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan)
-- [20250630162416_jenis_jenis_scope_di_javascript](20250630162416_jenis_jenis_scope_di_javascript)
-- [Apa Itu Hoisting](Apa Itu Hoisting)
-- [20250630160418_perbedaan_var_let_dan_const](20250630160418_perbedaan_var_let_dan_const)
+- [[20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan]]
+- [[20250630162416_jenis_jenis_scope_di_javascript]]
+- [[Apa Itu Hoisting]]
+- [[20250630160418_perbedaan_var_let_dan_const]]

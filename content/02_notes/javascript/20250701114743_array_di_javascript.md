@@ -50,10 +50,10 @@ Array adalah struktur data seperti rak yang menyimpan banyak data (dalam urutan)
 
 ## 🔗 Terkait
 
-- [Looping Di JavaScript](Looping Di JavaScript)
-- [forEach Di JavaScript](forEach Di JavaScript)
-- [Object Di JavaScript](Object Di JavaScript)
-- [20250630113534_fungsi_map_di_javascript](20250630113534_fungsi_map_di_javascript)
-- [20250629175251_fungsi_filter_di_javascrip](20250629175251_fungsi_filter_di_javascrip)
-- [Fungsi reduce Di JavaScript](Fungsi reduce Di JavaScript)
-- [20250701122631_fungsi_slice_di_javascript](20250701122631_fungsi_slice_di_javascript)
+- [[Looping Di JavaScript]]
+- [[forEach Di JavaScript]]
+- [[Object Di JavaScript]]
+- [[20250630113534_fungsi_map_di_javascript]]
+- [[20250629175251_fungsi_filter_di_javascrip]]
+- [[Fungsi reduce Di JavaScript]]
+- [[20250701122631_fungsi_slice_di_javascript]]

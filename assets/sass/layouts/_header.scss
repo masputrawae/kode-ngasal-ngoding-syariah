@@ -1,0 +1,23 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.header {
+  @include m.flex-between;
+  background-color: var(--bg-body);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--cl-border);
+  box-shadow: var(--shadow-sm);
+
+  button {
+    .icon {
+      color: var(--cl-text-title);
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  @include b.min(md){
+    display: none;
+  }
+}

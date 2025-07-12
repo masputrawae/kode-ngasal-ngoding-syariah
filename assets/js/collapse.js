@@ -10,10 +10,10 @@ export function initTree() {
 
     // Apply saved state
     if (treeState[targetId]) {
-      targetEl.classList.add('tree__collapse--is-open')
+      targetEl.classList.add('tree__children--is-open')
       button.classList.add('tree__btn--is-open')
     } else {
-      targetEl.classList.remove('tree__collapse--is-open')
+      targetEl.classList.remove('tree__children--is-open')
       button.classList.remove('tree__btn--is-open')
     }
   })
@@ -27,10 +27,10 @@ export function treeCollapse() {
     button.addEventListener('click', () => {
       const treeState = JSON.parse(sessionStorage.getItem(TREE_KEY)) || {}
 
-      targetEl.classList.toggle('tree__collapse--is-open')
+      targetEl.classList.toggle('tree__children--is-open')
       button.classList.toggle('tree__btn--is-open')
 
-      const isOpen = targetEl.classList.contains('tree__collapse--is-open')
+      const isOpen = targetEl.classList.contains('tree__children--is-open')
       treeState[targetId] = isOpen
 
       sessionStorage.setItem(TREE_KEY, JSON.stringify(treeState))

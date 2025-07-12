@@ -53,6 +53,6 @@ console.log(nama)
 
 ## 🔗 Terkait
 
-- [20250630124757_alasan_let_dan_const_lebih_direkomendasikan](20250630124757_alasan_let_dan_const_lebih_direkomendasikan)
-- [Apa Itu Hoisting](Apa Itu Hoisting)
-- [20250630162416_jenis_jenis_scope_di_javascript](20250630162416_jenis_jenis_scope_di_javascript)
+- [[20250630124757_alasan_let_dan_const_lebih_direkomendasikan]]
+- [[Apa Itu Hoisting]]
+- [[20250630162416_jenis_jenis_scope_di_javascript]]

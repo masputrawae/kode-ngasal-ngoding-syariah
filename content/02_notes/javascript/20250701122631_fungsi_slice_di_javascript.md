@@ -37,6 +37,6 @@ console.log(newArr) // Output: [3, 4, 5] !❌ 6 tidak termasuk
 
 ## 🔗 Terkait
 
-- [20250630113534_fungsi_map_di_javascript](20250630113534_fungsi_map_di_javascript)
-- [20250629175251_fungsi_filter_di_javascrip](20250629175251_fungsi_filter_di_javascrip)
-- [Fungsi reduce Di JavaScript](Fungsi reduce Di JavaScript)
+- [[20250630113534_fungsi_map_di_javascript]]
+- [[20250629175251_fungsi_filter_di_javascrip]]
+- [[Fungsi reduce Di JavaScript]]

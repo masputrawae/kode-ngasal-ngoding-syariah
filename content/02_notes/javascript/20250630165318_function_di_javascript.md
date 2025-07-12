@@ -32,7 +32,7 @@ console.log(penjumlahan(1, 5)) // Output: 6
 console.log(penjumlahan(10, 10)) // Output: 20
 ```
 
-Tentang Return: [Return Di JavaScript](Return Di JavaScript)
+Tentang Return: [[Return Di JavaScript]]
 
 **Contoh lain**:
 
@@ -48,7 +48,7 @@ console.log(sapa('Eko')) // Output: Hai Eko Bagaimana Kabarnya?
 
 ## 🔗 Terkait
 
-- [Return Di JavaScript](Return Di JavaScript)
-- [Arrow Function Di JavaScript](Arrow Function Di JavaScript)
-- [Function Expression Di JavaScript](Function Expression Di JavaScript)
-- [String Literal Di JavaScript](String Literal Di JavaScript)
+- [[Return Di JavaScript]]
+- [[Arrow Function Di JavaScript]]
+- [[Function Expression Di JavaScript]]
+- [[String Literal Di JavaScript]]

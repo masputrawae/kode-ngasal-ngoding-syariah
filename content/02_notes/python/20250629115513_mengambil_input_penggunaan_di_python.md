@@ -41,5 +41,5 @@ b = float(input("Masukkan angka: "))
 
 **Terkait**:
 
-- [Casting Tipe Data Di Python](Casting Tipe Data Di Python)
-- [20250630104722_operator_perbandingan_di_python](20250630104722_operator_perbandingan_di_python)
+- [[Casting Tipe Data Di Python]]
+- [[20250630104722_operator_perbandingan_di_python]]

@@ -33,10 +33,10 @@ if (nilaiOtong > 75) {
 
 ## 🔗 Terkait
 
-- [Lanjutan Kontrol Alur If Else Di JavaScript](Lanjutan Kontrol Alur If Else Di JavaScript)
-- [Switch Case di JavaScript](Switch Case di JavaScript)
-- [20250628171342_operator_perbandingan_di_javascript](20250628171342_operator_perbandingan_di_javascript)
-- [20250701054353_ternary_operator_di_javascript](20250701054353_ternary_operator_di_javascript)
-- [20250630165318_function_di_javascript](20250630165318_function_di_javascript)
-- [Operator OR di JavaScript](Operator OR di JavaScript)
-- [Operator AND di JavaScript](Operator AND di JavaScript)
+- [[Lanjutan Kontrol Alur If Else Di JavaScript]]
+- [[Switch Case di JavaScript]]
+- [[20250628171342_operator_perbandingan_di_javascript]]
+- [[20250701054353_ternary_operator_di_javascript]]
+- [[20250630165318_function_di_javascript]]
+- [[Operator OR di JavaScript]]
+- [[Operator AND di JavaScript]]

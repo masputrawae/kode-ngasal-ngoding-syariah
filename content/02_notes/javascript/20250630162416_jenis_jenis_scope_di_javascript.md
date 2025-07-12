@@ -68,8 +68,8 @@ console.log('Dari Luar Block Scope: ', a)
 
 ## 🔗 Terkait
 
-- [20250630160418_perbedaan_var_let_dan_const](20250630160418_perbedaan_var_let_dan_const)
-- [20250630124757_alasan_let_dan_const_lebih_direkomendasikan](20250630124757_alasan_let_dan_const_lebih_direkomendasikan)
-- [20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan](20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan)
-- [Return Di JavaScript](Return Di JavaScript)
-- [20250630165318_function_di_javascript](20250630165318_function_di_javascript)
+- [[20250630160418_perbedaan_var_let_dan_const]]
+- [[20250630124757_alasan_let_dan_const_lebih_direkomendasikan]]
+- [[20250630121354_alasan_keyword_var_di_javaScript_tidak_direkomendasikan]]
+- [[Return Di JavaScript]]
+- [[20250630165318_function_di_javascript]]

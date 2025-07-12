@@ -3,11 +3,13 @@
 html {
   font-size: v.$text-base;
 }
+
 .markdown {
   line-height: 1.65;
   font-family: var(--font-sans);
   max-width: 100%;
   font-weight: 400;
+  color: var(--cl-text);
 
   :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 2rem;
@@ -44,10 +46,17 @@ html {
   }
 
   a {
-    color: var(--cl-accent-01);
+    color: var(--cl-link);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
 
     &:hover {
-      color: var(--cl-accent-02);
+      color: var(--cl-link);
     }
+  }
+
+  b, strong {
+    color: var(--cl-text-title);
   }
 }

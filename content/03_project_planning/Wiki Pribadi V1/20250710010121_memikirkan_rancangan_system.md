@@ -8,12 +8,12 @@ created: 2025-07-10T01:01:21+07:00
 updated: 2025-07-05T11:48:02+07:00
 ---
 
-Setelah meninjau kembali proyek [20250705114802_milestone_&_mvp_planning_astro_wiki](20250705114802_milestone_&_mvp_planning_astro_wiki) Sempat berfikir tentang tantangan performa yang dihadapi untuk kedepannya
+Setelah meninjau kembali proyek [[20250705114802_milestone_&_mvp_planning_astro_wiki]] Sempat berfikir tentang tantangan performa yang dihadapi untuk kedepannya
 
 **Pertanyaan**:
 
 - Apakah mampu generate ribuan markdown?
-- Apakah mampu untuk dijalankan dengan [20250710010556_script_untuk_ambil_data_di_git_dengan_javascript](20250710010556_script_untuk_ambil_data_di_git_dengan_javascript) untuk menampilkan historis pada setiap konten
+- Apakah mampu untuk dijalankan dengan [[20250710010556_script_untuk_ambil_data_di_git_dengan_javascript]] untuk menampilkan historis pada setiap konten
 
 Disini mulai bimbang dengan performa di masa mendatang
 

@@ -1,6 +1,6 @@
 <header class="sidebar__header">
   {{ partial "components/brand.html" . }}
-  <button>
+  <button data-sidebar-target="sidebar">
     {{ partial "components/icons.html" (dict "icon" "icon--x") }}
   </button>
 </header>
@@ -51,7 +51,7 @@
             {{ .LinkTitle }}
           </button>
 
-          <ul id="{{ .RelPermalink | md5 }}" class="tree__collapse {{ if $isOpen }} tree__collapse--is-open {{ end }}">
+          <ul id="{{ .RelPermalink | md5 }}" class="tree__children {{ if $isOpen }} tree__children--is-open {{ end }}">
             {{- template "tree_view" (dict "Page" . "CurrentPage" $current) -}}
           </ul>
 
@@ -66,7 +66,7 @@
         {{- $isActive := eq $current.RelPermalink .RelPermalink -}}
 
         <li class="tree__file">
-          <a class="tree__link {{ if $isActive }} tree__link--is-active{{ end }}" href="{{ .RelPermalink }}">
+          <a class="tree__link {{ if $isActive }} tree__link--is-active {{ end }}" href="{{ .RelPermalink }}">
             {{ .LinkTitle }}
           </a>
         </li>

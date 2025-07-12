@@ -63,11 +63,11 @@ if (nilai > 80) {
 - Jika nilai berisi lebih dari 80
 - maka jalankan `console.log('Anda Lulus')`
 
-**Lebih Lanjut Tentang Operator Perbandingan 👉**: [20250628171342_operator_perbandingan_di_javascript](20250628171342_operator_perbandingan_di_javascript)
+**Lebih Lanjut Tentang Operator Perbandingan 👉**: [[20250628171342_operator_perbandingan_di_javascript]]
 
 **Terkait**:
 
-- [20250628171342_operator_perbandingan_di_javascript](20250628171342_operator_perbandingan_di_javascript)
-- [20250628211305_else_if_statement_di_javascript](20250628211305_else_if_statement_di_javascript)
-- [20250701054353_ternary_operator_di_javascript](20250701054353_ternary_operator_di_javascript)
-- [Switch Statement Di JavaScript](Switch Statement Di JavaScript)
+- [[20250628171342_operator_perbandingan_di_javascript]]
+- [[20250628211305_else_if_statement_di_javascript]]
+- [[20250701054353_ternary_operator_di_javascript]]
+- [[Switch Statement Di JavaScript]]

@@ -43,7 +43,7 @@ if (isLoggedIn) {
 
 ## 🔗 Terkait
 
-- [20250701030227_kontrol_alur_if_else_di_javascript](20250701030227_kontrol_alur_if_else_di_javascript)
-- [20250628171342_operator_perbandingan_di_javascript](20250628171342_operator_perbandingan_di_javascript)
-- [20250627161909_logical_or_operator_di_javascript](20250627161909_logical_or_operator_di_javascript)
-- [20250627165415_logical_and_operator_di_javascript](20250627165415_logical_and_operator_di_javascript)
+- [[20250701030227_kontrol_alur_if_else_di_javascript]]
+- [[20250628171342_operator_perbandingan_di_javascript]]
+- [[20250627161909_logical_or_operator_di_javascript]]
+- [[20250627165415_logical_and_operator_di_javascript]]

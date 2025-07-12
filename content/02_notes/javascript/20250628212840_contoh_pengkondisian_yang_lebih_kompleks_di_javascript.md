@@ -35,6 +35,6 @@ if (usai >= 18) {
 
 **Terkait**:
 
-- [20250628171342_operator_perbandingan_di_javascript](20250628171342_operator_perbandingan_di_javascript)
-- [Switch Statement Di JavaScript](Switch Statement Di JavaScript)
-- [20250701054353_ternary_operator_di_javascript](20250701054353_ternary_operator_di_javascript)
+- [[20250628171342_operator_perbandingan_di_javascript]]
+- [[Switch Statement Di JavaScript]]
+- [[20250701054353_ternary_operator_di_javascript]]

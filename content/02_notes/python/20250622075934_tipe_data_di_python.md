@@ -49,9 +49,9 @@ print(f"Variabel sedang_bermain bertipe: {type(sedang_bermain)}")
 
 **Terkait**:
 
-- [20250629084509_mendeklarasikan_variabel_di_python](20250629084509_mendeklarasikan_variabel_di_python)
-- [Array Di Python](Array Di Python)
-- [20250629231646_list_di_python](20250629231646_list_di_python)
-- [20250629232511_dictionary_di_python](20250629232511_dictionary_di_python)
-- [20250629233929_tuple_di_python](20250629233929_tuple_di_python)
-- [20250612114301_operasi_aritmatika_di_python](20250612114301_operasi_aritmatika_di_python)
+- [[20250629084509_mendeklarasikan_variabel_di_python]]
+- [[Array Di Python]]
+- [[20250629231646_list_di_python]]
+- [[20250629232511_dictionary_di_python]]
+- [[20250629233929_tuple_di_python]]
+- [[20250612114301_operasi_aritmatika_di_python]]

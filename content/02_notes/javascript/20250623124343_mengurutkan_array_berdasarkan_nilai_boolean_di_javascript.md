@@ -47,8 +47,8 @@ items.sort((a, b) => (a.featured === b.featured ? 0 : a.featured ? 1 : -1))
 
 **Terkait**:
 
-- [Mengurutkan Array Object Berdasarkan Tanggal](Mengurutkan Array Object Berdasarkan Tanggal)
-- [20250630113534_fungsi_map_di_javascript](20250630113534_fungsi_map_di_javascript)
-- [20250629175251_fungsi_filter_di_javascrip](20250629175251_fungsi_filter_di_javascrip)
-- [Fungsi reduce Di JavaScript](Fungsi reduce Di JavaScript)
-- [Contoh penggunaan map filter dan reduce Di JavaScript](Contoh penggunaan map filter dan reduce Di JavaScript)
+- [[Mengurutkan Array Object Berdasarkan Tanggal]]
+- [[20250630113534_fungsi_map_di_javascript]]
+- [[20250629175251_fungsi_filter_di_javascrip]]
+- [[Fungsi reduce Di JavaScript]]
+- [[Contoh penggunaan map filter dan reduce Di JavaScript]]

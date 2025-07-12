@@ -39,4 +39,4 @@ x = 5 // Tidak error walaupun kamu tidak deklarasikan `x`
 
 ## 🔗 Terkait:
 
-- [20250620070056_variabel_tanpa_keyword_di_javascript](20250620070056_variabel_tanpa_keyword_di_javascript)
+- [[20250620070056_variabel_tanpa_keyword_di_javascript]]

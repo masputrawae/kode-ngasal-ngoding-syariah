@@ -30,6 +30,6 @@ console.log(filterArr) // Output: [6, 7, 8, 9]
 
 **Terkait**:
 
-- [20250630113534_fungsi_map_di_javascript](20250630113534_fungsi_map_di_javascript)
-- [Fungsi reduce Di JavaScript](Fungsi reduce Di JavaScript)
-- [Contoh penggunaan map filter dan reduce Di JavaScript](Contoh penggunaan map filter dan reduce Di JavaScript)
+- [[20250630113534_fungsi_map_di_javascript]]
+- [[Fungsi reduce Di JavaScript]]
+- [[Contoh penggunaan map filter dan reduce Di JavaScript]]

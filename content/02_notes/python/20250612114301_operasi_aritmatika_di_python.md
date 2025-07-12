@@ -38,8 +38,8 @@ print(a ** b)
 
 ## 🔗 Terkait
 
-- [20250629084509_mendeklarasikan_variabel_di_python](20250629084509_mendeklarasikan_variabel_di_python)
-- [Jenis Jenis Tipe Data Di Python](Jenis Jenis Tipe Data Di Python)
-- [Function Di Python](Function Di Python)
-- [Casting Tipe Data Di Python](Casting Tipe Data Di Python)
-- [Input Di Python](Input Di Python)
+- [[20250629084509_mendeklarasikan_variabel_di_python]]
+- [[Jenis Jenis Tipe Data Di Python]]
+- [[Function Di Python]]
+- [[Casting Tipe Data Di Python]]
+- [[Input Di Python]]

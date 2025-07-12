@@ -53,6 +53,6 @@ Secara sederhananya kondisi ini akan mencocokkan nilai dengan perbandingan lebih
 
 ## 🔗 Terkait
 
-- [20250630104722_operator_perbandingan_di_python](20250630104722_operator_perbandingan_di_python)
-- [20250612114301_operasi_aritmatika_di_python](20250612114301_operasi_aritmatika_di_python)
-- [Function Di Python](Function Di Python)
+- [[20250630104722_operator_perbandingan_di_python]]
+- [[20250612114301_operasi_aritmatika_di_python]]
+- [[Function Di Python]]

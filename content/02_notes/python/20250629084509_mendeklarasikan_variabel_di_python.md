@@ -20,9 +20,9 @@ isBelajar = True
 
 **Terkait**:
 
-- [Membuat Program Pertama Di Python](Membuat Program Pertama Di Python)
-- [20250622075934_tipe_data_di_python](20250622075934_tipe_data_di_python)
-- [20250612114841_percabangan_di_python](20250612114841_percabangan_di_python)
-- [Function Di Python](Function Di Python)
-- [20250629115513_mengambil_input_penggunaan_di_python](20250629115513_mengambil_input_penggunaan_di_python)
-- [Praktik Membuat Kalkulator Sederhana Di Python](Praktik Membuat Kalkulator Sederhana Di Python)
+- [[Membuat Program Pertama Di Python]]
+- [[20250622075934_tipe_data_di_python]]
+- [[20250612114841_percabangan_di_python]]
+- [[Function Di Python]]
+- [[20250629115513_mengambil_input_penggunaan_di_python]]
+- [[Praktik Membuat Kalkulator Sederhana Di Python]]

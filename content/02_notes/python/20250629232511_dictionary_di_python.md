@@ -26,6 +26,6 @@ print(siswa[nama]) # Output: John Doe
 
 **Terkait**:
 
-- [20250629231646_list_di_python](20250629231646_list_di_python)
-- [20250629233929_tuple_di_python](20250629233929_tuple_di_python)
-- [20250629233444_set_di_python](20250629233444_set_di_python)
+- [[20250629231646_list_di_python]]
+- [[20250629233929_tuple_di_python]]
+- [[20250629233444_set_di_python]]
