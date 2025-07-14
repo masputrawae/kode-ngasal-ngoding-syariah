@@ -1,31 +1,31 @@
 @layer theme {
   :root[data-theme="light"]{
-    --color-bg-body: ;
-    --color-bg-second: ;
-    --color-bg-third: ;
+    --color-bg-body: #f9fafb;
+    --color-bg-second: #f3f4f6;
+    --color-bg-third: #e5e7eb;
     
-    --color-text-default: ;
-    --color-text-title: ;
-    --color-text-muted: ;
-    --color-text-alt: ;
+    --color-text-default: #374151;
+    --color-text-title: #030712;
+    --color-text-muted: #4b5563;
+    --color-text-alt: #111827;
     
-    --color-border: ;
-    --color-border-second: ;
-    --color-border-focus: ;
-    --color-border-alt: ;
+    --color-border: #d1d5db;
+    --color-border-second: #e5e7eb;
+    --color-border-focus: #9ca3af;
+    --color-border-alt: #6b7280;
     
-    --color-link: ;
-    --color-link-hover: ;
-    --color-link-broken: ;
-    --color-link-broken-hover: ;
+    --color-link: #1d4ed8;
+    --color-link-hover: #2563eb;
+    --color-link-broken: #e11d48;
+    --color-link-broken-hover: #be123c;
     
-    --color-shadow-sm: ;
-    --color-shadow-md: ;
-    --color-shadow-lg: ;
+    --color-shadow-sm: 1px 4px 8px rgba(0, 0, 0, 0.1);
+    --color-shadow-md: 4px 8px 10px rgba(0, 0, 0, 0.08);
+    --color-shadow-lg: 6px 10px 12px rgba(0, 0, 0, 0.1);
 
-    --color-text-shadow-sm: ;
-    --color-text-shadow-md: ;
-    --color-text-shadow-lg: ;
+    --color-text-shadow-sm: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    --color-text-shadow-md: 2px 2px 3px rgba(0, 0, 0, 0.08);
+    --color-text-shadow-lg: 3px 3px 6px rgba(0, 0, 0, 0.1);
     
     --color-bg-state-tip: ;
     --color-bg-state-info: ;
