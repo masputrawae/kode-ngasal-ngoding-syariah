@@ -1,0 +1,54 @@
+@layer theme {
+  :root[data-theme="light"]{
+    --color-bg-body: ;
+    --color-bg-second: ;
+    --color-bg-third: ;
+    
+    --color-text-default: ;
+    --color-text-title: ;
+    --color-text-muted: ;
+    --color-text-alt: ;
+    
+    --color-border: ;
+    --color-border-second: ;
+    --color-border-focus: ;
+    --color-border-alt: ;
+    
+    --color-link: ;
+    --color-link-hover: ;
+    --color-link-broken: ;
+    --color-link-broken-hover: ;
+    
+    --color-shadow-sm: ;
+    --color-shadow-md: ;
+    --color-shadow-lg: ;
+
+    --color-text-shadow-sm: ;
+    --color-text-shadow-md: ;
+    --color-text-shadow-lg: ;
+    
+    --color-bg-state-tip: ;
+    --color-bg-state-info: ;
+    --color-bg-state-success: ;
+    --color-bg-state-warning: ;
+    --color-bg-state-danger: ;
+    --color-bg-state-error: ;
+    --color-bg-state-note: ;
+    --color-bg-state-abstract: ;
+    --color-bg-state-question: ;
+    --color-bg-state-failure: ;
+    --color-bg-state-important: ;
+    
+    --color-text-state-tip: ;
+    --color-text-state-info: ;
+    --color-text-state-success: ;
+    --color-text-state-warning: ;
+    --color-text-state-danger: ;
+    --color-text-state-error: ;
+    --color-text-state-note: ;
+    --color-text-state-abstract: ;
+    --color-text-state-question: ;
+    --color-text-state-failure: ;
+    --color-text-state-important: ;
+  }
+}

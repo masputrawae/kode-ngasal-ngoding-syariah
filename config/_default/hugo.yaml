@@ -1,0 +1,37 @@
+baseURL: https://masputrawae.github.io
+languageCode: id
+title: MasPutraWae
+
+markup:
+  tableOfContents:
+    endLevel: 6
+    ordered: false
+    startLevel: 2
+
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+      attribute:
+        block: true
+        title: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: '0.146.0'
+
+  mounts:
+    - source: 'content'
+      target: 'content'
+      excludeFiles: '99_templates/*'
+    - source: 'content'
+      target: 'content'
+      excludeFiles: '.obsidian/*'
+    - source: 'content'
+      target: 'content'
+      excludeFiles: '.trash/*'
+    - source: 'content'
+      target: 'content'
+      excludeFiles: 'private/*'
