@@ -1,0 +1,30 @@
+@mixin flex-align($v){
+  display: flex;
+  align-items: $v1;
+}
+
+@mixin circle($v){
+  width: $v;
+  height: $v;
+  border-radius: 50%;
+}
+
+@mixin px($v){
+  padding-left: $v;
+  padding-right: $v;
+}
+
+@mixin py($v){
+  padding-top: $v;
+  padding-bottom: $v;
+}
+
+@mixin mx($v){
+  margin-left: $v;
+  margin-right: $v;
+}
+
+@mixin my($v){
+  margin-top: $v;
+  margin-bottom: $v;
+}

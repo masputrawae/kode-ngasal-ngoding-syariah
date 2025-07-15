@@ -14,10 +14,10 @@
     --color-border-focus: #6b7280;
     --color-border-alt: #4b5563;
     
-    --color-link: #60a5fa;
-    --color-link-hover: #3b82f6;
-    --color-link-broken: #fb7185;
-    --color-link-broken-hover: #f43f5e;
+    --color-link: #3b82f6;
+    --color-link-hover: #60a5fa;
+    --color-link-broken: #f43f5e;
+    --color-link-broken-hover: #fb7185;
     
     --color-shadow-sm: 1px 4px 8px rgba(0, 0, 0, 0.7);
     --color-shadow-md: 4px 8px 10px rgba(0, 0, 0, 0.5);
@@ -27,28 +27,22 @@
     --color-text-shadow-md: 2px 2px 5px rgba(0, 0, 0, 0.5);
     --color-text-shadow-lg: 3px 3px 6px rgba(0, 0, 0, 0.4);
     
-    --color-bg-state-tip: ;
-    --color-bg-state-info: ;
-    --color-bg-state-success: ;
-    --color-bg-state-warning: ;
-    --color-bg-state-danger: ;
-    --color-bg-state-error: ;
-    --color-bg-state-note: ;
-    --color-bg-state-abstract: ;
-    --color-bg-state-question: ;
-    --color-bg-state-failure: ;
-    --color-bg-state-important: ;
+    --color-bg-state-tip: #1a2e05;
+    --color-bg-state-info: #172554;
+    --color-bg-state-success: #052e16;
+    --color-bg-state-warning: #422006;
+    --color-bg-state-danger: #450a0a;
+    --color-bg-state-note: #042f2e;
+    --color-bg-state-abstract: #1e1b4b;
+    --color-bg-state-question: #2e1065;
     
-    --color-text-state-tip: ;
-    --color-text-state-info: ;
-    --color-text-state-success: ;
-    --color-text-state-warning: ;
-    --color-text-state-danger: ;
-    --color-text-state-error: ;
-    --color-text-state-note: ;
-    --color-text-state-abstract: ;
-    --color-text-state-question: ;
-    --color-text-state-failure: ;
-    --color-text-state-important: ;
+    --color-text-state-tip: #a3e635; 
+    --color-text-state-info: #60a5fa; 
+    --color-text-state-success: #4ade80; 
+    --color-text-state-warning: #facc15; 
+    --color-text-state-danger: #f87171; 
+    --color-text-state-note: #2dd4bf; 
+    --color-text-state-abstract: #818cf8; 
+    --color-text-state-question: #a78bfa;
   }
 }
