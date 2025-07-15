@@ -1,16 +1,6 @@
-<nav id="menuListNotes" class="menu">
-  <header class="menu__header">
-    <strong>List Notes</strong>
-    <button data-menu="menuListNotes">
-      {{ partial "components/icon" (dict "name" "x") }}
-    </button>
-  </header>
-  <ul class="tree">
-    {{- template "tree_view" (dict "Page" .Site.Home "CurrentPage" .) -}}
-  </ul>
-  <div class="resize-handle"></div>
-</nav>
-
+<ul class="tree">
+  {{- template "tree_view" (dict "Page" .Site.Home "CurrentPage" .) -}}
+</ul>
 {{- define "tree_view" -}}
   {{- $page := .Page -}}
   {{- $current := .CurrentPage -}}

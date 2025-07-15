@@ -1,0 +1,15 @@
+<form class="form">
+  <label for="inputSearch" class="form__label">
+    {{ partial "components/icon" (dict "name" "search") }}
+  </label>
+  <input
+    type="search"
+    name="inputSearch"
+    id="inputSearch"
+    class="form__input"
+    placeholder="Cari Catatan..."
+  />
+</form>
+<nav class="results">
+  <ul id="results" class="results__list"></ul>
+</nav>

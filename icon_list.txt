@@ -25,6 +25,9 @@ box-arrow-up-right
 folder-symlink
 house
 gear-wide-connected
+moon-stars
+list
+sun
 
 alexa
 behance

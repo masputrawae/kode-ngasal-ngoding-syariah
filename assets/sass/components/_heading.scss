@@ -1,0 +1,18 @@
+@use '../abstracts/mixins' as m;
+
+.heading {
+  border-bottom: 1px solid var(--color-border);
+
+  &__anchor {
+    visibility: hidden;
+    opacity: 0;
+    @include m.transition(visibility, opacity);
+  }
+
+  &:hover {
+    .heading__anchor {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

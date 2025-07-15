@@ -1,10 +1,14 @@
 author: Putra Jaya
 tagline:
+  - Selamat Datang!
+  - Hari Yang Indah!
   - Manusia Biasa
   - Semangat Belajar!
   - Semangat Koding!
-logo: logo.webp
-image: default-image.webp
+  - Hai Hello!
+  - Cah Bagus
+logo: assets/images/logo.webp
+image: assets/images/default-image.webp
 description: |
   Dolore nostrud voluptate ullamco et do exercitation est fugiat adipisicing mollit enim non. Qui reprehenderit est tempor cupidatat in fugiat deserunt.
 

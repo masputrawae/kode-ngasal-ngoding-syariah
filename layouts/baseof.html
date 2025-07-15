@@ -13,16 +13,16 @@
   {{ partial "headed/sass" . }}
 </head>
 <body>
-  <div class="main">
-    {{ partial "layouts/header" . }}
-    {{ block "main" . }}{{ end }}
-    {{ partial "layouts/footer" . }}
+  <div class="layout">
+    {{ partial "layouts/sidebar-left" . }}
+    <div class="main">
+      {{ partial "layouts/header" . }}
+      {{ block "main" . }}{{ end }}
+      {{ partial "layouts/footer" . }}
+    </div>
+    {{ partial "layouts/sidebar-right" . }}
+    <div class="overlay"></div>
   </div>
-
-  {{ partial "layouts/menu-list-notes" . }}
-  {{ partial "layouts/menu-table-of-content" . }}
-  {{ partial "layouts/menu-setting" . }}
-  {{ partial "layouts/menu-search" . }}
 
   {{ partial "headed/preview-link" . }}
   {{ partial "headed/embed-js" . }}

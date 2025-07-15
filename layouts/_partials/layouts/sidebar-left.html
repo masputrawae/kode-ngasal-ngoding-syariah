@@ -1,0 +1,27 @@
+<aside id="sidebarLeft" class="sidebar sidebar--left">
+  <header class="sidebar__header">
+    <a href="{{ site.BaseURL | relURL }}" class="brand">
+      <div class="brand__image">
+        <img src="{{ site.Params.logo | relURL }}" alt="Logo {{ site.Params.author }}" class="brand__logo">
+      </div>
+      <span class="brand__body">
+        <strong class="brand__title">{{ site.Params.author }}</strong>
+        <em class="typewriter brand__tagline" data-texts="{{ site.Params.tagline | jsonify }}"></em>
+      </span>
+    </a>
+
+    <button data-sidebar="sidebarLeft">
+      {{ partial "components/icon" (dict "name" "x") }}
+    </button>
+  </header>
+  <nav class="sidebar__header-second">
+    <button id="switchTheme">
+      {{ partial "components/icon" (dict "name" "sun") }}
+      {{ partial "components/icon" (dict "name" "moon-stars") }}
+    </button>
+    {{ partial "components/search" . }}
+  </nav>
+  <nav class="sidebar__navigation">
+    {{ partial "components/tree" . }}
+  </nav>
+</aside>
