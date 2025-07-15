@@ -1,5 +1,13 @@
 @use '../abstracts/mixins' as m;
 
+.layout {
+  display: block;
+  @include m.min(lg) {
+    display: grid;
+    grid-template-columns: 24rem minmax(0, 1fr);
+  }
+}
+
 .overlay {
   display: block;
   position: fixed;

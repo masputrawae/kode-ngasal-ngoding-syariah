@@ -13,17 +13,28 @@
 
   &--left {
     left: 0;
-    transform: translateX(0%);
-    visibility: visible;
+    transform: translateX(-100%);
 
     display: grid;
     grid-template-rows: auto auto minmax(0,1fr);
     gap: 1rem;
+    border-inline-end: 1px solid var(--color-border);
+
+    @include m.min(lg){
+      position: sticky;
+      transform: translateX(0%);
+      visibility: visible;
+      width: 24rem;
+    }
   }
   
   &--right {
     right: 0;
     transform: translateX(100%);
+
+    @include m.min(md){
+      width: 24rem;
+    }
   }
 
   &--isOpen {
@@ -46,13 +57,6 @@
   &__navigation {
     overflow-y: auto;
     overflow-x: hidden;
-  }
-
-  @include m.min(lg){
-    width: 20rem;
-  }
-
-  @include m.min(xl){
-    width: 22rem;
+    scrollbar-width: thin;
   }
 }

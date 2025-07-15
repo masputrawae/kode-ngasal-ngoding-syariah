@@ -4,6 +4,7 @@ html {
   font-size: 14px;
   scrollbar-width: thin;
   scrollbar-color: var(--color-link) var(--color-bg-body);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,9 +17,10 @@ body {
   font-size: var(--text-base);
   line-height: 1.65;
   width: 100%;
-  max-width: 65ch;
-  margin-inline: auto;
+  max-width: 100%;
+  overflow-x: hidden;
 
+  margin-inline: auto;
   // HEADING
   :where(h1, h2, h3, h4, h5, h6) {
     margin-top: 1.5rem;

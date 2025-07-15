@@ -1,0 +1,150 @@
+@use '../abstracts/mixins' as m;
+
+.tree {
+  padding-inline: 0.5rem;
+
+  &__children {
+    padding-inline-start: 1rem;
+    margin-inline-start: 0.5rem;
+    display: none;
+    border-inline-start: 1px dashed var(--color-border-alt);
+
+    &--isOpen {
+      display: block;
+      animation: fadeIn 0.2s ease-out;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    margin-block: 0.25rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--color-text-title);
+    background-color: var(--color-bg-second);
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    @include m.transition(background-color, color);
+
+    &--isOpen {
+      background-color: var(--color-bg-third);
+    }
+
+    &:hover {
+      background-color: var(--color-bg-third);
+      color: var(--color-link);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-link);
+      outline-offset: 2px;
+    }
+
+    &::after {
+      content: '▸';
+      margin-left: auto;
+      transition: transform 0.2s;
+    }
+
+    &--isOpen::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__file {
+    list-style: disc;
+    margin-left: 1.5rem;
+  }
+
+  &__link {
+    display: block;
+    color: var(--color-text-muted);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color 0.2s, text-decoration 0.2s;
+    cursor: pointer;
+
+    &--isActive {
+      color: var(--color-link);
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: var(--color-link-hover);
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-link);
+      outline-offset: 2px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#TableOfContents {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+
+  ol {
+    padding-left: 1rem;
+    list-style: decimal;
+    margin: 0;
+  }
+
+  li {
+    margin: 0.3rem 0;
+    transition: color 0.2s ease;
+
+    a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background: var(--color-text-muted);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+      }
+
+      &:hover:after {
+        transform: scaleX(1);
+      }
+
+      &.active {
+        color: var(--color-link);
+        font-weight: 600;
+        border-color: var(--color-link);
+
+        &:after {
+          transform: scaleX(1);
+          background: var(--color-link);
+        }
+      }
+    }
+  }
+}

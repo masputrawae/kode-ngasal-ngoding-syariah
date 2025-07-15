@@ -6,7 +6,7 @@ enableEmoji: true
 markup:
   tableOfContents:
     endLevel: 6
-    ordered: false
+    ordered: true
     startLevel: 2
   
   highlight:

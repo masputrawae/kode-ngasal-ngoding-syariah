@@ -102,10 +102,81 @@ function typingHandler() {
   })
 }
 
+// TREE COLLAPSIBLE
+function treeHandler() {
+  const TREE_KEY = 'TREE'
+  const folderButtons = document.querySelectorAll('[data-folder-target]')
+
+  function initTree() {
+    const treeState = JSON.parse(sessionStorage.getItem(TREE_KEY)) || []
+
+    folderButtons.forEach(button => {
+      const targetId = button.getAttribute('data-folder-target')
+      const targetEl = document.getElementById(targetId)
+
+      // Apply saved state
+      if (treeState[targetId]) {
+        targetEl.classList.add('tree__children--isOpen')
+        button.classList.add('tree__btn--isOpen')
+      } else {
+        targetEl.classList.remove('tree__children--isOpen')
+        button.classList.remove('tree__btn--isOpen')
+      }
+    })
+  }
+
+  function treeCollapse() {
+    folderButtons.forEach(button => {
+      const targetId = button.getAttribute('data-folder-target')
+      const targetEl = document.getElementById(targetId)
+
+      button.addEventListener('click', () => {
+        const treeState = JSON.parse(sessionStorage.getItem(TREE_KEY)) || {}
+
+        targetEl.classList.toggle('tree__children--isOpen')
+        button.classList.toggle('tree__btn--isOpen')
+
+        const isOpen = targetEl.classList.contains('tree__children--isOpen')
+        treeState[targetId] = isOpen
+
+        sessionStorage.setItem(TREE_KEY, JSON.stringify(treeState))
+      })
+    })
+  }
+
+  initTree()
+  treeCollapse()
+}
+
 function main() {
   themeHandler()
   sidebarHandler()
   typingHandler()
+  treeHandler()
 }
 
 document.addEventListener('DOMContentLoaded', main)
+document.addEventListener("DOMContentLoaded", () => {
+  const tocLinks = document.querySelectorAll("#TableOfContents a");
+  const headings = Array.from(tocLinks)
+    .map(link => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  function onScroll() {
+    let activeIndex = -1;
+    headings.forEach((heading, index) => {
+      const rect = heading.getBoundingClientRect();
+      if (rect.top <= 100) { // adjust offset as needed
+        activeIndex = index;
+      }
+    });
+
+    tocLinks.forEach(link => link.classList.remove("active"));
+    if (activeIndex >= 0) {
+      tocLinks[activeIndex].classList.add("active");
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+});
