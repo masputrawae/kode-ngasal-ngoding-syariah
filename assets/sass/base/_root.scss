@@ -1,15 +1,17 @@
-@layer theme {
-  :root {
-    --text-sm: 0.88rem;
-    --text-tiny: 0.94rem;
-    --text-base: 1rem;
-    --text-lg: 1.07rem;
-    --text-xl: 1.14rem;
-    --text-2xl: 1.21rem;
-    --text-3xl: 1.3rem;
-    --text-4xl: 1.38rem;
-    --text-5xl: 1.48rem;
-    --text-6xl: 1.57rem;
-    --text-7xl: 1.68rem;
-  }
+:root {
+  --font-mono: "Fira Code", monospace;
+  --font-noto: "Noto Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+  --text-sm: 0.88rem;
+  --text-tiny: 0.94rem;
+  --text-base: 1rem;
+  --text-lg: 1.07rem;
+  --text-xl: 1.14rem;
+  --text-2xl: 1.21rem;
+  --text-3xl: 1.3rem;
+  --text-4xl: 1.38rem;
+  --text-5xl: 1.48rem;
+  --text-6xl: 1.57rem;
+  --text-7xl: 1.68rem;
 }

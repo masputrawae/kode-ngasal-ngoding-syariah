@@ -2,4 +2,9 @@
 @use './light';
 @use './root';
 @use './reset';
+
+@use './syntax-github-dark';
+@use './syntax-github-light';
+
 @use './typography';
+@use './callout';

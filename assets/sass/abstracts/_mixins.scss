@@ -1,30 +1,71 @@
-@mixin flex-align($v){
-  display: flex;
-  align-items: $v1;
+// _breakpoints.scss
+@use './variables' as v;
+@use 'sass:map';
+
+@mixin min($breakpoint) {
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    @media screen and (min-width: map.get(v.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else if type-of($breakpoint) == number {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found. Available breakpoints: #{map-keys(v.$breakpoints)}";
+  }
 }
 
-@mixin circle($v){
+@mixin max($breakpoint) {
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    @media screen and (max-width: map.get(v.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else if type-of($breakpoint) == number {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found. Available breakpoints: #{map-keys(v.$breakpoints)}";
+  }
+}
+
+@mixin between($from, $to) {
+  @if map.has-key(v.$breakpoints, $from) and map.has-key(v.$breakpoints, $to) {
+    @media screen and (min-width: map.get(v.$breakpoints, $from)) and (max-width: map.get(v.$breakpoints, $to)) {
+      @content;
+    }
+  } @else if type-of($from) == number and type-of($to) == number {
+    @media screen and (min-width: $from) and (max-width: $to) {
+      @content;
+    }
+  } @else {
+    @warn "One or both breakpoints not found. Available breakpoints: #{map-keys(v.$breakpoints)}";
+  }
+}
+
+@mixin circle($v) {
   width: $v;
   height: $v;
   border-radius: 50%;
 }
 
-@mixin px($v){
-  padding-left: $v;
-  padding-right: $v;
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@mixin py($v){
-  padding-top: $v;
-  padding-bottom: $v;
+@mixin transition($properties...) {
+  transition: $properties, 0.3s ease-in-out;
 }
 
-@mixin mx($v){
-  margin-left: $v;
-  margin-right: $v;
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
 }
 
-@mixin my($v){
-  margin-top: $v;
-  margin-bottom: $v;
+@mixin grid-cols($col) {
+  display: grid;
+  grid-template-columns: repeat($col, minmax(0, 1fr));
 }

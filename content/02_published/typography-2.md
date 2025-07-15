@@ -1,6 +1,6 @@
 ---
-id: "20250712220512"
-title: Typography Preview
+id: '20250712220512'
+title: Typography 2
 description: Typography preview
 image: https://picsum.photos/1080/720?2
 tags:
@@ -176,6 +176,13 @@ or even:
 3. Bird
 1. McHale
 8. Parish
+
+Task
+
+- [ ] Not Chacked
+- [ ] Not Chacked
+- [x] Chacked
+- [x] Chacked
 
 you'd get the exact same HTML output. The point is, if you want to,
 you can use ordinal numbers in your ordered Markdown lists, so that

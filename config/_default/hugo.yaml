@@ -1,12 +1,25 @@
 baseURL: https://masputrawae.github.io
 languageCode: id
 title: MasPutraWae
+enableEmoji: true
 
 markup:
   tableOfContents:
     endLevel: 6
     ordered: false
     startLevel: 2
+  
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    style: 'github-dark'
+    noClasses: false
+    lineNumbersInTable: false
+    lineNos: false
+    anchorLineNos: false
+    lineAnchors: ''
+    lineNoStart: 1
+    tabWidth: 4
 
   goldmark:
     renderer:
