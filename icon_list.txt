@@ -23,6 +23,8 @@ braces
 x-circle
 box-arrow-up-right
 folder-symlink
+house
+gear-wide-connected
 
 alexa
 behance

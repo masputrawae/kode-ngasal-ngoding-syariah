@@ -1,0 +1,17 @@
+<header class="header">
+  <button data-menu="menuListNotes" class="header__button">
+    {{ partial "components/icon" (dict "name" "journal-text") }}
+  </button>
+  <button data-menu="menuSetting" class="header__button">
+    {{ partial "components/icon" (dict "name" "gear-wide-connected") }}
+  </button>
+  <a href="{{ site.BaseURL | relURL }}" class="header__button">
+    {{ partial "components/icon" (dict "name" "house") }}
+  </a>
+  <button data-menu="menuTableOfContent" class="header__button">
+    {{ partial "components/icon" (dict "name" "book") }}
+  </button>
+  <button data-menu="menuSearchBar" class="header__button">
+    {{ partial "components/icon" (dict "name" "search") }}
+  </button>
+</header>

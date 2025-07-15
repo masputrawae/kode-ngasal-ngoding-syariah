@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main class="markdown">
-  <article>
+  <article class="content">
+    <h1 class="heading">{{ .Title }}</h1>
     {{ partial "components/wikilinks" . }}
   </article>
 </main>

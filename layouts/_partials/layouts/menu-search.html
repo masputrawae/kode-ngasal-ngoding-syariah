@@ -1,0 +1,19 @@
+<aside id="menuSearchBar" class="menu">
+  <div class="resize-handle">
+    <header class="menu__header">
+      <strong>Search</strong>
+      <button data-menu="menuSearchBar">
+        {{ partial "components/icon" (dict "name" "x") }}
+      </button>
+    </header>
+    <div>
+      <form class="form">
+        <label for="inputSearch" class="form__label">Search</label>
+        <input type="search" name="inputSearch" id="inputSearch" class="form__input">
+      </form>
+      <nav class="results">
+        <ul id="results" class="results__list"></ul>
+      </nav>
+    </div>
+  </div>
+</aside>
