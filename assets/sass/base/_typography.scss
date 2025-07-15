@@ -19,6 +19,7 @@ body {
   max-width: 65ch;
   margin-inline: auto;
 
+  // HEADING
   :where(h1, h2, h3, h4, h5, h6) {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
@@ -66,10 +67,12 @@ body {
     }
   }
 
+  // PARAGRAPH
   p {
     margin-block: 1.25rem;
   }
 
+  // LIST STYLE
   ul,
   ol {
     margin-block: 1.25rem;
@@ -84,16 +87,32 @@ body {
     list-style-type: decimal;
   }
 
-  dt {
-    margin-top: 1.25rem;
-    font-weight: 600;
+  // DEFINITION LIST
+  dl {
+    margin: 1.5em 0;
+    line-height: 1.6;
   }
 
+  dt {
+    font-weight: 600;
+    color: var(--color-text-muted);
+    border-bottom: 1px dashed var(--color-text-muted);
+    padding-bottom: 0.3em;
+  }
+
+  dd {
+    margin: 0.5em 0 1em 1em;
+    color: var(--color-text-title);
+    padding-inline-start: 1em;
+    border-inline-start: 3px solid var(--color-text-state-info);
+  }
+
+  // TABLE
   table {
     table-layout: auto;
     width: 100%;
     margin-block: 3rem;
-    font-size: var(--text-sm);
+    font-size: var(--text-tiny);
     line-height: 1.75;
   }
 
@@ -143,6 +162,7 @@ body {
     margin-block: 1.5rem;
   }
 
+  // LINK
   a {
     color: var(--color-link);
     text-decoration: underline;
@@ -156,14 +176,26 @@ body {
     }
   }
 
-  .link-broken {
-    color: var(--color-link-broken);
+  .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    
+    .bi {
+      width: var(--text-sm);
+      height: var(--text-sm);
+      display: inline;
+    }
+    &--broken {
+      color: var(--color-link-broken);
 
-    &:hover {
-      color: var(--color-link-broken-hover);
+      &:hover {
+        color: var(--color-link-broken-hover);
+      }
     }
   }
 
+  // CODE
   pre,
   code,
   kbd {
@@ -223,6 +255,7 @@ body {
     box-shadow: var(--color-shadow-sm);
   }
 
+  // BLOCKQUOTE
   blockquote {
     color: var(--color-text-muted);
     border-inline-start-width: 0.25rem;
@@ -248,6 +281,7 @@ body {
     }
   }
 
+  // TASK CHECKBOX
   ul {
     &:has(li input[type='checkbox']) {
       padding: 0;
@@ -298,7 +332,64 @@ body {
     }
   }
 
-  @include m.min(xl){
+  // IMAGE
+  .figure {
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: var(--color-shadow-sm);
+      display: inline-block;
+    }
+
+    &--left,
+    &--right {
+      max-width: 320px;
+    }
+
+    &--left {
+      float: left;
+      align-items: start;
+      text-align: left;
+    }
+
+    &--right {
+      float: right;
+      align-items: end;
+      text-align: right;
+    }
+
+    &__caption {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+      max-width: 320px;
+    }
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    @include m.max(lg) {
+      &--left,
+      &--right {
+        float: none;
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @include m.min(xl) {
     max-width: 100ch;
   }
 }

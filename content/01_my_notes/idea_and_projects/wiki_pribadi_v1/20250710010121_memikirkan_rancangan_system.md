@@ -8,6 +8,9 @@ created: 2025-07-10T01:01:21+07:00
 updated: 2025-07-05T11:48:02+07:00
 ---
 
+- [[20250620221110_ubah_string_ke_number_di_javascript]]
+- [[20250627234640_asynchronous_di_javascript]]
+
 Setelah meninjau kembali proyek [[20250705114802_milestone_and_mvp_planning_astro_wiki]] Sempat berfikir tentang tantangan performa yang dihadapi untuk kedepannya
 
 **Pertanyaan**:

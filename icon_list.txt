@@ -20,6 +20,9 @@ book
 search
 person
 braces
+x-circle
+box-arrow-up-right
+folder-symlink
 
 alexa
 behance

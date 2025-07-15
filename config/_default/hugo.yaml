@@ -22,10 +22,31 @@ markup:
     tabWidth: 4
 
   goldmark:
+    renderHooks:
+      image:
+        enableDefault: true
+        useEmbedded: auto
+      link:
+        enableDefault: true
+        useEmbedded: auto
     renderer:
       unsafe: true
+    extensions:
+      definitionList: true
+      extras:
+        delete:
+          enable: true
+        insert:
+          enable: true
+        mark:
+          enable: true
+        subscript:
+          enable: true
+        superscript:
+          enable: true
+      footnote: true
     parser:
-      wrapStandAloneImageWithinParagraph: false
+      wrapStandAloneImageWithinParagraph: true
       attribute:
         block: true
         title: true
