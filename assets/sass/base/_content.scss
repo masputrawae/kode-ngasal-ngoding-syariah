@@ -1,0 +1,31 @@
+@use '../abstracts/mixins' as m;
+
+.content {
+  padding-inline: 0.5rem;
+  display: block;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 4rem;
+    background-color: var(--color-bg-second);
+    padding-inline: 1rem;
+
+    #TableOfContents {
+      top: 5rem;
+      left: 0;
+      padding: 0 1rem;
+      border: 1px solid var(--color-border);
+      position: absolute;
+      background-color: var(--color-bg-second);
+      visibility: hidden;
+
+      &.isActive {
+        visibility: visible;
+      }
+    }
+  }
+}

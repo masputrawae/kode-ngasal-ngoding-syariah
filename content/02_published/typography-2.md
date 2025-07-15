@@ -11,28 +11,7 @@ updated: 2025-07-12T22:05:12+07:00
 pinned: true
 ---
 
-# Markdown: Syntax
-
-*   [Overview](#overview)
-    *   [Philosophy](#philosophy)
-    *   [Inline HTML](#html)
-    *   [Automatic Escaping for Special Characters](#autoescape)
-*   [Block Elements](#block)
-    *   [Paragraphs and Line Breaks](#p)
-    *   [Headers](#header)
-    *   [Blockquotes](#blockquote)
-    *   [Lists](#list)
-    *   [Code Blocks](#precode)
-    *   [Horizontal Rules](#hr)
-*   [Span Elements](#span)
-    *   [Links](#link)
-    *   [Emphasis](#em)
-    *   [Code](#code)
-    *   [Images](#img)
-*   [Miscellaneous](#misc)
-    *   [Backslash Escapes](#backslash)
-    *   [Automatic Links](#autolink)
-
+Eiusmod deserunt est exercitation in aliquip tempor. Cillum quis officia eiusmod aute ad aliquip sunt aliquip sunt. Aliquip elit ea consequat esse qui. Adipisicing velit esse dolore eu aute aliqua qui in culpa. Esse commodo pariatur voluptate ad nulla aliqua Lorem esse dolore proident consequat.
 
 **Note:** This document is itself written using Markdown; you
 can [see the source for it by adding '.text' to the URL](/projects/markdown/syntax.text).
@@ -41,7 +20,7 @@ can [see the source for it by adding '.text' to the URL](/projects/markdown/synt
 
 ## Overview
 
-### Philosophy
+### Philosophy 
 
 Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
 

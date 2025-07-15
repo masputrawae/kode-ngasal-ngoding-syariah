@@ -1,6 +1,16 @@
 {{ define "main" }}
 <main class="markdown">
-  <article>
+  <article class="content">
+    <div class="content__header">
+      <h1>{{ .Title }}</h1>
+      <div class="content__toc">
+        <button data-toc="TableOfContents">
+          On This Page
+        </button>
+        {{ .TableOfContents }}
+      </div>
+      
+    </div>
     {{ partial "components/wikilinks" . }}
   </article>
 </main>
