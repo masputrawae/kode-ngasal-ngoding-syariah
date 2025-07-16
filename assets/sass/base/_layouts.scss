@@ -29,7 +29,6 @@
   align-items: center;
   width: 100%;
   padding-inline: 1rem;
-  position: sticky;
   inset-block-start: 0;
 
   &__right {
@@ -45,6 +44,7 @@
   }
 
   @include m.min(lg) {
+    position: fixed;
     background-color: var(--color-bg-second);
     justify-content: space-between;
     grid-area: header;
@@ -70,6 +70,11 @@
     .brand {
       display: flex;
       width: 20%;
+    }
+  }
+  @include m.min(xl) {
+    .bi-book {
+      display: none;
     }
   }
 }
@@ -133,18 +138,20 @@
   .content {
     padding-inline: 1rem;
   }
-
+  
   @include m.min(lg) {
+    margin-block-start: 11dvh;
     grid-area: content;
   }
 }
 
 // FOOTER
 .footer {
-  margin-bottom: 6rem;
+  margin-block-end: 6rem;
 
   @include m.min(lg) {
     grid-area: footer;
+    margin-block-end: 0;
   }
 }
 

@@ -113,7 +113,7 @@ function treeHandler() {
   const folderButtons = document.querySelectorAll('[data-folder-target]')
 
   function initTree() {
-    const treeState = JSON.parse(sessionStorage.getItem(TREE_KEY)) || []
+    const treeState = JSON.parse(sessionStorage.getItem(TREE_KEY)) || {}
 
     folderButtons.forEach(button => {
       const targetId = button.getAttribute('data-folder-target')
@@ -153,15 +153,8 @@ function treeHandler() {
   treeCollapse()
 }
 
-function main() {
-  themeHandler()
-  modalHandler()
-  typingHandler()
-  treeHandler()
-}
-
-document.addEventListener('DOMContentLoaded', main)
-document.addEventListener('DOMContentLoaded', () => {
+// TOC HIGHLIGHT
+function tocHandler() {
   const tocLinks = document.querySelectorAll('#TableOfContents a')
   const headings = Array.from(tocLinks)
     .map(link => document.querySelector(link.getAttribute('href')))
@@ -171,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeIndex = -1
     headings.forEach((heading, index) => {
       const rect = heading.getBoundingClientRect()
-      if (rect.top <= 100) {
+      if (rect.top <= 64 + 20) {
         // adjust offset as needed
         activeIndex = index
       }
@@ -185,4 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
-})
+}
+
+function main() {
+  themeHandler()
+  modalHandler()
+  typingHandler()
+  treeHandler()
+  tocHandler()
+}
+
+document.addEventListener('DOMContentLoaded', main)

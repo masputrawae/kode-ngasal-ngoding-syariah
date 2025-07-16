@@ -68,6 +68,10 @@ body {
         opacity: 1;
       }
     }
+
+    @include m.min(lg){
+      scroll-margin-block-start: 11dvh;
+    }
   }
 
   // PARAGRAPH
