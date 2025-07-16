@@ -1,10 +1,25 @@
 <header class="header">
   {{ partial "components/brand" . }}
+  {{ partial "components/search" . }}
   <div class="header__right">
-    {{ partial "components/search" . }}
+    <a href="">
+      {{ partial "components/icon" (dict "name" "github") }}
+    </a>
+    <a href="">
+      {{ partial "components/icon" (dict "name" "facebook") }}
+    </a>
+    <a href="">
+      {{ partial "components/icon" (dict "name" "discord") }}
+    </a>
+    <a href="">
+      {{ partial "components/icon" (dict "name" "twitter-x") }}
+    </a>
     <button data-btn-theme>
       {{ partial "components/icon" (dict "name" "sun") }}
       {{ partial "components/icon" (dict "name" "moon-stars") }}
+    </button>
+    <button data-modal="sidebarRight">
+      {{ partial "components/icon" (dict "name" "book") }}
     </button>
   </div>
 </header>

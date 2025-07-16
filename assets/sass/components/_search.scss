@@ -1,0 +1,37 @@
+@use '../abstracts/mixins' as m;
+// SEARCH
+.search {
+  position: relative;
+  width: 100%;
+  
+  &__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-block-start: 1rem;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--color-shadow-sm);
+
+    background-color: var(--color-bg-second);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100rem;
+
+    @include m.min(lg) {
+      margin-block-start: 0;
+    }
+  }
+
+  &__input {
+    outline: none;
+    width: 100%;
+  }
+
+  &__results {
+    position: absolute;
+  }
+
+  @include m.min(lg){
+    width: 50%;
+  }
+}

@@ -52,13 +52,13 @@ function modalHandler() {
     const targetEl = document.getElementById(targetId)
 
     btn.addEventListener('click', () => {
-      targetEl.classList.toggle('sidebar--isOpen')
-      overlay.classList.toggle('overlay--isActive')
+      targetEl.classList.toggle('isOpen')
+      overlay.classList.toggle('isActive')
     })
 
     overlay.addEventListener('click', () => {
-      targetEl.classList.remove('sidebar--isOpen')
-      overlay.classList.remove('overlay--isActive')
+      targetEl.classList.remove('isOpen')
+      overlay.classList.remove('isActive')
     })
   })
 }

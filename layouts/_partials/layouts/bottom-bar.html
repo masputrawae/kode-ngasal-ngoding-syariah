@@ -12,9 +12,9 @@
     {{ partial "components/icon" (dict "name" "house") }}
   </a>
 
-  <button data-modal="sidebarRight" class="bottom-bar__btn">
+  <a href="{{ site.BaseURL | relURL }}" class="bottom-bar__btn">
     {{ partial "components/icon" (dict "name" "github") }}
-  </button>
+  </a>
 
   <button data-modal="sidebarRight" class="bottom-bar__btn">
     {{ partial "components/icon" (dict "name" "book") }}
