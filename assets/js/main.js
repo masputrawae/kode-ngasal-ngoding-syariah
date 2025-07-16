@@ -4,16 +4,19 @@ const overlay = document.querySelector('.overlay')
 // SWITCH THEME HANDLER
 function themeHandler() {
   const KEY_THEME = 'THEME'
-  const button = document.querySelector('#switchTheme')
+  const buttons = document.querySelectorAll('[data-btn-theme]')
 
   function setTheme(theme) {
     elHtml.dataset.theme = theme
     sessionStorage.setItem(KEY_THEME, theme)
-    if (theme === 'dark') {
-      button.classList.add('darkIsActive')
-    } else {
-      button.classList.remove('darkIsActive')
-    }
+
+    buttons.forEach(btn => {
+      if (theme === 'dark') {
+        btn.classList.add('darkIsActive')
+      } else {
+        btn.classList.remove('darkIsActive')
+      }
+    })
   }
 
   function initTheme() {
@@ -27,10 +30,12 @@ function themeHandler() {
   }
 
   function toggleTheme() {
-    button.addEventListener('click', () => {
-      const storageTheme = sessionStorage.getItem(KEY_THEME)
-      const newTheme = storageTheme === 'dark' ? 'light' : 'dark'
-      setTheme(newTheme)
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const storageTheme = sessionStorage.getItem(KEY_THEME)
+        const newTheme = storageTheme === 'dark' ? 'light' : 'dark'
+        setTheme(newTheme)
+      })
     })
   }
 
@@ -39,11 +44,11 @@ function themeHandler() {
 }
 
 // SIDEBAR HANDLER
-function sidebarHandler() {
-  const buttons = document.querySelectorAll('[data-sidebar]')
+function modalHandler() {
+  const buttons = document.querySelectorAll('[data-modal]')
 
   buttons.forEach(btn => {
-    const targetId = btn.getAttribute('data-sidebar')
+    const targetId = btn.getAttribute('data-modal')
     const targetEl = document.getElementById(targetId)
 
     btn.addEventListener('click', () => {
@@ -150,33 +155,34 @@ function treeHandler() {
 
 function main() {
   themeHandler()
-  sidebarHandler()
+  modalHandler()
   typingHandler()
   treeHandler()
 }
 
 document.addEventListener('DOMContentLoaded', main)
-document.addEventListener("DOMContentLoaded", () => {
-  const tocLinks = document.querySelectorAll("#TableOfContents a");
+document.addEventListener('DOMContentLoaded', () => {
+  const tocLinks = document.querySelectorAll('#TableOfContents a')
   const headings = Array.from(tocLinks)
-    .map(link => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean)
 
   function onScroll() {
-    let activeIndex = -1;
+    let activeIndex = -1
     headings.forEach((heading, index) => {
-      const rect = heading.getBoundingClientRect();
-      if (rect.top <= 100) { // adjust offset as needed
-        activeIndex = index;
+      const rect = heading.getBoundingClientRect()
+      if (rect.top <= 100) {
+        // adjust offset as needed
+        activeIndex = index
       }
-    });
+    })
 
-    tocLinks.forEach(link => link.classList.remove("active"));
+    tocLinks.forEach(link => link.classList.remove('active'))
     if (activeIndex >= 0) {
-      tocLinks[activeIndex].classList.add("active");
+      tocLinks[activeIndex].classList.add('active')
     }
   }
 
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-});
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+})

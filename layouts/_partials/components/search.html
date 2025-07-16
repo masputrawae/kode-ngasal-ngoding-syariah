@@ -1,15 +1,18 @@
-<form class="form">
-  <label for="inputSearch" class="form__label">
-    {{ partial "components/icon" (dict "name" "search") }}
-  </label>
-  <input
-    type="search"
-    name="inputSearch"
-    id="inputSearch"
-    class="form__input"
-    placeholder="Cari Catatan..."
-  />
-</form>
-<nav class="results">
-  <ul id="results" class="results__list"></ul>
-</nav>
+<div class="search">
+  <div class="search__form">
+    <label for="inputSearch" class="search__label">
+      {{ partial "components/icon" (dict "name" "search") }}
+    </label>
+    <input
+      type="search"
+      name="inputSearch"
+      id="inputSearch"
+      class="search__input"
+      placeholder="Cari Catatan..."
+    />
+  </div>
+
+  <nav class="search__results-wrapper">
+    <ul id="results" class="search__results-list"></ul>
+  </nav>
+</div>

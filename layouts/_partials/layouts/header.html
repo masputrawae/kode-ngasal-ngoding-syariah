@@ -1,13 +1,10 @@
 <header class="header">
-  <button data-sidebar="sidebarLeft" class="header__button">
-    {{ partial "components/icon" (dict "name" "journal-text") }}
-  </button>
-
-  <a href="{{ site.BaseURL | relURL }}">
-    {{ site.Title }}
-  </a>
-
-  <button data-sidebar="sidebarRight" class="header__button">
-    {{ partial "components/icon" (dict "name" "book") }}
-  </button>
+  {{ partial "components/brand" . }}
+  <div class="header__right">
+    {{ partial "components/search" . }}
+    <button data-btn-theme>
+      {{ partial "components/icon" (dict "name" "sun") }}
+      {{ partial "components/icon" (dict "name" "moon-stars") }}
+    </button>
+  </div>
 </header>

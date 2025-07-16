@@ -15,17 +15,16 @@
 <body>
   <div class="layout">
     {{ partial "layouts/sidebar-left" . }}
-    <div class="main">
-      {{ partial "layouts/header" . }}
-      {{ block "main" . }}{{ end }}
-      {{ partial "layouts/footer" . }}
-    </div>
+    {{ partial "layouts/header" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "layouts/footer" . }}
     {{ partial "layouts/sidebar-right" . }}
-    <div class="overlay"></div>
   </div>
-
+  <div class="overlay"></div>
+  {{ partial "layouts/bottom-bar" . }}
   {{ partial "headed/preview-link" . }}
   {{ partial "headed/embed-js" . }}
   {{ partial "headed/js" . }}
 </body>
 </html>
+

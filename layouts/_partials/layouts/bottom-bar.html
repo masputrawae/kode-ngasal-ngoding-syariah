@@ -1,0 +1,22 @@
+<nav class="bottom-bar">
+  <button data-modal="sidebarLeft" class="bottom-bar__btn">
+    {{ partial "components/icon" (dict "name" "list") }}
+  </button>
+
+  <button data-btn-theme class="bottom-bar__btn">
+    {{ partial "components/icon" (dict "name" "sun") }}
+    {{ partial "components/icon" (dict "name" "moon-stars") }}
+  </button>
+
+  <a href="{{ site.BaseURL | relURL }}" class="bottom-bar__btn">
+    {{ partial "components/icon" (dict "name" "house") }}
+  </a>
+
+  <button data-modal="sidebarRight" class="bottom-bar__btn">
+    {{ partial "components/icon" (dict "name" "github") }}
+  </button>
+
+  <button data-modal="sidebarRight" class="bottom-bar__btn">
+    {{ partial "components/icon" (dict "name" "book") }}
+  </button>
+</nav>
